@@ -16,7 +16,7 @@ public enum CalendarDaySelection {
     case viewOnly
 
     var allowActiveRangeDeletion: Bool {
-        if case let .multiRange(partial, _) = self, case let .fullRange(range) = partial {
+        if case let .multiRange(partial, _) = self, case let .fullRange = partial {
             return true
         }
 

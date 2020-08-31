@@ -270,20 +270,20 @@ class ManagedCalendarView {
                 selectedDates.insert(date)
             }
         case .multiDay(let days):
-            days.map {
+            _ = days.map {
                 if let date = $0.date(calendar: calendar) {
                     selectedDates.insert(date)
                 }
             }
         case  .singleRange(_, let range):
             if let range = range, let dateRange = range.toDateRange(calendar: calendar) {
-                calendar.dates(from: dateRange.lowerBound, to: dateRange.upperBound)
+                _ = calendar.dates(from: dateRange.lowerBound, to: dateRange.upperBound)
                     .map { selectedDates.insert($0) }
             }
         case .multiRange(_, let ranges):
             for range in ranges {
                 if let dateRange = range.toDateRange(calendar: calendar) {
-                    calendar.dates(from: dateRange.lowerBound, to: dateRange.upperBound)
+                    _ = calendar.dates(from: dateRange.lowerBound, to: dateRange.upperBound)
                         .map { selectedDates.insert($0) }
                 }
             }
