@@ -12,7 +12,7 @@ A library containing visual components.
                        DESC
   s.author           = { 'Jarrod Parkes' => 'parkesfjarrod@gmail.com' }
   s.source           = {
-      :git => 'git@github.com:jarrodparkes/Habanero.git',
+      :git => 'https://github.com/jarrodparkes/Habanero.git',
       :tag => s.version.to_s,
       :submodules => true
   }

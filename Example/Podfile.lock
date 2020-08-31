@@ -1,5 +1,5 @@
 PODS:
-  - Habanero (0.3.0):
+  - Habanero (0.1.0):
     - HorizonCalendar (= 1.3.1)
   - HorizonCalendar (1.3.1)
   - Validator (0.1.6)
@@ -19,7 +19,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Habanero: 7f2224ffa99251e88f0acc95b991592d6fbf67b9
+  Habanero: e09e9649c3cfa5045f55aeb3d11ae9d03e4a66e5
   HorizonCalendar: 1218c8f7aab67fdf522f9f04d106372ce05b8f52
   Validator: c663e3cbf5423da9cd07f4f5c9b811573c1b7265
 
