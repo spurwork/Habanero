@@ -1,8 +1,12 @@
 # Habanero
 A visual components library.
 
+[![Version](https://img.shields.io/cocoapods/v/Habanero.svg)](https://cocoapods.org/pods/Habanero)
+[![License](https://img.shields.io/cocoapods/l/Habanero.svg)](https://cocoapods.org/pods/Habanero)
+[![Platform](https://img.shields.io/cocoapods/p/Habanero.svg)](https://cocoapods.org/pods/Habanero)
+
 ## Introduction
-`Habanero` is UIKit library containing commonly-used visual components that share to an easily-modified style.
+`Habanero` is a UIKit library containing commonly-used visual components that share to an easily-modified style.
 
 Features:
 

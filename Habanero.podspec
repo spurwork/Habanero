@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
       LICENSE
   }
   s.homepage         = 'https://jarrodparkes.com'
-  s.summary          = 'A component library.'
+  s.summary          = 'A visual components library.'
   s.description      = <<-DESC
 A library containing visual components.
                        DESC
