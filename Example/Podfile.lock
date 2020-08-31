@@ -1,0 +1,28 @@
+PODS:
+  - Habanero (0.3.0):
+    - HorizonCalendar (= 1.3.1)
+  - HorizonCalendar (1.3.1)
+  - Validator (0.1.6)
+
+DEPENDENCIES:
+  - Habanero (from `../`)
+  - Validator (~> 0.1.6)
+
+SPEC REPOS:
+  "git@github.com:jarrodparkes/cocoapod-specs.git":
+    - Validator
+  https://github.com/CocoaPods/Specs.git:
+    - HorizonCalendar
+
+EXTERNAL SOURCES:
+  Habanero:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Habanero: 7f2224ffa99251e88f0acc95b991592d6fbf67b9
+  HorizonCalendar: 1218c8f7aab67fdf522f9f04d106372ce05b8f52
+  Validator: c663e3cbf5423da9cd07f4f5c9b811573c1b7265
+
+PODFILE CHECKSUM: cb233604ea240e28eb89e62aff68a3ab74b620db
+
+COCOAPODS: 1.9.1

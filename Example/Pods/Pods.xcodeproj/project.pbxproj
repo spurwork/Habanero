@@ -1,0 +1,1893 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		007CA7A32F75206438A198129793B09E /* BaseUIConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9702B636E2911BCD0A0754B5866B50E3 /* BaseUIConfigurable.swift */; };
+		01B40A4E2ABBB8542FF090ED6376C631 /* MonthRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058607E8725F98D81807C2525B70D58F /* MonthRange.swift */; };
+		0494D07A6DAEA2320B6641F728197C4E /* ColorsStandard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3619774039A89C5C53F93BB97BB9193 /* ColorsStandard.swift */; };
+		0585EFE8FFA0C989260BEEC9858356D3 /* NSDirectionalEdgeInsets+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3886A0F78DFD38A94651A67363200B9E /* NSDirectionalEdgeInsets+Helpers.swift */; };
+		06B0111D878929B6B3203AC3C4304B90 /* Habanero-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 35603F1BBF847E9DA9A3D079DD8B165E /* Habanero-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A8AA16B294DB8ED1040224CB916F9BB /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024983F7E46DD3D91BB7D27D3C3A22CF /* AlertView.swift */; };
+		0B54189E45F7E979AE86F70A2B256958 /* CharacterSetRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABD976455A57ACBFA2CEEC296730FE9 /* CharacterSetRule.swift */; };
+		0E7AF3B8AD47F2C6D00FAA6D44DE2843 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20549AFB1FCFB9339BDA45EE210A4394 /* CalendarView.swift */; };
+		0FFBA469F96635D4FFCFC741A670DE3D /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02254C78BEB057CD2D87F999B41A5599 /* Images.swift */; };
+		13E460581586D5D478C08B2B39B42861 /* StringInputFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6257FC1E4F74E0630A44ACC26A448B3F /* StringInputFormatter.swift */; };
+		15CD6FDF78706D203E78CF42D738D3A4 /* DateRelationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5E5968828CA7AEC48FAF2197FD3B1F /* DateRelationRule.swift */; };
+		19FBE189DD1971C440FC4FEBDC3AA8C3 /* CalendarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE77BC53A09E4B4E002D42C97D838034 /* CalendarItem.swift */; };
+		1A6AFD6D263F28443E920D2187FDD5EF /* ScreenPixelAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F961FD234844771A5F2A9B161EC9D86 /* ScreenPixelAlignment.swift */; };
+		1A86BA5B833F9581BCF916398753C5AB /* SelectionGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA9446FFC726A670812B82C6C7E4E39 /* SelectionGroup.swift */; };
+		1BD3FA449A81438D0ECA3C5D715A10CB /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2417DF95BEC9DB73C924275133949F /* Validator.swift */; };
+		1CDD37EF00A1ADE2FE6A95F8EAE4B2DA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728D762D073C7D7F370F6AC5979F520E /* Constants.swift */; };
+		1D57F79E735DBB9525DBEA9037DDB8CD /* TextInputCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E491F6D1D76CD11A8A32F56B43ECF4 /* TextInputCountView.swift */; };
+		1DB3BB5486CBDF6E82EC75A41DB900CF /* VisibleItemsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FF8378098DCD9051C0834B19583A9F /* VisibleItemsProvider.swift */; };
+		235D57123B128476D1A45A84C22E3B24 /* Pods-Habanero-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C1D92CDA13B28647CD2F8DCD3D2F98AD /* Pods-Habanero-dummy.m */; };
+		284C5ACA9F0F47F9C010C10E95FF43D9 /* CalendarDayOfWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCAC820EE537BFAD573FD219FFF1DFF /* CalendarDayOfWeek.swift */; };
+		286F78F9056FEDACAA877CC9EF00C61D /* UIView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A044120ADF37DEC80E8139FBE7BF4 /* UIView+Helpers.swift */; };
+		29100C0E5CD084865E5E6AA3C78DFAE0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		2DDD3BAE0CAA4BFB912657E2FA73D8B9 /* CalendarItemViewReuseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E706867C22457AD489F2EE6A8F8A1D94 /* CalendarItemViewReuseManager.swift */; };
+		2F30C13D77E3AFD959910F06E88B9E71 /* UIColor+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8655BEE823635DBD8AE7E9EEABA33324 /* UIColor+Helpers.swift */; };
+		2F7CFF328287AC661F40FD2479E35969 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E0B2457BD7AB0C67A6FE335BAEF385 /* RadioButton.swift */; };
+		31BB6ED528D72778707D6B7B0386B3A3 /* UIEdgeInsets+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E35C74DE9B84CAA271D3D30AC7540EB /* UIEdgeInsets+Helpers.swift */; };
+		33C5F3D3CEB7438FE12DDDF3B78DE445 /* UIButton+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B94B17A1BDC8FF3C75B02FF5E3B15D8 /* UIButton+Helpers.swift */; };
+		3480180C9BE5D5499C80E480C2CDE1F4 /* Bundlable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B8EA25B13C595A0EAE6D546A7D120F /* Bundlable.swift */; };
+		35DF66CC153C08795F4361346B10C1CE /* ScrollToItemContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3178FBFE1BDFB518142E418245A64DF1 /* ScrollToItemContext.swift */; };
+		363DA337316A4F91E96AF17936E30353 /* DetailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1635653720E36C2CB21D8F3D67D0BDA /* DetailTextField.swift */; };
+		36E4223ED343B857C77E86D98992A38C /* DayRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91623BCA5360F375FAA66BD0F5B83562 /* DayRange.swift */; };
+		394A6012804CA2DC0A945C36B4261B3F /* PaddedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD542C58C5F5730438FEEDDF4FC3291 /* PaddedTextField.swift */; };
+		3A2948842EB1F0D441FD16A686FAE5FC /* String+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B680F9745E23920D932CE5B513C4BFB0 /* String+Helpers.swift */; };
+		3BD693253ADD02053579B04DA10A4A43 /* ValidatorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F42F2D9DAE98843F90255FFC0F5EE4A /* ValidatorError.swift */; };
+		3C1F1D9A9E1204C8B276A0748D1ECC87 /* UIStackView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747550013941B51BE5DA2540FF8E9D30 /* UIStackView+Helpers.swift */; };
+		3E1E21CC34A8DC24240B1AE51E5401A0 /* BaseControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E8BDEFD88639A970F7E0EAC7F83FE1 /* BaseControl.swift */; };
+		3F555E026D96E3857AA84A5672760857 /* UIFont+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F908108727F07E61496C90AC09BC24 /* UIFont+Helpers.swift */; };
+		4196818264E3690877087F60CFDB76E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		43BAAE51B22B4A5FDAE81FE30C558FEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		4485838DC5CB6F50DAC9E728D2BE3CD7 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5062EB93AC68088EF331D81BD5F9AAF /* Rule.swift */; };
+		4B071A6F0705E3A3B04243AB89BE745E /* CalendarRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECACD49FA5EEF39685143F33489A1FB /* CalendarRange.swift */; };
+		4C39872FA6B51180B209A20FD01F35CA /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551EF03FEE929AA743BE7ACB084196B8 /* AlertManager.swift */; };
+		4C4A2768B6F2F3D1D092A9A7BB45F697 /* TextInputError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76A4F16406B71018490288DABBDA43B /* TextInputError.swift */; };
+		4D30AE7895A2723D051A0F0064284725 /* ActionListAccessoryViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459F2BBCC5DF8274D846A692DCB1CD7D /* ActionListAccessoryViews.swift */; };
+		52754B3C739C29DD046D08158EBA5740 /* OffScreenCalendarItemAccessibilityElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F13CAF127286B36002C793EB9ADEF6D /* OffScreenCalendarItemAccessibilityElement.swift */; };
+		52DF7F5F796785B045BAA2701BDD0054 /* CalendarRanges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90496E7494F430649FA4E5D9734C0E7D /* CalendarRanges.swift */; };
+		56E0E52CA50C37F3670A1E03A501A6EC /* ManagedCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5C3B105CE83FB67A74AD650A1310DB /* ManagedCalendarView.swift */; };
+		58DDBD05641FE60DD20D4AC3652D2E15 /* SimpleStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755A6FEFD315025C5E9D401576A8CE01 /* SimpleStatus.swift */; };
+		59D93C5284CE93B956E583F47E9ABCAE /* SelectionControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C69414396B5EFE9E5F50DB751C9FF4 /* SelectionControl.swift */; };
+		5B7F2BC4B8C425DCDC72C423D9CDA543 /* UIBarButtonItem+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526215A96C7A7584966A4CFB15614A62 /* UIBarButtonItem+Helpers.swift */; };
+		5B9047B470ED8EF5D37DADF7529F6656 /* TextInputFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D945B0F96073E26968F4070E469FFD5 /* TextInputFormatter.swift */; };
+		5E644A648F4CFF18F423980A77D25CFD /* HorizonCalendar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C883F06F7F08D1B9F24A2276BC0B08D /* HorizonCalendar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5FA2F7FC3C307A385B7240145BB84CED /* CalendarViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A3597AA2B0ABD74BD0615F54CDD108 /* CalendarViewContent.swift */; };
+		61EBB1A3BA66BDB9B43D8429AF1973D8 /* LengthRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D35C2B571497435DAB39E3A2E0885C7 /* LengthRule.swift */; };
+		62096E21A0D870F7790466046EFFBCF3 /* SetRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E123F0BB0035B06E4411760409FD4C /* SetRule.swift */; };
+		626F757467A9104F350A122DB5EA34F9 /* RequiredRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733E2C5FED0A790DCA11891E1F0ADD58 /* RequiredRule.swift */; };
+		627047A2E2B8BE8463E850A65364A2CD /* MonthsLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A774809B946956E166AB33AAE068D16F /* MonthsLayout.swift */; };
+		62D3BBBA1D960E53407BEACE16028E74 /* ViewAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F2C30BE253380A9FE8430B2F66FD9F /* ViewAnchor.swift */; };
+		6460D8BEBDAD7618792348CD31B2F3DB /* NumberInputFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A4CA9FB8F0A0679020017587414FE6 /* NumberInputFormatter.swift */; };
+		67485C4FFC87D5A1EE74485961DAFAAB /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D273024C29BE1C80BB04561CC78DE /* BaseTableViewCell.swift */; };
+		69D63F58B4A153242DAC5E3B68881562 /* Validator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F43453FDE8383D74F864B08B953265AF /* Validator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		69E3EFFB01B6A6A139A233085655C116 /* HorizonCalendar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 162511C49EA93A272EBC5D55494FED8F /* HorizonCalendar-dummy.m */; };
+		6B01FA531BEAB95662302C1FF4CD53A7 /* NoEmojiRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82D5750397D8D335B0ADB5E0ABD8CF7 /* NoEmojiRule.swift */; };
+		6C08D4FB497CAB2B720D763EDC2588A3 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6045BA50E486957BA65050362CDB1AD5 /* ButtonStyle.swift */; };
+		6C639B75CE52CF4BF893A2AC4EEA7BB9 /* LayoutItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C59389BE492A16B5755C334BF138E8 /* LayoutItem.swift */; };
+		6E27C86CA7AF48920D6FBF392EC9E743 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6584F1AA5AF55E41962066874C82D58D /* FontStyle.swift */; };
+		6FDB387705B5F6D39D25B4673E2C5158 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F857F8737A9A21F3090C374524074E /* Button.swift */; };
+		70B249BB12580DA7F53367AAC2BB8F79 /* Habanero-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A53573DD9892C625E85306A072F9CD2B /* Habanero-dummy.m */; };
+		72176C8F64B9A0C45D5D5C7BAD128F00 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29E20FE9D5B32BAE1E26A6BD65ECBD6 /* StatusView.swift */; };
+		73022B9817872FC51B93755047B6DE11 /* DateFormatter+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A19BE5A8063D077D49961DEB0BDA2B /* DateFormatter+Helpers.swift */; };
+		76687CE959452CD85E242028C6458737 /* TextInputDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33D74F74FE9EB9D8B30708172B3C7FB /* TextInputDisplayable.swift */; };
+		78BD90C3873C61A7849DAB43C6A36492 /* ButtonStyleContained.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E459332B8A93CB388BA3141C9FC665D /* ButtonStyleContained.swift */; };
+		7D6B781B9BBE32945F560ECAFBB9517E /* ActionListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CC61E1116A9C22CA3709652EBFBD12 /* ActionListCell.swift */; };
+		7EA21BDD7296E34AE6EFB85BB2F814AC /* CalendarDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA58F8E0EBC82CDF4AD9E1FD95AC5EA /* CalendarDay.swift */; };
+		8239FD2FA5A0D5F017A84FF7B4D8F934 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAA22C2DF4064828FAD02E9B081D2C /* BaseView.swift */; };
+		83E0FEF9DA0273F639BC32D36B7BA9AF /* SelectionControlButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E758097862E2CDF578C04A34A6AA88 /* SelectionControlButton.swift */; };
+		8573A20042BA16855A1E28C5A3392B3F /* TextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98ABC18B0990C9626782759947B69262 /* TextInput.swift */; };
+		88BBF59929164B60993DFDA1A63679F4 /* CalendarDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8472B4C6477214452CC632B1BE129 /* CalendarDayView.swift */; };
+		88D787D0D146CC7B0ED817D1B037933D /* ThemeStandard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6634314F68F0397C460A83EE2B0961 /* ThemeStandard.swift */; };
+		89059EC6182D42E9CC94C88E329DDC44 /* Day+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E045BDBD5214BF0141F27AA9A56FC922 /* Day+Helpers.swift */; };
+		8AA31C8D59FC7543459DE5F1CDF125D2 /* UITextInput+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF119B3B873E780B9898832F3ACA221B /* UITextInput+Helpers.swift */; };
+		8C0C88893567B16DC0B4F33725F38C3D /* ScrollMetricsMutator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE5BDACC85227101FA73BF546484F4 /* ScrollMetricsMutator.swift */; };
+		8D3D94FCC99A89B19CD788E5385F40D9 /* Month.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED28631A8C4BC7EB7FBA947770B34C76 /* Month.swift */; };
+		8D5D95B3BE3640237B0A9BEFDFC31DF9 /* ActionListNavigationStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B656ACF48841F8D09803F1BCA01077 /* ActionListNavigationStyle.swift */; };
+		949F19697D90958E869AA4BCD2F8801D /* NSAttributedString+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9C697B5FD42E35D10503D2880F7019 /* NSAttributedString+Helpers.swift */; };
+		95E26799AE7B5D16E26BC0A05DACD229 /* Pods-Habanero_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B0AFD7487F7DA14A1529A84AC08F357F /* Pods-Habanero_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9900233D0E7A14FEA896D2B6C805977E /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D480A86DDB92E2DF99245DC8DB9ED1F6 /* Theme.swift */; };
+		9C221C1EB4728DFB675F63FC95A7DA30 /* DetailTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA28DD58C876CA6E3E9C4FE039B70DE /* DetailTextView.swift */; };
+		9DFF26483194CDF83B625EF9DE5FAC86 /* DayOfWeekPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53973A8BA2AE9DC3FA79343AE8F76CA /* DayOfWeekPosition.swift */; };
+		9EEA7B17D2142222314202ADF6F93773 /* VisibleCalendarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D756C84E4C44FBB65F6DF89F7AC941 /* VisibleCalendarItem.swift */; };
+		A1F331DE7137471FAC73E54365557987 /* CAShapeLayer+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C20B6DA64AF2C463489FCB259B28393 /* CAShapeLayer+Helpers.swift */; };
+		A2B3009BB4DA2A0C5BFBE0B02D0A07AF /* Calendar+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FF9016241AFD10D105B8F18A6210AB /* Calendar+Helpers.swift */; };
+		A39634EF5B33AAA04EEF6D4BB3D8C868 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EA6AD797D271019AD4D7D8D3F55833 /* Alert.swift */; };
+		A60563C69BCCD2FD2EC2EA8AA2F13955 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022D93D426FCEB6FACF727C25AF8BAC8 /* Day.swift */; };
+		A64A66D3ED89F6B684EED40AF8DCE9AF /* FloatRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91E6C67972EB03A2B2F1DAC7CC5F62E /* FloatRule.swift */; };
+		A72E4B422CB823848F1F58D01EA3F33F /* ButtonStyleOutline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAC7BF93CD58B737044E05263706CFB /* ButtonStyleOutline.swift */; };
+		A97E9C3C24FD4D7A00B60512 /* CalendarDateSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E9C3B24FD4D7A00B60512 /* CalendarDateSelection.swift */; };
+		AC937F2CD505AFA3CBFBBEFBD1F97482 /* Selection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C71E9C316A236987F0532C6D8274DDE /* Selection.swift */; };
+		AE9844768B7CC4D005DB3E3C569A9276 /* ButtonStyleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA5A4AC17F041EA7980BAA76FE18EC /* ButtonStyleText.swift */; };
+		AF92DC80FBD06C9F4C857521A52841EB /* AlertType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3BDC85DE9E9DFBEBE8A32DE9D242FB /* AlertType.swift */; };
+		B05A30081637C30E18183534BFA2FB13 /* ImagesStandard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DD67FDA14F9C96220E4644F8C7840E /* ImagesStandard.swift */; };
+		B2DA7D421E3CD9379F692E98BFEC5F3D /* RegexRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BBF4BCCEFC44F80A93C97126B72A7 /* RegexRule.swift */; };
+		B5BB07C06052832473BA992E0B943D9C /* SelectionGroupStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3992B45786E7A50A147E9B00079DC16 /* SelectionGroupStyle.swift */; };
+		B5FBE7BE0A4E7A000D0E2DA5BEDDC4A7 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5E4D89975345335DA5FDF97B95E306 /* Colors.swift */; };
+		BA53186913EF85C3F2D648879B86CF27 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		BC475FB20A3875268CA174FF663E6E2C /* CalendarRangesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783220C1ACA2FAEFA7200CA6D381E1B5 /* CalendarRangesView.swift */; };
+		BEA5F5FFB9212612F4580D3ACA0E5B26 /* SimpleSelectionControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0058D0B364B7D56AEA2F871149A0F453 /* SimpleSelectionControl.swift */; };
+		BF253F96F948B2CB28F9F7D1F13A5621 /* LayoutItemTypeEnumerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B8B086E060FD6EE1A64DA43E716BF3 /* LayoutItemTypeEnumerator.swift */; };
+		C12B21F62C625BBAFBC3ED60092F794C /* DateRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CBBAE0F269D991C8B57B833CDFF32C /* DateRule.swift */; };
+		CBAF3C823BAC18A5547712953CA33EA0 /* Calendar+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514B31E4B96370A7BAE720C964AB8191 /* Calendar+Helpers.swift */; };
+		D132AFAECDCA2BCB127C7A7690321BCA /* FrameProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E4E67E9E3F127F1BFACE9397FF137 /* FrameProvider.swift */; };
+		DAC7E53E3807FAB13555EEDEE8CD5A24 /* CalendarDaySelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8CE3D93ACC551CCB3F6DA5B0D1161 /* CalendarDaySelection.swift */; };
+		DBBDEC32E41BBDF20414D0668AC35B35 /* SelectionLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5752ADDDAB5F55E388BD5AC5605B5FD4 /* SelectionLabel.swift */; };
+		DE6C1DC183621B47D9170E7528C22095 /* ConstantsStandard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C77339620661574B0E1FC57B09E595D /* ConstantsStandard.swift */; };
+		E04D9BBAE4AA0215CB5ED49550C6E60E /* Validator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 284E08798168493D634A226F1E07558E /* Validator-dummy.m */; };
+		E0A50AB33E79A03190F7FB0CDA76E835 /* String+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C3606669C688D97737A1F8E69787F3 /* String+Helpers.swift */; };
+		E0D2AF89DBA07EBF2F6902FF6D49BD15 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3805FD0E66B448E62B1E33BFD670BA /* Menu.swift */; };
+		E305036CF31315A193557F1418CBE572 /* CalendarViewScrollPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4916C1FAE3134210AB6A80605AD37A10 /* CalendarViewScrollPosition.swift */; };
+		E3649BA6B06720681A1E460A6FB261F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		EA0522BDEEDDFF0A0A23701D6464066C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 798DC0CB23E7AA28CB3F2C434E81FA70 /* Assets.xcassets */; };
+		ED6262ACFF47EAAC82BAE40BA4C755FF /* Pods-Habanero_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 814ED9F2C85EC5E544B0047BA2C2A1B4 /* Pods-Habanero_Tests-dummy.m */; };
+		EE979CE4FAA9B317CEC22B794B86DD7A /* ActionListDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D4DE018081DAFA58A8C400C6314536 /* ActionListDetail.swift */; };
+		F011EC62810ADFE8F256AFD277E70CE4 /* UITableView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD9C5DA8561B8893733BDC048CD1183 /* UITableView+Helpers.swift */; };
+		F0FF96DEC232980DA3AF331B53E0C12F /* MenuPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F84C2096B2D24D5D8962AAC97197FB /* MenuPicker.swift */; };
+		F3A2776D410928396ED80873A57545C6 /* CalendarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EE309DA170FC54EB79E7C9B86F2C96 /* CalendarItemView.swift */; };
+		F421B22C28170B642D259E2624B2AA33 /* CheckboxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42316B3FF15362C577FFD37D37537100 /* CheckboxButton.swift */; };
+		F636EA79764080DF451B5D620BEB6F5F /* Pods-Habanero-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 74A493A147B2FF78CE27130477CA66B7 /* Pods-Habanero-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F643EBBC081F95A88CC291DC27F4F4BA /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78266526E492F32D620E8A084FF09685 /* CalendarView.swift */; };
+		FD755806A09E8EEB07CF4FD4128B7085 /* Dictionary+MutatingValueForKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5EED7F8F5A806C90EE273057960410 /* Dictionary+MutatingValueForKey.swift */; };
+		FDADCF63D17E84F9CDF1AE831ECCF385 /* StatusType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10485347A7C3025817AA043C661C5392 /* StatusType.swift */; };
+		FE69105BD62E283785F63B9BF7E8FCC3 /* ActionListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1540A9F0962CDEE25DCA15A3B15B5E4D /* ActionListItem.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		20182B5654B4FBC3A949A888B93005C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A67DAE410D595411BB02155C40EE7443;
+			remoteInfo = "Habanero-Habanero";
+		};
+		7CF3730156BE4B7EE37BCC48D664F87E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 44E7E03875D04F3FFAEE1E88F50589CA;
+			remoteInfo = Validator;
+		};
+		7EFC343902CDD52B9DF652A2FD034EA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 06F2B2E25E8D0A392F1AF3F09E30184A;
+			remoteInfo = HorizonCalendar;
+		};
+		AE1FD2A6F3738C0CA83A3B136E5F580D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92B6BDE86BAA3EC37E34D29C4221FDD8;
+			remoteInfo = Habanero;
+		};
+		B2F84271E0ECA549E93A381987EE2601 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 06F2B2E25E8D0A392F1AF3F09E30184A;
+			remoteInfo = HorizonCalendar;
+		};
+		C611876BD99006291D4D235B3B6CE614 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECDB4D4CECFFCF3F279364DD3C77DDCF;
+			remoteInfo = "Pods-Habanero";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0058D0B364B7D56AEA2F871149A0F453 /* SimpleSelectionControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SimpleSelectionControl.swift; sourceTree = "<group>"; };
+		02254C78BEB057CD2D87F999B41A5599 /* Images.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		022D93D426FCEB6FACF727C25AF8BAC8 /* Day.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Day.swift; path = Sources/Public/Day.swift; sourceTree = "<group>"; };
+		024983F7E46DD3D91BB7D27D3C3A22CF /* AlertView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		02CBBAE0F269D991C8B57B833CDFF32C /* DateRule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateRule.swift; path = Validator/Classes/Rules/DateRule.swift; sourceTree = "<group>"; };
+		058607E8725F98D81807C2525B70D58F /* MonthRange.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MonthRange.swift; path = Sources/Public/MonthRange.swift; sourceTree = "<group>"; };
+		08D756C84E4C44FBB65F6DF89F7AC941 /* VisibleCalendarItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VisibleCalendarItem.swift; path = Sources/Internal/VisibleCalendarItem.swift; sourceTree = "<group>"; };
+		09CC61E1116A9C22CA3709652EBFBD12 /* ActionListCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ActionListCell.swift; sourceTree = "<group>"; };
+		0B3EC092989BB4DA0EE9F31F5C1E255C /* Pods-Habanero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Habanero.debug.xcconfig"; sourceTree = "<group>"; };
+		0D35C2B571497435DAB39E3A2E0885C7 /* LengthRule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LengthRule.swift; path = Validator/Classes/Rules/LengthRule.swift; sourceTree = "<group>"; };
+		0F53BE1093D7712EA4C9295B04D3A2C5 /* Pods-Habanero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Habanero.release.xcconfig"; sourceTree = "<group>"; };
+		10485347A7C3025817AA043C661C5392 /* StatusType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StatusType.swift; sourceTree = "<group>"; };
+		14EA6AD797D271019AD4D7D8D3F55833 /* Alert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		1540A9F0962CDEE25DCA15A3B15B5E4D /* ActionListItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ActionListItem.swift; sourceTree = "<group>"; };
+		162511C49EA93A272EBC5D55494FED8F /* HorizonCalendar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HorizonCalendar-dummy.m"; sourceTree = "<group>"; };
+		17B8B086E060FD6EE1A64DA43E716BF3 /* LayoutItemTypeEnumerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutItemTypeEnumerator.swift; path = Sources/Internal/LayoutItemTypeEnumerator.swift; sourceTree = "<group>"; };
+		1C3805FD0E66B448E62B1E33BFD670BA /* Menu.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		20549AFB1FCFB9339BDA45EE210A4394 /* CalendarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CalendarView.swift; path = Sources/Public/CalendarView.swift; sourceTree = "<group>"; };
+		23EA5A4AC17F041EA7980BAA76FE18EC /* ButtonStyleText.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ButtonStyleText.swift; sourceTree = "<group>"; };
+		265092AB26200DA27F8433D4B50ECCBC /* Habanero-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Habanero-prefix.pch"; sourceTree = "<group>"; };
+		26E0B2457BD7AB0C67A6FE335BAEF385 /* RadioButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
+		284E08798168493D634A226F1E07558E /* Validator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Validator-dummy.m"; sourceTree = "<group>"; };
+		28BB22F1E3FF7BA15ED16E2822BB6E02 /* Pods-Habanero-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Habanero-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2AAC7BF93CD58B737044E05263706CFB /* ButtonStyleOutline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ButtonStyleOutline.swift; sourceTree = "<group>"; };
+		2ADD0DCF204303B2D396F3E98798AA39 /* Pods-Habanero-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Habanero-Info.plist"; sourceTree = "<group>"; };
+		2C71E9C316A236987F0532C6D8274DDE /* Selection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Selection.swift; sourceTree = "<group>"; };
+		2D3E0C79A93F05458C39711895AF1986 /* Validator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Validator.debug.xcconfig; sourceTree = "<group>"; };
+		2DE8472B4C6477214452CC632B1BE129 /* CalendarDayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalendarDayView.swift; sourceTree = "<group>"; };
+		302A044120ADF37DEC80E8139FBE7BF4 /* UIView+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+Helpers.swift"; sourceTree = "<group>"; };
+		3178FBFE1BDFB518142E418245A64DF1 /* ScrollToItemContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScrollToItemContext.swift; path = Sources/Internal/ScrollToItemContext.swift; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		327FA2F13CF4A65EE64D5A6CC56144BE /* Pods-Habanero.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Habanero.modulemap"; sourceTree = "<group>"; };
+		35603F1BBF847E9DA9A3D079DD8B165E /* Habanero-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Habanero-umbrella.h"; sourceTree = "<group>"; };
+		3886A0F78DFD38A94651A67363200B9E /* NSDirectionalEdgeInsets+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSDirectionalEdgeInsets+Helpers.swift"; sourceTree = "<group>"; };
+		39D4DE018081DAFA58A8C400C6314536 /* ActionListDetail.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ActionListDetail.swift; sourceTree = "<group>"; };
+		3ECACD49FA5EEF39685143F33489A1FB /* CalendarRange.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalendarRange.swift; sourceTree = "<group>"; };
+		42316B3FF15362C577FFD37D37537100 /* CheckboxButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CheckboxButton.swift; sourceTree = "<group>"; };
+		4527FB65EE3826FFA2007FC87FFC1721 /* Habanero-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Habanero-Info.plist"; sourceTree = "<group>"; };
+		459F2BBCC5DF8274D846A692DCB1CD7D /* ActionListAccessoryViews.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ActionListAccessoryViews.swift; sourceTree = "<group>"; };
+		4832A6D71E37542ECE51FE1DF32A6544 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4916C1FAE3134210AB6A80605AD37A10 /* CalendarViewScrollPosition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CalendarViewScrollPosition.swift; path = Sources/Public/CalendarViewScrollPosition.swift; sourceTree = "<group>"; };
+		49FF9016241AFD10D105B8F18A6210AB /* Calendar+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Calendar+Helpers.swift"; path = "Sources/Internal/Calendar+Helpers.swift"; sourceTree = "<group>"; };
+		4ABD976455A57ACBFA2CEEC296730FE9 /* CharacterSetRule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CharacterSetRule.swift; path = Validator/Classes/Rules/CharacterSetRule.swift; sourceTree = "<group>"; };
+		4C883F06F7F08D1B9F24A2276BC0B08D /* HorizonCalendar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HorizonCalendar-umbrella.h"; sourceTree = "<group>"; };
+		4F42F2D9DAE98843F90255FFC0F5EE4A /* ValidatorError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValidatorError.swift; path = Validator/Classes/ValidatorError.swift; sourceTree = "<group>"; };
+		514B31E4B96370A7BAE720C964AB8191 /* Calendar+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Calendar+Helpers.swift"; sourceTree = "<group>"; };
+		51A3597AA2B0ABD74BD0615F54CDD108 /* CalendarViewContent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CalendarViewContent.swift; path = Sources/Public/CalendarViewContent.swift; sourceTree = "<group>"; };
+		51E491F6D1D76CD11A8A32F56B43ECF4 /* TextInputCountView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextInputCountView.swift; sourceTree = "<group>"; };
+		526215A96C7A7584966A4CFB15614A62 /* UIBarButtonItem+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Helpers.swift"; sourceTree = "<group>"; };
+		551EF03FEE929AA743BE7ACB084196B8 /* AlertManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		55B656ACF48841F8D09803F1BCA01077 /* ActionListNavigationStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ActionListNavigationStyle.swift; sourceTree = "<group>"; };
+		5752ADDDAB5F55E388BD5AC5605B5FD4 /* SelectionLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SelectionLabel.swift; sourceTree = "<group>"; };
+		5AD9C5DA8561B8893733BDC048CD1183 /* UITableView+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UITableView+Helpers.swift"; sourceTree = "<group>"; };
+		5B94B17A1BDC8FF3C75B02FF5E3B15D8 /* UIButton+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIButton+Helpers.swift"; sourceTree = "<group>"; };
+		5E4446448C2C25C0899E10630DA0B5B0 /* Habanero.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Habanero.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F2417DF95BEC9DB73C924275133949F /* Validator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validator.swift; path = Validator/Classes/Validator.swift; sourceTree = "<group>"; };
+		5F9C697B5FD42E35D10503D2880F7019 /* NSAttributedString+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Helpers.swift"; sourceTree = "<group>"; };
+		6045BA50E486957BA65050362CDB1AD5 /* ButtonStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
+		6257FC1E4F74E0630A44ACC26A448B3F /* StringInputFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StringInputFormatter.swift; sourceTree = "<group>"; };
+		6584F1AA5AF55E41962066874C82D58D /* FontStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FontStyle.swift; path = Habanero/Classes/FontStyle.swift; sourceTree = "<group>"; };
+		65FB1F27B57A51D318469CBC0756EF45 /* Habanero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Habanero.debug.xcconfig; sourceTree = "<group>"; };
+		6B0D273024C29BE1C80BB04561CC78DE /* BaseTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseTableViewCell.swift; path = Habanero/Classes/BaseTableViewCell.swift; sourceTree = "<group>"; };
+		6C20B6DA64AF2C463489FCB259B28393 /* CAShapeLayer+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "CAShapeLayer+Helpers.swift"; sourceTree = "<group>"; };
+		6C5E4D89975345335DA5FDF97B95E306 /* Colors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		6C77339620661574B0E1FC57B09E595D /* ConstantsStandard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConstantsStandard.swift; sourceTree = "<group>"; };
+		6D945B0F96073E26968F4070E469FFD5 /* TextInputFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextInputFormatter.swift; sourceTree = "<group>"; };
+		6F7365BB36B67315930B504AC5B8FEC0 /* Habanero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Habanero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		728D762D073C7D7F370F6AC5979F520E /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		733E2C5FED0A790DCA11891E1F0ADD58 /* RequiredRule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequiredRule.swift; path = Validator/Classes/Rules/RequiredRule.swift; sourceTree = "<group>"; };
+		747550013941B51BE5DA2540FF8E9D30 /* UIStackView+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIStackView+Helpers.swift"; sourceTree = "<group>"; };
+		74A493A147B2FF78CE27130477CA66B7 /* Pods-Habanero-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Habanero-umbrella.h"; sourceTree = "<group>"; };
+		74F908108727F07E61496C90AC09BC24 /* UIFont+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIFont+Helpers.swift"; sourceTree = "<group>"; };
+		755A6FEFD315025C5E9D401576A8CE01 /* SimpleStatus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SimpleStatus.swift; sourceTree = "<group>"; };
+		7610F38C24A6B31C52431B359F0D2958 /* ResourceBundle-Habanero-Habanero-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Habanero-Habanero-Info.plist"; sourceTree = "<group>"; };
+		76C3606669C688D97737A1F8E69787F3 /* String+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+Helpers.swift"; sourceTree = "<group>"; };
+		778A43DE3EA035383F503F3CB114C303 /* Validator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Validator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78266526E492F32D620E8A084FF09685 /* CalendarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		783220C1ACA2FAEFA7200CA6D381E1B5 /* CalendarRangesView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalendarRangesView.swift; sourceTree = "<group>"; };
+		78FF8378098DCD9051C0834B19583A9F /* VisibleItemsProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VisibleItemsProvider.swift; path = Sources/Internal/VisibleItemsProvider.swift; sourceTree = "<group>"; };
+		798DC0CB23E7AA28CB3F2C434E81FA70 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Habanero/Assets/Assets.xcassets; sourceTree = "<group>"; };
+		7AD8CE3D93ACC551CCB3F6DA5B0D1161 /* CalendarDaySelection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalendarDaySelection.swift; sourceTree = "<group>"; };
+		7C9BBF4BCCEFC44F80A93C97126B72A7 /* RegexRule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RegexRule.swift; path = Validator/Classes/Rules/RegexRule.swift; sourceTree = "<group>"; };
+		7E5883E35ECD7436E5B1C59946F38C80 /* Pods-Habanero_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Habanero_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		7F961FD234844771A5F2A9B161EC9D86 /* ScreenPixelAlignment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScreenPixelAlignment.swift; path = Sources/Internal/ScreenPixelAlignment.swift; sourceTree = "<group>"; };
+		80A19BE5A8063D077D49961DEB0BDA2B /* DateFormatter+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DateFormatter+Helpers.swift"; path = "Validator/Classes/Extensions/DateFormatter+Helpers.swift"; sourceTree = "<group>"; };
+		80DD67FDA14F9C96220E4644F8C7840E /* ImagesStandard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImagesStandard.swift; sourceTree = "<group>"; };
+		814ED9F2C85EC5E544B0047BA2C2A1B4 /* Pods-Habanero_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Habanero_Tests-dummy.m"; sourceTree = "<group>"; };
+		825BD9D3D8DA35F959489E41A1538CA2 /* HorizonCalendar-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "HorizonCalendar-Info.plist"; sourceTree = "<group>"; };
+		83131D11F2D12670323391C6EE903BE9 /* Pods-Habanero-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Habanero-frameworks.sh"; sourceTree = "<group>"; };
+		8655BEE823635DBD8AE7E9EEABA33324 /* UIColor+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIColor+Helpers.swift"; sourceTree = "<group>"; };
+		8A6634314F68F0397C460A83EE2B0961 /* ThemeStandard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThemeStandard.swift; sourceTree = "<group>"; };
+		8AD542C58C5F5730438FEEDDF4FC3291 /* PaddedTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaddedTextField.swift; sourceTree = "<group>"; };
+		8E3B61E1D6F8DE69E521176BDAFDCB86 /* Pods-Habanero-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Habanero-acknowledgements.plist"; sourceTree = "<group>"; };
+		8E92A93407E270AE035EA3B9DCF754BB /* Pods_Habanero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Habanero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		90496E7494F430649FA4E5D9734C0E7D /* CalendarRanges.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalendarRanges.swift; sourceTree = "<group>"; };
+		91623BCA5360F375FAA66BD0F5B83562 /* DayRange.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DayRange.swift; path = Sources/Public/DayRange.swift; sourceTree = "<group>"; };
+		93F2C30BE253380A9FE8430B2F66FD9F /* ViewAnchor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewAnchor.swift; path = Habanero/Classes/ViewAnchor.swift; sourceTree = "<group>"; };
+		949DD2625B97B270160343819E5555FC /* Validator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Validator-prefix.pch"; sourceTree = "<group>"; };
+		9702B636E2911BCD0A0754B5866B50E3 /* BaseUIConfigurable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseUIConfigurable.swift; path = Habanero/Classes/BaseUIConfigurable.swift; sourceTree = "<group>"; };
+		98ABC18B0990C9626782759947B69262 /* TextInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextInput.swift; sourceTree = "<group>"; };
+		9A3BDC85DE9E9DFBEBE8A32DE9D242FB /* AlertType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AlertType.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E35C74DE9B84CAA271D3D30AC7540EB /* UIEdgeInsets+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Helpers.swift"; sourceTree = "<group>"; };
+		9E459332B8A93CB388BA3141C9FC665D /* ButtonStyleContained.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ButtonStyleContained.swift; sourceTree = "<group>"; };
+		9E5E5968828CA7AEC48FAF2197FD3B1F /* DateRelationRule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateRelationRule.swift; path = Validator/Classes/Rules/DateRelationRule.swift; sourceTree = "<group>"; };
+		9F13CAF127286B36002C793EB9ADEF6D /* OffScreenCalendarItemAccessibilityElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OffScreenCalendarItemAccessibilityElement.swift; path = Sources/Internal/OffScreenCalendarItemAccessibilityElement.swift; sourceTree = "<group>"; };
+		A2D045584C78C2286730DA252CAA0438 /* Pods-Habanero_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Habanero_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A53573DD9892C625E85306A072F9CD2B /* Habanero-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Habanero-dummy.m"; sourceTree = "<group>"; };
+		A774809B946956E166AB33AAE068D16F /* MonthsLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MonthsLayout.swift; path = Sources/Public/MonthsLayout.swift; sourceTree = "<group>"; };
+		A97E9C3B24FD4D7A00B60512 /* CalendarDateSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDateSelection.swift; sourceTree = "<group>"; };
+		A9FF83FF0B5F5D8B47F16E295646BE35 /* Habanero.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = Habanero.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AA5C3B105CE83FB67A74AD650A1310DB /* ManagedCalendarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ManagedCalendarView.swift; sourceTree = "<group>"; };
+		AE77BC53A09E4B4E002D42C97D838034 /* CalendarItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CalendarItem.swift; path = Sources/Public/CalendarItem.swift; sourceTree = "<group>"; };
+		AF119B3B873E780B9898832F3ACA221B /* UITextInput+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UITextInput+Helpers.swift"; sourceTree = "<group>"; };
+		B0301BF907EF962E46200990C0787163 /* Pods_Habanero_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Habanero_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0AFD7487F7DA14A1529A84AC08F357F /* Pods-Habanero_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Habanero_Tests-umbrella.h"; sourceTree = "<group>"; };
+		B2F84C2096B2D24D5D8962AAC97197FB /* MenuPicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MenuPicker.swift; sourceTree = "<group>"; };
+		B33D74F74FE9EB9D8B30708172B3C7FB /* TextInputDisplayable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextInputDisplayable.swift; sourceTree = "<group>"; };
+		B3EE309DA170FC54EB79E7C9B86F2C96 /* CalendarItemView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CalendarItemView.swift; path = Sources/Internal/CalendarItemView.swift; sourceTree = "<group>"; };
+		B680F9745E23920D932CE5B513C4BFB0 /* String+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Helpers.swift"; path = "Validator/Classes/Extensions/String+Helpers.swift"; sourceTree = "<group>"; };
+		B91E6C67972EB03A2B2F1DAC7CC5F62E /* FloatRule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatRule.swift; path = Validator/Classes/Rules/FloatRule.swift; sourceTree = "<group>"; };
+		BBE60A48EEE0D12D284ACFAA01EE70AB /* HorizonCalendar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HorizonCalendar-prefix.pch"; sourceTree = "<group>"; };
+		BFCCFF546BEA4B678BB32D6887A01F12 /* Pods-Habanero-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Habanero-resources.sh"; sourceTree = "<group>"; };
+		C1D92CDA13B28647CD2F8DCD3D2F98AD /* Pods-Habanero-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Habanero-dummy.m"; sourceTree = "<group>"; };
+		C29E20FE9D5B32BAE1E26A6BD65ECBD6 /* StatusView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
+		C3619774039A89C5C53F93BB97BB9193 /* ColorsStandard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ColorsStandard.swift; sourceTree = "<group>"; };
+		C412CDAA9984A0EF188171A2F4DE7E88 /* HorizonCalendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HorizonCalendar.release.xcconfig; sourceTree = "<group>"; };
+		C46E4E67E9E3F127F1BFACE9397FF137 /* FrameProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FrameProvider.swift; path = Sources/Internal/FrameProvider.swift; sourceTree = "<group>"; };
+		C4E758097862E2CDF578C04A34A6AA88 /* SelectionControlButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SelectionControlButton.swift; sourceTree = "<group>"; };
+		C53973A8BA2AE9DC3FA79343AE8F76CA /* DayOfWeekPosition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DayOfWeekPosition.swift; path = Sources/Public/DayOfWeekPosition.swift; sourceTree = "<group>"; };
+		C5E8BDEFD88639A970F7E0EAC7F83FE1 /* BaseControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseControl.swift; path = Habanero/Classes/BaseControl.swift; sourceTree = "<group>"; };
+		C76A4F16406B71018490288DABBDA43B /* TextInputError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextInputError.swift; sourceTree = "<group>"; };
+		C7F2854E603AD7384549860A559E3808 /* HorizonCalendar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HorizonCalendar.debug.xcconfig; sourceTree = "<group>"; };
+		C9FE5BDACC85227101FA73BF546484F4 /* ScrollMetricsMutator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScrollMetricsMutator.swift; path = Sources/Internal/ScrollMetricsMutator.swift; sourceTree = "<group>"; };
+		CABAA22C2DF4064828FAD02E9B081D2C /* BaseView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseView.swift; path = Habanero/Classes/BaseView.swift; sourceTree = "<group>"; };
+		CD8AA6EEB3DB1B0D6A1F986208869DA2 /* Pods-Habanero_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Habanero_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		D2C59389BE492A16B5755C334BF138E8 /* LayoutItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutItem.swift; path = Sources/Internal/LayoutItem.swift; sourceTree = "<group>"; };
+		D480A86DDB92E2DF99245DC8DB9ED1F6 /* Theme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		D4F857F8737A9A21F3090C374524074E /* Button.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		D5062EB93AC68088EF331D81BD5F9AAF /* Rule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Rule.swift; path = Validator/Classes/Rule.swift; sourceTree = "<group>"; };
+		D8C69414396B5EFE9E5F50DB751C9FF4 /* SelectionControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SelectionControl.swift; sourceTree = "<group>"; };
+		D8D524B719A0979C65CF3CBF228B35A3 /* Habanero.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Habanero.modulemap; sourceTree = "<group>"; };
+		DBA58F8E0EBC82CDF4AD9E1FD95AC5EA /* CalendarDay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalendarDay.swift; sourceTree = "<group>"; };
+		E045BDBD5214BF0141F27AA9A56FC922 /* Day+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Day+Helpers.swift"; sourceTree = "<group>"; };
+		E0B8EA25B13C595A0EAE6D546A7D120F /* Bundlable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Bundlable.swift; sourceTree = "<group>"; };
+		E1ED810ED2CE63C318ED52E87D65C0F8 /* Habanero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Habanero.release.xcconfig; sourceTree = "<group>"; };
+		E5719FD64CB5655A68C4D4B7E8815ABA /* Validator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Validator.release.xcconfig; sourceTree = "<group>"; };
+		E5BD86CD25503BD6B71BCB30A1067884 /* HorizonCalendar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HorizonCalendar.modulemap; sourceTree = "<group>"; };
+		E5FB637B7EDE695046709748D7175EF9 /* Validator-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Validator-Info.plist"; sourceTree = "<group>"; };
+		E706867C22457AD489F2EE6A8F8A1D94 /* CalendarItemViewReuseManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CalendarItemViewReuseManager.swift; path = Sources/Internal/CalendarItemViewReuseManager.swift; sourceTree = "<group>"; };
+		E7A4CA9FB8F0A0679020017587414FE6 /* NumberInputFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NumberInputFormatter.swift; sourceTree = "<group>"; };
+		E7E35A886A2AD92B39B138F238E8F9FA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		E82D5750397D8D335B0ADB5E0ABD8CF7 /* NoEmojiRule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NoEmojiRule.swift; path = Validator/Classes/Rules/NoEmojiRule.swift; sourceTree = "<group>"; };
+		EAA28DD58C876CA6E3E9C4FE039B70DE /* DetailTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DetailTextView.swift; sourceTree = "<group>"; };
+		EC78EF5D632F489DAA2785A7D30C68BF /* Validator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Validator.modulemap; sourceTree = "<group>"; };
+		ECCAC820EE537BFAD573FD219FFF1DFF /* CalendarDayOfWeek.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalendarDayOfWeek.swift; sourceTree = "<group>"; };
+		ECCF61BEA864A717368B8DB32652F46D /* Pods-Habanero_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Habanero_Tests-Info.plist"; sourceTree = "<group>"; };
+		ED28631A8C4BC7EB7FBA947770B34C76 /* Month.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Month.swift; path = Sources/Public/Month.swift; sourceTree = "<group>"; };
+		EDA9446FFC726A670812B82C6C7E4E39 /* SelectionGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SelectionGroup.swift; sourceTree = "<group>"; };
+		F1635653720E36C2CB21D8F3D67D0BDA /* DetailTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DetailTextField.swift; sourceTree = "<group>"; };
+		F3992B45786E7A50A147E9B00079DC16 /* SelectionGroupStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SelectionGroupStyle.swift; sourceTree = "<group>"; };
+		F43453FDE8383D74F864B08B953265AF /* Validator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Validator-umbrella.h"; sourceTree = "<group>"; };
+		F45579511528B62D4DDD4ED7123E55D2 /* HorizonCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HorizonCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4E123F0BB0035B06E4411760409FD4C /* SetRule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SetRule.swift; path = Validator/Classes/Rules/SetRule.swift; sourceTree = "<group>"; };
+		FA21E087D5C46A4314D3C1195C55586C /* Pods-Habanero_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Habanero_Tests.modulemap"; sourceTree = "<group>"; };
+		FB5EED7F8F5A806C90EE273057960410 /* Dictionary+MutatingValueForKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Dictionary+MutatingValueForKey.swift"; path = "Sources/Internal/Dictionary+MutatingValueForKey.swift"; sourceTree = "<group>"; };
+		FCEF156E7B37EFB0740F402AF48FD7B8 /* Pods-Habanero_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Habanero_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		23CB5918F6D3256C8963F994992CF2F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4196818264E3690877087F60CFDB76E6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5666BBF9F24562FB85E39FF771DAA142 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43BAAE51B22B4A5FDAE81FE30C558FEC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DE9BA1EBCFEA62849FCE2A431F18F82 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA53186913EF85C3F2D648879B86CF27 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFB140CE2EEB16F4092BEF48D598E7F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29100C0E5CD084865E5E6AA3C78DFAE0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D14214F14DECB3468653E35C264EA337 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3649BA6B06720681A1E460A6FB261F1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F00B01273370924984EBD1F6BC6A646D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00152AC5971D6B83634220FD4FCA2449 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				6FD2CC63E04EF4B19AEC960FA6987280 /* Calendar */,
+				408900867AE53250416B460CCFEAB9E2 /* Lists */,
+				0CF18457522377CE63AF626F5EDD05B4 /* Selections */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		03F325EEFC4DE6D49AA098415B53189F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				798DC0CB23E7AA28CB3F2C434E81FA70 /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		0CF18457522377CE63AF626F5EDD05B4 /* Selections */ = {
+			isa = PBXGroup;
+			children = (
+				2C71E9C316A236987F0532C6D8274DDE /* Selection.swift */,
+				EDA9446FFC726A670812B82C6C7E4E39 /* SelectionGroup.swift */,
+				F3992B45786E7A50A147E9B00079DC16 /* SelectionGroupStyle.swift */,
+			);
+			path = Selections;
+			sourceTree = "<group>";
+		};
+		175250BB48C2FD3B327064FB1AAC2CE9 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				E0B8EA25B13C595A0EAE6D546A7D120F /* Bundlable.swift */,
+				6C5E4D89975345335DA5FDF97B95E306 /* Colors.swift */,
+				C3619774039A89C5C53F93BB97BB9193 /* ColorsStandard.swift */,
+				728D762D073C7D7F370F6AC5979F520E /* Constants.swift */,
+				6C77339620661574B0E1FC57B09E595D /* ConstantsStandard.swift */,
+				02254C78BEB057CD2D87F999B41A5599 /* Images.swift */,
+				80DD67FDA14F9C96220E4644F8C7840E /* ImagesStandard.swift */,
+				D480A86DDB92E2DF99245DC8DB9ED1F6 /* Theme.swift */,
+				8A6634314F68F0397C460A83EE2B0961 /* ThemeStandard.swift */,
+			);
+			name = Theme;
+			path = Habanero/Classes/Theme;
+			sourceTree = "<group>";
+		};
+		2007E382F9CCBE44E7E3CFB65542765F /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E3FCBF3CE8AC728545F9ED0E14B033D0 /* Habanero */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		267A20E013DD77BA2ABDE920517C228B /* Menus */ = {
+			isa = PBXGroup;
+			children = (
+				1C3805FD0E66B448E62B1E33BFD670BA /* Menu.swift */,
+				B2F84C2096B2D24D5D8962AAC97197FB /* MenuPicker.swift */,
+			);
+			path = Menus;
+			sourceTree = "<group>";
+		};
+		31D8FCADF5F46F7668C07C8602FC0E10 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B00420997FE0CF50A3C4D5A02AE19647 /* Atoms */,
+				00152AC5971D6B83634220FD4FCA2449 /* Components */,
+			);
+			name = Views;
+			path = Habanero/Classes/Views;
+			sourceTree = "<group>";
+		};
+		408900867AE53250416B460CCFEAB9E2 /* Lists */ = {
+			isa = PBXGroup;
+			children = (
+				459F2BBCC5DF8274D846A692DCB1CD7D /* ActionListAccessoryViews.swift */,
+				09CC61E1116A9C22CA3709652EBFBD12 /* ActionListCell.swift */,
+				55B656ACF48841F8D09803F1BCA01077 /* ActionListNavigationStyle.swift */,
+			);
+			path = Lists;
+			sourceTree = "<group>";
+		};
+		6FD2CC63E04EF4B19AEC960FA6987280 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				2DE8472B4C6477214452CC632B1BE129 /* CalendarDayView.swift */,
+				783220C1ACA2FAEFA7200CA6D381E1B5 /* CalendarRangesView.swift */,
+				78266526E492F32D620E8A084FF09685 /* CalendarView.swift */,
+				AA5C3B105CE83FB67A74AD650A1310DB /* ManagedCalendarView.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		8EE710B09C72705BAB3F80BF7008DC48 /* Validator */ = {
+			isa = PBXGroup;
+			children = (
+				4ABD976455A57ACBFA2CEEC296730FE9 /* CharacterSetRule.swift */,
+				80A19BE5A8063D077D49961DEB0BDA2B /* DateFormatter+Helpers.swift */,
+				9E5E5968828CA7AEC48FAF2197FD3B1F /* DateRelationRule.swift */,
+				02CBBAE0F269D991C8B57B833CDFF32C /* DateRule.swift */,
+				B91E6C67972EB03A2B2F1DAC7CC5F62E /* FloatRule.swift */,
+				0D35C2B571497435DAB39E3A2E0885C7 /* LengthRule.swift */,
+				E82D5750397D8D335B0ADB5E0ABD8CF7 /* NoEmojiRule.swift */,
+				7C9BBF4BCCEFC44F80A93C97126B72A7 /* RegexRule.swift */,
+				733E2C5FED0A790DCA11891E1F0ADD58 /* RequiredRule.swift */,
+				D5062EB93AC68088EF331D81BD5F9AAF /* Rule.swift */,
+				F4E123F0BB0035B06E4411760409FD4C /* SetRule.swift */,
+				B680F9745E23920D932CE5B513C4BFB0 /* String+Helpers.swift */,
+				5F2417DF95BEC9DB73C924275133949F /* Validator.swift */,
+				4F42F2D9DAE98843F90255FFC0F5EE4A /* ValidatorError.swift */,
+				B8B967B7EF498E81F7A1FE6B9D2CF0D5 /* Support Files */,
+			);
+			path = Validator;
+			sourceTree = "<group>";
+		};
+		9D16A6FDBBD68A3C257D7DD35CB89A44 /* Status */ = {
+			isa = PBXGroup;
+			children = (
+				10485347A7C3025817AA043C661C5392 /* StatusType.swift */,
+				C29E20FE9D5B32BAE1E26A6BD65ECBD6 /* StatusView.swift */,
+			);
+			path = Status;
+			sourceTree = "<group>";
+		};
+		A1A2972BFB2C43DBAC590370E5F7A4BE /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				D4F857F8737A9A21F3090C374524074E /* Button.swift */,
+				6045BA50E486957BA65050362CDB1AD5 /* ButtonStyle.swift */,
+				9E459332B8A93CB388BA3141C9FC665D /* ButtonStyleContained.swift */,
+				2AAC7BF93CD58B737044E05263706CFB /* ButtonStyleOutline.swift */,
+				23EA5A4AC17F041EA7980BAA76FE18EC /* ButtonStyleText.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		A7160A278F1F17D2A55E48413B77B5E2 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D23238A1813A80FF05C0A877964A211B /* Pods-Habanero */,
+				B661BAA76C2A27DCD9CF13875DEF1AC6 /* Pods-Habanero_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B00420997FE0CF50A3C4D5A02AE19647 /* Atoms */ = {
+			isa = PBXGroup;
+			children = (
+				BF23A6E8972A6D113F4C1CAC3E688AAC /* Alerts */,
+				A1A2972BFB2C43DBAC590370E5F7A4BE /* Buttons */,
+				267A20E013DD77BA2ABDE920517C228B /* Menus */,
+				B69D3623FAB147C7C14B524D428D771B /* Selections */,
+				9D16A6FDBBD68A3C257D7DD35CB89A44 /* Status */,
+				C062A21A4FC7942954F22A14CD4E91F3 /* Text */,
+			);
+			path = Atoms;
+			sourceTree = "<group>";
+		};
+		B482E3237651F0D83F7FD4CF97E687CE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D8D524B719A0979C65CF3CBF228B35A3 /* Habanero.modulemap */,
+				A53573DD9892C625E85306A072F9CD2B /* Habanero-dummy.m */,
+				4527FB65EE3826FFA2007FC87FFC1721 /* Habanero-Info.plist */,
+				265092AB26200DA27F8433D4B50ECCBC /* Habanero-prefix.pch */,
+				35603F1BBF847E9DA9A3D079DD8B165E /* Habanero-umbrella.h */,
+				65FB1F27B57A51D318469CBC0756EF45 /* Habanero.debug.xcconfig */,
+				E1ED810ED2CE63C318ED52E87D65C0F8 /* Habanero.release.xcconfig */,
+				7610F38C24A6B31C52431B359F0D2958 /* ResourceBundle-Habanero-Habanero-Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Habanero";
+			sourceTree = "<group>";
+		};
+		B661BAA76C2A27DCD9CF13875DEF1AC6 /* Pods-Habanero_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				FA21E087D5C46A4314D3C1195C55586C /* Pods-Habanero_Tests.modulemap */,
+				A2D045584C78C2286730DA252CAA0438 /* Pods-Habanero_Tests-acknowledgements.markdown */,
+				FCEF156E7B37EFB0740F402AF48FD7B8 /* Pods-Habanero_Tests-acknowledgements.plist */,
+				814ED9F2C85EC5E544B0047BA2C2A1B4 /* Pods-Habanero_Tests-dummy.m */,
+				ECCF61BEA864A717368B8DB32652F46D /* Pods-Habanero_Tests-Info.plist */,
+				B0AFD7487F7DA14A1529A84AC08F357F /* Pods-Habanero_Tests-umbrella.h */,
+				CD8AA6EEB3DB1B0D6A1F986208869DA2 /* Pods-Habanero_Tests.debug.xcconfig */,
+				7E5883E35ECD7436E5B1C59946F38C80 /* Pods-Habanero_Tests.release.xcconfig */,
+			);
+			name = "Pods-Habanero_Tests";
+			path = "Target Support Files/Pods-Habanero_Tests";
+			sourceTree = "<group>";
+		};
+		B69D3623FAB147C7C14B524D428D771B /* Selections */ = {
+			isa = PBXGroup;
+			children = (
+				42316B3FF15362C577FFD37D37537100 /* CheckboxButton.swift */,
+				26E0B2457BD7AB0C67A6FE335BAEF385 /* RadioButton.swift */,
+				D8C69414396B5EFE9E5F50DB751C9FF4 /* SelectionControl.swift */,
+				C4E758097862E2CDF578C04A34A6AA88 /* SelectionControlButton.swift */,
+				5752ADDDAB5F55E388BD5AC5605B5FD4 /* SelectionLabel.swift */,
+			);
+			path = Selections;
+			sourceTree = "<group>";
+		};
+		B8B967B7EF498E81F7A1FE6B9D2CF0D5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC78EF5D632F489DAA2785A7D30C68BF /* Validator.modulemap */,
+				284E08798168493D634A226F1E07558E /* Validator-dummy.m */,
+				E5FB637B7EDE695046709748D7175EF9 /* Validator-Info.plist */,
+				949DD2625B97B270160343819E5555FC /* Validator-prefix.pch */,
+				F43453FDE8383D74F864B08B953265AF /* Validator-umbrella.h */,
+				2D3E0C79A93F05458C39711895AF1986 /* Validator.debug.xcconfig */,
+				E5719FD64CB5655A68C4D4B7E8815ABA /* Validator.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Validator";
+			sourceTree = "<group>";
+		};
+		B952169149378A68F2E3CBB1AB996423 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F5EA92278E84D397FF68CBFFACFF371D /* HorizonCalendar */,
+				8EE710B09C72705BAB3F80BF7008DC48 /* Validator */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BEBB89C966A1431F7F8C92D0E5AC062F /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				E7A4CA9FB8F0A0679020017587414FE6 /* NumberInputFormatter.swift */,
+				6257FC1E4F74E0630A44ACC26A448B3F /* StringInputFormatter.swift */,
+				6D945B0F96073E26968F4070E469FFD5 /* TextInputFormatter.swift */,
+			);
+			path = Formatters;
+			sourceTree = "<group>";
+		};
+		BF23A6E8972A6D113F4C1CAC3E688AAC /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				551EF03FEE929AA743BE7ACB084196B8 /* AlertManager.swift */,
+				9A3BDC85DE9E9DFBEBE8A32DE9D242FB /* AlertType.swift */,
+				024983F7E46DD3D91BB7D27D3C3A22CF /* AlertView.swift */,
+			);
+			path = Alerts;
+			sourceTree = "<group>";
+		};
+		C062A21A4FC7942954F22A14CD4E91F3 /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				F1635653720E36C2CB21D8F3D67D0BDA /* DetailTextField.swift */,
+				EAA28DD58C876CA6E3E9C4FE039B70DE /* DetailTextView.swift */,
+				8AD542C58C5F5730438FEEDDF4FC3291 /* PaddedTextField.swift */,
+				98ABC18B0990C9626782759947B69262 /* TextInput.swift */,
+				51E491F6D1D76CD11A8A32F56B43ECF4 /* TextInputCountView.swift */,
+				B33D74F74FE9EB9D8B30708172B3C7FB /* TextInputDisplayable.swift */,
+				C76A4F16406B71018490288DABBDA43B /* TextInputError.swift */,
+				BEBB89C966A1431F7F8C92D0E5AC062F /* Formatters */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				2007E382F9CCBE44E7E3CFB65542765F /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				B952169149378A68F2E3CBB1AB996423 /* Pods */,
+				FCFB80BD7E668AA7E1DD911BD6C5D340 /* Products */,
+				A7160A278F1F17D2A55E48413B77B5E2 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D23238A1813A80FF05C0A877964A211B /* Pods-Habanero */ = {
+			isa = PBXGroup;
+			children = (
+				327FA2F13CF4A65EE64D5A6CC56144BE /* Pods-Habanero.modulemap */,
+				28BB22F1E3FF7BA15ED16E2822BB6E02 /* Pods-Habanero-acknowledgements.markdown */,
+				8E3B61E1D6F8DE69E521176BDAFDCB86 /* Pods-Habanero-acknowledgements.plist */,
+				C1D92CDA13B28647CD2F8DCD3D2F98AD /* Pods-Habanero-dummy.m */,
+				83131D11F2D12670323391C6EE903BE9 /* Pods-Habanero-frameworks.sh */,
+				2ADD0DCF204303B2D396F3E98798AA39 /* Pods-Habanero-Info.plist */,
+				BFCCFF546BEA4B678BB32D6887A01F12 /* Pods-Habanero-resources.sh */,
+				74A493A147B2FF78CE27130477CA66B7 /* Pods-Habanero-umbrella.h */,
+				0B3EC092989BB4DA0EE9F31F5C1E255C /* Pods-Habanero.debug.xcconfig */,
+				0F53BE1093D7712EA4C9295B04D3A2C5 /* Pods-Habanero.release.xcconfig */,
+			);
+			name = "Pods-Habanero";
+			path = "Target Support Files/Pods-Habanero";
+			sourceTree = "<group>";
+		};
+		D44C280FBACF074C272B07A3CE497C89 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				514B31E4B96370A7BAE720C964AB8191 /* Calendar+Helpers.swift */,
+				6C20B6DA64AF2C463489FCB259B28393 /* CAShapeLayer+Helpers.swift */,
+				E045BDBD5214BF0141F27AA9A56FC922 /* Day+Helpers.swift */,
+				5F9C697B5FD42E35D10503D2880F7019 /* NSAttributedString+Helpers.swift */,
+				3886A0F78DFD38A94651A67363200B9E /* NSDirectionalEdgeInsets+Helpers.swift */,
+				76C3606669C688D97737A1F8E69787F3 /* String+Helpers.swift */,
+				526215A96C7A7584966A4CFB15614A62 /* UIBarButtonItem+Helpers.swift */,
+				5B94B17A1BDC8FF3C75B02FF5E3B15D8 /* UIButton+Helpers.swift */,
+				8655BEE823635DBD8AE7E9EEABA33324 /* UIColor+Helpers.swift */,
+				9E35C74DE9B84CAA271D3D30AC7540EB /* UIEdgeInsets+Helpers.swift */,
+				74F908108727F07E61496C90AC09BC24 /* UIFont+Helpers.swift */,
+				747550013941B51BE5DA2540FF8E9D30 /* UIStackView+Helpers.swift */,
+				5AD9C5DA8561B8893733BDC048CD1183 /* UITableView+Helpers.swift */,
+				AF119B3B873E780B9898832F3ACA221B /* UITextInput+Helpers.swift */,
+				302A044120ADF37DEC80E8139FBE7BF4 /* UIView+Helpers.swift */,
+			);
+			name = Extensions;
+			path = Habanero/Classes/Extensions;
+			sourceTree = "<group>";
+		};
+		D5E51576789C322DEC190ED84DF5691B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				39D4DE018081DAFA58A8C400C6314536 /* ActionListDetail.swift */,
+				1540A9F0962CDEE25DCA15A3B15B5E4D /* ActionListItem.swift */,
+				14EA6AD797D271019AD4D7D8D3F55833 /* Alert.swift */,
+				DBA58F8E0EBC82CDF4AD9E1FD95AC5EA /* CalendarDay.swift */,
+				ECCAC820EE537BFAD573FD219FFF1DFF /* CalendarDayOfWeek.swift */,
+				7AD8CE3D93ACC551CCB3F6DA5B0D1161 /* CalendarDaySelection.swift */,
+				A97E9C3B24FD4D7A00B60512 /* CalendarDateSelection.swift */,
+				3ECACD49FA5EEF39685143F33489A1FB /* CalendarRange.swift */,
+				90496E7494F430649FA4E5D9734C0E7D /* CalendarRanges.swift */,
+				0058D0B364B7D56AEA2F871149A0F453 /* SimpleSelectionControl.swift */,
+				755A6FEFD315025C5E9D401576A8CE01 /* SimpleStatus.swift */,
+			);
+			name = ViewModels;
+			path = Habanero/Classes/ViewModels;
+			sourceTree = "<group>";
+		};
+		E3FCBF3CE8AC728545F9ED0E14B033D0 /* Habanero */ = {
+			isa = PBXGroup;
+			children = (
+				C5E8BDEFD88639A970F7E0EAC7F83FE1 /* BaseControl.swift */,
+				6B0D273024C29BE1C80BB04561CC78DE /* BaseTableViewCell.swift */,
+				9702B636E2911BCD0A0754B5866B50E3 /* BaseUIConfigurable.swift */,
+				CABAA22C2DF4064828FAD02E9B081D2C /* BaseView.swift */,
+				6584F1AA5AF55E41962066874C82D58D /* FontStyle.swift */,
+				93F2C30BE253380A9FE8430B2F66FD9F /* ViewAnchor.swift */,
+				D44C280FBACF074C272B07A3CE497C89 /* Extensions */,
+				EF657DD159301904B5A033EBB0C122F9 /* Pod */,
+				03F325EEFC4DE6D49AA098415B53189F /* Resources */,
+				B482E3237651F0D83F7FD4CF97E687CE /* Support Files */,
+				175250BB48C2FD3B327064FB1AAC2CE9 /* Theme */,
+				D5E51576789C322DEC190ED84DF5691B /* ViewModels */,
+				31D8FCADF5F46F7668C07C8602FC0E10 /* Views */,
+			);
+			name = Habanero;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		EF657DD159301904B5A033EBB0C122F9 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				A9FF83FF0B5F5D8B47F16E295646BE35 /* Habanero.podspec */,
+				E7E35A886A2AD92B39B138F238E8F9FA /* LICENSE */,
+				4832A6D71E37542ECE51FE1DF32A6544 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		F092425AE15EE257E52648AEB69364C3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E5BD86CD25503BD6B71BCB30A1067884 /* HorizonCalendar.modulemap */,
+				162511C49EA93A272EBC5D55494FED8F /* HorizonCalendar-dummy.m */,
+				825BD9D3D8DA35F959489E41A1538CA2 /* HorizonCalendar-Info.plist */,
+				BBE60A48EEE0D12D284ACFAA01EE70AB /* HorizonCalendar-prefix.pch */,
+				4C883F06F7F08D1B9F24A2276BC0B08D /* HorizonCalendar-umbrella.h */,
+				C7F2854E603AD7384549860A559E3808 /* HorizonCalendar.debug.xcconfig */,
+				C412CDAA9984A0EF188171A2F4DE7E88 /* HorizonCalendar.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/HorizonCalendar";
+			sourceTree = "<group>";
+		};
+		F5EA92278E84D397FF68CBFFACFF371D /* HorizonCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				49FF9016241AFD10D105B8F18A6210AB /* Calendar+Helpers.swift */,
+				AE77BC53A09E4B4E002D42C97D838034 /* CalendarItem.swift */,
+				B3EE309DA170FC54EB79E7C9B86F2C96 /* CalendarItemView.swift */,
+				E706867C22457AD489F2EE6A8F8A1D94 /* CalendarItemViewReuseManager.swift */,
+				20549AFB1FCFB9339BDA45EE210A4394 /* CalendarView.swift */,
+				51A3597AA2B0ABD74BD0615F54CDD108 /* CalendarViewContent.swift */,
+				4916C1FAE3134210AB6A80605AD37A10 /* CalendarViewScrollPosition.swift */,
+				022D93D426FCEB6FACF727C25AF8BAC8 /* Day.swift */,
+				C53973A8BA2AE9DC3FA79343AE8F76CA /* DayOfWeekPosition.swift */,
+				91623BCA5360F375FAA66BD0F5B83562 /* DayRange.swift */,
+				FB5EED7F8F5A806C90EE273057960410 /* Dictionary+MutatingValueForKey.swift */,
+				C46E4E67E9E3F127F1BFACE9397FF137 /* FrameProvider.swift */,
+				D2C59389BE492A16B5755C334BF138E8 /* LayoutItem.swift */,
+				17B8B086E060FD6EE1A64DA43E716BF3 /* LayoutItemTypeEnumerator.swift */,
+				ED28631A8C4BC7EB7FBA947770B34C76 /* Month.swift */,
+				058607E8725F98D81807C2525B70D58F /* MonthRange.swift */,
+				A774809B946956E166AB33AAE068D16F /* MonthsLayout.swift */,
+				9F13CAF127286B36002C793EB9ADEF6D /* OffScreenCalendarItemAccessibilityElement.swift */,
+				7F961FD234844771A5F2A9B161EC9D86 /* ScreenPixelAlignment.swift */,
+				C9FE5BDACC85227101FA73BF546484F4 /* ScrollMetricsMutator.swift */,
+				3178FBFE1BDFB518142E418245A64DF1 /* ScrollToItemContext.swift */,
+				08D756C84E4C44FBB65F6DF89F7AC941 /* VisibleCalendarItem.swift */,
+				78FF8378098DCD9051C0834B19583A9F /* VisibleItemsProvider.swift */,
+				F092425AE15EE257E52648AEB69364C3 /* Support Files */,
+			);
+			path = HorizonCalendar;
+			sourceTree = "<group>";
+		};
+		FCFB80BD7E668AA7E1DD911BD6C5D340 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5E4446448C2C25C0899E10630DA0B5B0 /* Habanero.bundle */,
+				6F7365BB36B67315930B504AC5B8FEC0 /* Habanero.framework */,
+				F45579511528B62D4DDD4ED7123E55D2 /* HorizonCalendar.framework */,
+				8E92A93407E270AE035EA3B9DCF754BB /* Pods_Habanero.framework */,
+				B0301BF907EF962E46200990C0787163 /* Pods_Habanero_Tests.framework */,
+				778A43DE3EA035383F503F3CB114C303 /* Validator.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		21C26F0FF05C8C6F50F85EF542A14034 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06B0111D878929B6B3203AC3C4304B90 /* Habanero-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B238BF3F895E95CBCF061DB906B43A1B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E644A648F4CFF18F423980A77D25CFD /* HorizonCalendar-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6B2F4AC13922879753D59D95A2B73AB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95E26799AE7B5D16E26BC0A05DACD229 /* Pods-Habanero_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D54ABF8A04D91D70F719F074630FC0D1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F636EA79764080DF451B5D620BEB6F5F /* Pods-Habanero-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F50AC8602C24B8610F8B0C20F512BD76 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69D63F58B4A153242DAC5E3B68881562 /* Validator-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		06F2B2E25E8D0A392F1AF3F09E30184A /* HorizonCalendar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F221528183C460CBFD2ACE580683DF7 /* Build configuration list for PBXNativeTarget "HorizonCalendar" */;
+			buildPhases = (
+				B238BF3F895E95CBCF061DB906B43A1B /* Headers */,
+				65E3E3E6DF8241A0167BA9442B1EC6FC /* Sources */,
+				23CB5918F6D3256C8963F994992CF2F1 /* Frameworks */,
+				0F213D3B8F8A29E630FC284545BEC250 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HorizonCalendar;
+			productName = HorizonCalendar;
+			productReference = F45579511528B62D4DDD4ED7123E55D2 /* HorizonCalendar.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		44E7E03875D04F3FFAEE1E88F50589CA /* Validator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD28808B27CC31BFED1A428E248CD63D /* Build configuration list for PBXNativeTarget "Validator" */;
+			buildPhases = (
+				F50AC8602C24B8610F8B0C20F512BD76 /* Headers */,
+				3677B446816DA76A29B00C9293736C3A /* Sources */,
+				6DE9BA1EBCFEA62849FCE2A431F18F82 /* Frameworks */,
+				4BAA1664EA8905DABC68D611B7238210 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Validator;
+			productName = Validator;
+			productReference = 778A43DE3EA035383F503F3CB114C303 /* Validator.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		92B6BDE86BAA3EC37E34D29C4221FDD8 /* Habanero */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3EF36161D18FC7FB8A9B9E9785AF5DA /* Build configuration list for PBXNativeTarget "Habanero" */;
+			buildPhases = (
+				21C26F0FF05C8C6F50F85EF542A14034 /* Headers */,
+				F2D951354DA42DDFD822ABF7287905BF /* Sources */,
+				5666BBF9F24562FB85E39FF771DAA142 /* Frameworks */,
+				2BE909A5F497500466F66178ABDED907 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B32EE41CDD9B351A1A6F9AE5699D4986 /* PBXTargetDependency */,
+				6D3E6153A0F5A99914B669C5A2B85B5D /* PBXTargetDependency */,
+			);
+			name = Habanero;
+			productName = Habanero;
+			productReference = 6F7365BB36B67315930B504AC5B8FEC0 /* Habanero.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A67DAE410D595411BB02155C40EE7443 /* Habanero-Habanero */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A780988E9499CD144CAF65AFADAA99B8 /* Build configuration list for PBXNativeTarget "Habanero-Habanero" */;
+			buildPhases = (
+				69F0ECC62F288196CECF406F85CCD404 /* Sources */,
+				F00B01273370924984EBD1F6BC6A646D /* Frameworks */,
+				F09D0867B168821C26D7F731904F3F2B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Habanero-Habanero";
+			productName = "Habanero-Habanero";
+			productReference = 5E4446448C2C25C0899E10630DA0B5B0 /* Habanero.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		B389B0E07BCD12F9952498EFE984ECC3 /* Pods-Habanero_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEB079D5CAF3A4DC4E3B57F52A51DFE8 /* Build configuration list for PBXNativeTarget "Pods-Habanero_Tests" */;
+			buildPhases = (
+				C6B2F4AC13922879753D59D95A2B73AB /* Headers */,
+				35258A4CC3276BD075941E2CA95B708F /* Sources */,
+				CFB140CE2EEB16F4092BEF48D598E7F7 /* Frameworks */,
+				40E988C9F8F913F72650E3FE7AD18ED7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00564AB3B59252D282E871202608EFF1 /* PBXTargetDependency */,
+			);
+			name = "Pods-Habanero_Tests";
+			productName = "Pods-Habanero_Tests";
+			productReference = B0301BF907EF962E46200990C0787163 /* Pods_Habanero_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		ECDB4D4CECFFCF3F279364DD3C77DDCF /* Pods-Habanero */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0DE7EC436CC1A492F03DAAFCDC8C07B /* Build configuration list for PBXNativeTarget "Pods-Habanero" */;
+			buildPhases = (
+				D54ABF8A04D91D70F719F074630FC0D1 /* Headers */,
+				10EAF7754E47FDB194D918D4B5E4BA59 /* Sources */,
+				D14214F14DECB3468653E35C264EA337 /* Frameworks */,
+				EB7400F2A2E269FC13B4B963AB69D159 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB94641BDD2A8D94177FFCAE1CF86325 /* PBXTargetDependency */,
+				219DD53F71FA130210AD65176E201CB9 /* PBXTargetDependency */,
+				B157FFB17125132DBFC33102EE8EB564 /* PBXTargetDependency */,
+			);
+			name = "Pods-Habanero";
+			productName = "Pods-Habanero";
+			productReference = 8E92A93407E270AE035EA3B9DCF754BB /* Pods_Habanero.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1160;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = FCFB80BD7E668AA7E1DD911BD6C5D340 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				92B6BDE86BAA3EC37E34D29C4221FDD8 /* Habanero */,
+				A67DAE410D595411BB02155C40EE7443 /* Habanero-Habanero */,
+				06F2B2E25E8D0A392F1AF3F09E30184A /* HorizonCalendar */,
+				ECDB4D4CECFFCF3F279364DD3C77DDCF /* Pods-Habanero */,
+				B389B0E07BCD12F9952498EFE984ECC3 /* Pods-Habanero_Tests */,
+				44E7E03875D04F3FFAEE1E88F50589CA /* Validator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0F213D3B8F8A29E630FC284545BEC250 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BE909A5F497500466F66178ABDED907 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40E988C9F8F913F72650E3FE7AD18ED7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BAA1664EA8905DABC68D611B7238210 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB7400F2A2E269FC13B4B963AB69D159 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F09D0867B168821C26D7F731904F3F2B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA0522BDEEDDFF0A0A23701D6464066C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		10EAF7754E47FDB194D918D4B5E4BA59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				235D57123B128476D1A45A84C22E3B24 /* Pods-Habanero-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35258A4CC3276BD075941E2CA95B708F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED6262ACFF47EAAC82BAE40BA4C755FF /* Pods-Habanero_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3677B446816DA76A29B00C9293736C3A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B54189E45F7E979AE86F70A2B256958 /* CharacterSetRule.swift in Sources */,
+				73022B9817872FC51B93755047B6DE11 /* DateFormatter+Helpers.swift in Sources */,
+				15CD6FDF78706D203E78CF42D738D3A4 /* DateRelationRule.swift in Sources */,
+				C12B21F62C625BBAFBC3ED60092F794C /* DateRule.swift in Sources */,
+				A64A66D3ED89F6B684EED40AF8DCE9AF /* FloatRule.swift in Sources */,
+				61EBB1A3BA66BDB9B43D8429AF1973D8 /* LengthRule.swift in Sources */,
+				6B01FA531BEAB95662302C1FF4CD53A7 /* NoEmojiRule.swift in Sources */,
+				B2DA7D421E3CD9379F692E98BFEC5F3D /* RegexRule.swift in Sources */,
+				626F757467A9104F350A122DB5EA34F9 /* RequiredRule.swift in Sources */,
+				4485838DC5CB6F50DAC9E728D2BE3CD7 /* Rule.swift in Sources */,
+				62096E21A0D870F7790466046EFFBCF3 /* SetRule.swift in Sources */,
+				3A2948842EB1F0D441FD16A686FAE5FC /* String+Helpers.swift in Sources */,
+				E04D9BBAE4AA0215CB5ED49550C6E60E /* Validator-dummy.m in Sources */,
+				1BD3FA449A81438D0ECA3C5D715A10CB /* Validator.swift in Sources */,
+				3BD693253ADD02053579B04DA10A4A43 /* ValidatorError.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65E3E3E6DF8241A0167BA9442B1EC6FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2B3009BB4DA2A0C5BFBE0B02D0A07AF /* Calendar+Helpers.swift in Sources */,
+				19FBE189DD1971C440FC4FEBDC3AA8C3 /* CalendarItem.swift in Sources */,
+				F3A2776D410928396ED80873A57545C6 /* CalendarItemView.swift in Sources */,
+				2DDD3BAE0CAA4BFB912657E2FA73D8B9 /* CalendarItemViewReuseManager.swift in Sources */,
+				0E7AF3B8AD47F2C6D00FAA6D44DE2843 /* CalendarView.swift in Sources */,
+				5FA2F7FC3C307A385B7240145BB84CED /* CalendarViewContent.swift in Sources */,
+				E305036CF31315A193557F1418CBE572 /* CalendarViewScrollPosition.swift in Sources */,
+				A60563C69BCCD2FD2EC2EA8AA2F13955 /* Day.swift in Sources */,
+				9DFF26483194CDF83B625EF9DE5FAC86 /* DayOfWeekPosition.swift in Sources */,
+				36E4223ED343B857C77E86D98992A38C /* DayRange.swift in Sources */,
+				FD755806A09E8EEB07CF4FD4128B7085 /* Dictionary+MutatingValueForKey.swift in Sources */,
+				D132AFAECDCA2BCB127C7A7690321BCA /* FrameProvider.swift in Sources */,
+				69E3EFFB01B6A6A139A233085655C116 /* HorizonCalendar-dummy.m in Sources */,
+				6C639B75CE52CF4BF893A2AC4EEA7BB9 /* LayoutItem.swift in Sources */,
+				BF253F96F948B2CB28F9F7D1F13A5621 /* LayoutItemTypeEnumerator.swift in Sources */,
+				8D3D94FCC99A89B19CD788E5385F40D9 /* Month.swift in Sources */,
+				01B40A4E2ABBB8542FF090ED6376C631 /* MonthRange.swift in Sources */,
+				627047A2E2B8BE8463E850A65364A2CD /* MonthsLayout.swift in Sources */,
+				52754B3C739C29DD046D08158EBA5740 /* OffScreenCalendarItemAccessibilityElement.swift in Sources */,
+				1A6AFD6D263F28443E920D2187FDD5EF /* ScreenPixelAlignment.swift in Sources */,
+				8C0C88893567B16DC0B4F33725F38C3D /* ScrollMetricsMutator.swift in Sources */,
+				35DF66CC153C08795F4361346B10C1CE /* ScrollToItemContext.swift in Sources */,
+				9EEA7B17D2142222314202ADF6F93773 /* VisibleCalendarItem.swift in Sources */,
+				1DB3BB5486CBDF6E82EC75A41DB900CF /* VisibleItemsProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69F0ECC62F288196CECF406F85CCD404 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2D951354DA42DDFD822ABF7287905BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D30AE7895A2723D051A0F0064284725 /* ActionListAccessoryViews.swift in Sources */,
+				7D6B781B9BBE32945F560ECAFBB9517E /* ActionListCell.swift in Sources */,
+				EE979CE4FAA9B317CEC22B794B86DD7A /* ActionListDetail.swift in Sources */,
+				FE69105BD62E283785F63B9BF7E8FCC3 /* ActionListItem.swift in Sources */,
+				8D5D95B3BE3640237B0A9BEFDFC31DF9 /* ActionListNavigationStyle.swift in Sources */,
+				A39634EF5B33AAA04EEF6D4BB3D8C868 /* Alert.swift in Sources */,
+				4C39872FA6B51180B209A20FD01F35CA /* AlertManager.swift in Sources */,
+				AF92DC80FBD06C9F4C857521A52841EB /* AlertType.swift in Sources */,
+				0A8AA16B294DB8ED1040224CB916F9BB /* AlertView.swift in Sources */,
+				3E1E21CC34A8DC24240B1AE51E5401A0 /* BaseControl.swift in Sources */,
+				67485C4FFC87D5A1EE74485961DAFAAB /* BaseTableViewCell.swift in Sources */,
+				007CA7A32F75206438A198129793B09E /* BaseUIConfigurable.swift in Sources */,
+				8239FD2FA5A0D5F017A84FF7B4D8F934 /* BaseView.swift in Sources */,
+				3480180C9BE5D5499C80E480C2CDE1F4 /* Bundlable.swift in Sources */,
+				6FDB387705B5F6D39D25B4673E2C5158 /* Button.swift in Sources */,
+				6C08D4FB497CAB2B720D763EDC2588A3 /* ButtonStyle.swift in Sources */,
+				78BD90C3873C61A7849DAB43C6A36492 /* ButtonStyleContained.swift in Sources */,
+				A72E4B422CB823848F1F58D01EA3F33F /* ButtonStyleOutline.swift in Sources */,
+				AE9844768B7CC4D005DB3E3C569A9276 /* ButtonStyleText.swift in Sources */,
+				CBAF3C823BAC18A5547712953CA33EA0 /* Calendar+Helpers.swift in Sources */,
+				7EA21BDD7296E34AE6EFB85BB2F814AC /* CalendarDay.swift in Sources */,
+				284C5ACA9F0F47F9C010C10E95FF43D9 /* CalendarDayOfWeek.swift in Sources */,
+				88BBF59929164B60993DFDA1A63679F4 /* CalendarDayView.swift in Sources */,
+				4B071A6F0705E3A3B04243AB89BE745E /* CalendarRange.swift in Sources */,
+				52DF7F5F796785B045BAA2701BDD0054 /* CalendarRanges.swift in Sources */,
+				BC475FB20A3875268CA174FF663E6E2C /* CalendarRangesView.swift in Sources */,
+				DAC7E53E3807FAB13555EEDEE8CD5A24 /* CalendarDaySelection.swift in Sources */,
+				F643EBBC081F95A88CC291DC27F4F4BA /* CalendarView.swift in Sources */,
+				A1F331DE7137471FAC73E54365557987 /* CAShapeLayer+Helpers.swift in Sources */,
+				F421B22C28170B642D259E2624B2AA33 /* CheckboxButton.swift in Sources */,
+				A97E9C3C24FD4D7A00B60512 /* CalendarDateSelection.swift in Sources */,
+				B5FBE7BE0A4E7A000D0E2DA5BEDDC4A7 /* Colors.swift in Sources */,
+				0494D07A6DAEA2320B6641F728197C4E /* ColorsStandard.swift in Sources */,
+				1CDD37EF00A1ADE2FE6A95F8EAE4B2DA /* Constants.swift in Sources */,
+				DE6C1DC183621B47D9170E7528C22095 /* ConstantsStandard.swift in Sources */,
+				89059EC6182D42E9CC94C88E329DDC44 /* Day+Helpers.swift in Sources */,
+				363DA337316A4F91E96AF17936E30353 /* DetailTextField.swift in Sources */,
+				9C221C1EB4728DFB675F63FC95A7DA30 /* DetailTextView.swift in Sources */,
+				6E27C86CA7AF48920D6FBF392EC9E743 /* FontStyle.swift in Sources */,
+				70B249BB12580DA7F53367AAC2BB8F79 /* Habanero-dummy.m in Sources */,
+				0FFBA469F96635D4FFCFC741A670DE3D /* Images.swift in Sources */,
+				B05A30081637C30E18183534BFA2FB13 /* ImagesStandard.swift in Sources */,
+				56E0E52CA50C37F3670A1E03A501A6EC /* ManagedCalendarView.swift in Sources */,
+				E0D2AF89DBA07EBF2F6902FF6D49BD15 /* Menu.swift in Sources */,
+				F0FF96DEC232980DA3AF331B53E0C12F /* MenuPicker.swift in Sources */,
+				949F19697D90958E869AA4BCD2F8801D /* NSAttributedString+Helpers.swift in Sources */,
+				0585EFE8FFA0C989260BEEC9858356D3 /* NSDirectionalEdgeInsets+Helpers.swift in Sources */,
+				6460D8BEBDAD7618792348CD31B2F3DB /* NumberInputFormatter.swift in Sources */,
+				394A6012804CA2DC0A945C36B4261B3F /* PaddedTextField.swift in Sources */,
+				2F7CFF328287AC661F40FD2479E35969 /* RadioButton.swift in Sources */,
+				AC937F2CD505AFA3CBFBBEFBD1F97482 /* Selection.swift in Sources */,
+				59D93C5284CE93B956E583F47E9ABCAE /* SelectionControl.swift in Sources */,
+				83E0FEF9DA0273F639BC32D36B7BA9AF /* SelectionControlButton.swift in Sources */,
+				1A86BA5B833F9581BCF916398753C5AB /* SelectionGroup.swift in Sources */,
+				B5BB07C06052832473BA992E0B943D9C /* SelectionGroupStyle.swift in Sources */,
+				DBBDEC32E41BBDF20414D0668AC35B35 /* SelectionLabel.swift in Sources */,
+				BEA5F5FFB9212612F4580D3ACA0E5B26 /* SimpleSelectionControl.swift in Sources */,
+				58DDBD05641FE60DD20D4AC3652D2E15 /* SimpleStatus.swift in Sources */,
+				FDADCF63D17E84F9CDF1AE831ECCF385 /* StatusType.swift in Sources */,
+				72176C8F64B9A0C45D5D5C7BAD128F00 /* StatusView.swift in Sources */,
+				E0A50AB33E79A03190F7FB0CDA76E835 /* String+Helpers.swift in Sources */,
+				13E460581586D5D478C08B2B39B42861 /* StringInputFormatter.swift in Sources */,
+				8573A20042BA16855A1E28C5A3392B3F /* TextInput.swift in Sources */,
+				1D57F79E735DBB9525DBEA9037DDB8CD /* TextInputCountView.swift in Sources */,
+				76687CE959452CD85E242028C6458737 /* TextInputDisplayable.swift in Sources */,
+				4C4A2768B6F2F3D1D092A9A7BB45F697 /* TextInputError.swift in Sources */,
+				5B9047B470ED8EF5D37DADF7529F6656 /* TextInputFormatter.swift in Sources */,
+				9900233D0E7A14FEA896D2B6C805977E /* Theme.swift in Sources */,
+				88D787D0D146CC7B0ED817D1B037933D /* ThemeStandard.swift in Sources */,
+				5B7F2BC4B8C425DCDC72C423D9CDA543 /* UIBarButtonItem+Helpers.swift in Sources */,
+				33C5F3D3CEB7438FE12DDDF3B78DE445 /* UIButton+Helpers.swift in Sources */,
+				2F30C13D77E3AFD959910F06E88B9E71 /* UIColor+Helpers.swift in Sources */,
+				31BB6ED528D72778707D6B7B0386B3A3 /* UIEdgeInsets+Helpers.swift in Sources */,
+				3F555E026D96E3857AA84A5672760857 /* UIFont+Helpers.swift in Sources */,
+				3C1F1D9A9E1204C8B276A0748D1ECC87 /* UIStackView+Helpers.swift in Sources */,
+				F011EC62810ADFE8F256AFD277E70CE4 /* UITableView+Helpers.swift in Sources */,
+				8AA31C8D59FC7543459DE5F1CDF125D2 /* UITextInput+Helpers.swift in Sources */,
+				286F78F9056FEDACAA877CC9EF00C61D /* UIView+Helpers.swift in Sources */,
+				62D3BBBA1D960E53407BEACE16028E74 /* ViewAnchor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00564AB3B59252D282E871202608EFF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Habanero";
+			target = ECDB4D4CECFFCF3F279364DD3C77DDCF /* Pods-Habanero */;
+			targetProxy = C611876BD99006291D4D235B3B6CE614 /* PBXContainerItemProxy */;
+		};
+		219DD53F71FA130210AD65176E201CB9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HorizonCalendar;
+			target = 06F2B2E25E8D0A392F1AF3F09E30184A /* HorizonCalendar */;
+			targetProxy = 7EFC343902CDD52B9DF652A2FD034EA0 /* PBXContainerItemProxy */;
+		};
+		6D3E6153A0F5A99914B669C5A2B85B5D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HorizonCalendar;
+			target = 06F2B2E25E8D0A392F1AF3F09E30184A /* HorizonCalendar */;
+			targetProxy = B2F84271E0ECA549E93A381987EE2601 /* PBXContainerItemProxy */;
+		};
+		B157FFB17125132DBFC33102EE8EB564 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Validator;
+			target = 44E7E03875D04F3FFAEE1E88F50589CA /* Validator */;
+			targetProxy = 7CF3730156BE4B7EE37BCC48D664F87E /* PBXContainerItemProxy */;
+		};
+		B32EE41CDD9B351A1A6F9AE5699D4986 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Habanero-Habanero";
+			target = A67DAE410D595411BB02155C40EE7443 /* Habanero-Habanero */;
+			targetProxy = 20182B5654B4FBC3A949A888B93005C8 /* PBXContainerItemProxy */;
+		};
+		CB94641BDD2A8D94177FFCAE1CF86325 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Habanero;
+			target = 92B6BDE86BAA3EC37E34D29C4221FDD8 /* Habanero */;
+			targetProxy = AE1FD2A6F3738C0CA83A3B136E5F580D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		10A8EA6CEE4AECE37E7D528CFDD35BE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1ED810ED2CE63C318ED52E87D65C0F8 /* Habanero.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Habanero";
+				IBSC_MODULE = Habanero;
+				INFOPLIST_FILE = "Target Support Files/Habanero/ResourceBundle-Habanero-Habanero-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_NAME = Habanero;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		131356BE54884448CA49C07BEDF4BB2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		176D8685E8C2504A55FF20236C3AFA4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B3EC092989BB4DA0EE9F31F5C1E255C /* Pods-Habanero.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Habanero/Pods-Habanero-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Habanero/Pods-Habanero.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		260D7CC37CC4B71B2C38EE242F54CEDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1ED810ED2CE63C318ED52E87D65C0F8 /* Habanero.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Habanero/Habanero-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Habanero/Habanero-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Habanero/Habanero.modulemap";
+				PRODUCT_MODULE_NAME = Habanero;
+				PRODUCT_NAME = Habanero;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		40968BDC42B5995AAC59A1B6DE736066 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E5883E35ECD7436E5B1C59946F38C80 /* Pods-Habanero_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Habanero_Tests/Pods-Habanero_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Habanero_Tests/Pods-Habanero_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		443FE8DC5D61FB1AAA091E9855920917 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D3E0C79A93F05458C39711895AF1986 /* Validator.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Validator/Validator-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Validator/Validator-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Validator/Validator.modulemap";
+				PRODUCT_MODULE_NAME = Validator;
+				PRODUCT_NAME = Validator;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5C9353E20035FE145E42D62F8A38DC42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7F2854E603AD7384549860A559E3808 /* HorizonCalendar.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HorizonCalendar/HorizonCalendar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HorizonCalendar/HorizonCalendar-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/HorizonCalendar/HorizonCalendar.modulemap";
+				PRODUCT_MODULE_NAME = HorizonCalendar;
+				PRODUCT_NAME = HorizonCalendar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		77104A9C56B550BF81E8DB99A4DF1FE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD8AA6EEB3DB1B0D6A1F986208869DA2 /* Pods-Habanero_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Habanero_Tests/Pods-Habanero_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Habanero_Tests/Pods-Habanero_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8CC31ED427424B1ECE7BF2AD902E015D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65FB1F27B57A51D318469CBC0756EF45 /* Habanero.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Habanero/Habanero-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Habanero/Habanero-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Habanero/Habanero.modulemap";
+				PRODUCT_MODULE_NAME = Habanero;
+				PRODUCT_NAME = Habanero;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B3D1AE640188C28D8994858DC5424B7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65FB1F27B57A51D318469CBC0756EF45 /* Habanero.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Habanero";
+				IBSC_MODULE = Habanero;
+				INFOPLIST_FILE = "Target Support Files/Habanero/ResourceBundle-Habanero-Habanero-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_NAME = Habanero;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		CCA991D98BD0F0B42DBD9F5758FB68BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C412CDAA9984A0EF188171A2F4DE7E88 /* HorizonCalendar.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HorizonCalendar/HorizonCalendar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HorizonCalendar/HorizonCalendar-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/HorizonCalendar/HorizonCalendar.modulemap";
+				PRODUCT_MODULE_NAME = HorizonCalendar;
+				PRODUCT_NAME = HorizonCalendar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DB81DEDE17D8CB0404594F313F06E450 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5719FD64CB5655A68C4D4B7E8815ABA /* Validator.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Validator/Validator-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Validator/Validator-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Validator/Validator.modulemap";
+				PRODUCT_MODULE_NAME = Validator;
+				PRODUCT_NAME = Validator;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		ED9EAB441AAA4CF24FE09C59A8AAFB04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F53BE1093D7712EA4C9295B04D3A2C5 /* Pods-Habanero.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Habanero/Pods-Habanero-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Habanero/Pods-Habanero.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F090CD07A80273D5A73C8EA19224ADDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2F221528183C460CBFD2ACE580683DF7 /* Build configuration list for PBXNativeTarget "HorizonCalendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C9353E20035FE145E42D62F8A38DC42 /* Debug */,
+				CCA991D98BD0F0B42DBD9F5758FB68BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				131356BE54884448CA49C07BEDF4BB2A /* Debug */,
+				F090CD07A80273D5A73C8EA19224ADDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0DE7EC436CC1A492F03DAAFCDC8C07B /* Build configuration list for PBXNativeTarget "Pods-Habanero" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				176D8685E8C2504A55FF20236C3AFA4F /* Debug */,
+				ED9EAB441AAA4CF24FE09C59A8AAFB04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A780988E9499CD144CAF65AFADAA99B8 /* Build configuration list for PBXNativeTarget "Habanero-Habanero" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3D1AE640188C28D8994858DC5424B7B /* Debug */,
+				10A8EA6CEE4AECE37E7D528CFDD35BE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3EF36161D18FC7FB8A9B9E9785AF5DA /* Build configuration list for PBXNativeTarget "Habanero" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CC31ED427424B1ECE7BF2AD902E015D /* Debug */,
+				260D7CC37CC4B71B2C38EE242F54CEDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD28808B27CC31BFED1A428E248CD63D /* Build configuration list for PBXNativeTarget "Validator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				443FE8DC5D61FB1AAA091E9855920917 /* Debug */,
+				DB81DEDE17D8CB0404594F313F06E450 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEB079D5CAF3A4DC4E3B57F52A51DFE8 /* Build configuration list for PBXNativeTarget "Pods-Habanero_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77104A9C56B550BF81E8DB99A4DF1FE9 /* Debug */,
+				40968BDC42B5995AAC59A1B6DE736066 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

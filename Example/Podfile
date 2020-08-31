@@ -1,0 +1,18 @@
+source 'https://github.com/CocoaPods/Specs.git'
+source 'git@github.com:jarrodparkes/cocoapod-specs.git'
+
+platform :ios, '12.0'
+
+# comment this prior to launch to see if any warnings could cause serious errors
+inhibit_all_warnings!
+
+use_frameworks!
+
+target 'Habanero' do
+  pod 'Habanero', :path => '../'
+  pod 'Validator', '~> 0.1.6' # string validation
+
+  target 'Habanero_Tests' do
+    inherit! :search_paths
+  end
+end

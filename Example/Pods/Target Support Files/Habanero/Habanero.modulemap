@@ -1,0 +1,6 @@
+framework module Habanero {
+  umbrella header "Habanero-umbrella.h"
+
+  export *
+  module * { export * }
+}
