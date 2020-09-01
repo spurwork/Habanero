@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'Habanero'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.license          = { :type => 'Apache 2.0', :text => <<-LICENSE
       Copyright (c) Jarrod Parkes. All rights reserved.
       LICENSE
