@@ -90,18 +90,20 @@ class CalendarDayView: BaseView {
 
     private var displayable: CalendarDayViewDisplayable?
 
-    private let highlightColor = UIColor.black.withAlphaComponent(0.1)
+    private let baseHighlightColor = UIColor.black.withAlphaComponent(0.1)
 
+    private var theme: Theme?
     var dayAccessibilityText: String?
 
     var isHighlighted = false {
         didSet {
-            if let displayable = displayable, displayable.selectionStyle == .none, !displayable.isHighlighted {
-                backgroundView.backgroundColor = isHighlighted ? highlightColor : .clear
+            guard let theme = theme else { return }
+
+            if let displayable = displayable, displayable.selectionStyle == .none {
+                backgroundColor = isHighlighted ? baseHighlightColor : .clear
             } else if let displayable = displayable {
-                backgroundView.backgroundColor = displayable.isHighlighted ? highlightColor : .clear
-            } else {
-                backgroundView.backgroundColor = .clear
+                backgroundColor = isHighlighted ? displayable.selectionStyle
+                    .backgroundColor(colors: theme.colors).withAlphaComponent(0.1) : .clear
             }
         }
     }
@@ -128,6 +130,7 @@ class CalendarDayView: BaseView {
 
     override func layoutSubviews() {
         super.layoutSubviews()
+        layer.cornerRadius = min(bounds.width, bounds.height) / 2
         backgroundView.layer.cornerRadius = min(bounds.width, bounds.height) / 2
     }
 
@@ -145,6 +148,7 @@ class CalendarDayView: BaseView {
     // MARK: Helpers
 
     func styleWith(theme: Theme, calendar: Calendar, displayable: CalendarDayViewDisplayable) {
+        self.theme = theme
         self.displayable = displayable
 
         let colors = theme.colors
@@ -164,12 +168,14 @@ class CalendarDayView: BaseView {
 
         // background
         if !selectionStyle.isBoundaryStyle {
-            backgroundView.layer.borderColor = UIColor.black.cgColor
-            backgroundView.layer.borderWidth = isToday ? 1 : 0
-            backgroundView.backgroundColor = displayable.isHighlighted ? highlightColor : .clear
+            backgroundView.backgroundColor = displayable.isHighlighted ? baseHighlightColor : .clear
         } else {
             backgroundView.backgroundColor = selectionStyle.backgroundColor(colors: colors)
         }
+
+        // border
+        backgroundView.layer.borderColor = UIColor.black.cgColor
+        backgroundView.layer.borderWidth = isToday ? 1 : 0
 
         // stack view
         stackView.axis = .vertical

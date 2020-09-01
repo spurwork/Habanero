@@ -128,7 +128,7 @@ extension ComponentsFC: ActionListVCDelegate {
                                                 calendar.date(byAdding: .day, value: 2, to: startDate)!,
                                                 calendar.date(byAdding: .day, value: 3, to: startDate)!
                                             ]),
-                                            areDaysSelectable: false)
+                                            areDaysSelectable: true)
             case 3:
                 config = CalendarViewConfig(dateRange: dateRange,
                                             accessoryStyle: .none,
