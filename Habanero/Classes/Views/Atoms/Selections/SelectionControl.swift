@@ -22,7 +22,10 @@ public protocol SelectionControlDisplayable {
     var tipLinkable: Bool { get }
 
     /// Is the control selected?
-    var selected: Bool { get }
+    var isSelected: Bool { get }
+
+    /// Is the control enabled?
+    var isEnabled: Bool { get }
 }
 
 // MARK: - SelectionControlDelegate
@@ -226,7 +229,9 @@ public class SelectionControl: BaseControl {
         }
 
         selectionControlButton.styleWith(theme: theme)
-        selectionControlButton.isSelected = displayable.selected
+
+        isSelected = displayable.isSelected
+        isEnabled = displayable.isEnabled
     }
 
     // MARK: Helpers

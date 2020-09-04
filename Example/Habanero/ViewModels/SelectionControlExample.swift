@@ -11,7 +11,10 @@ import Habanero
 
 struct SelectionControlExample: SelectionControlDisplayable {
     let title: String
+    
     let tip: String?
     let tipLinkable: Bool
-    let selected: Bool
+    
+    let isSelected: Bool
+    let isEnabled: Bool
 }

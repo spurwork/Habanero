@@ -35,6 +35,15 @@ public struct ColorsStandard: Colors, Bundlable {
         return bundleColor(named: "TintImageBarButtonItem", fallbackColor: .surfaceBlack)
     }
 
+    // MARK: Button
+
+    public var tintButtonImagePrimary: UIColor {
+        return bundleColor(named: "TintButtonImagePrimary", fallbackColor: .supportBlack100)
+    }
+    public var tintButtonImageDisabled: UIColor {
+        return bundleColor(named: "TintButtonImageDisabled", fallbackColor: .supportGrey400)
+    }
+
     // MARK: Borders
 
     public var borderDisabled: UIColor {

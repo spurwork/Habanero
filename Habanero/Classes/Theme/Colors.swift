@@ -28,6 +28,13 @@ public protocol Colors {
     /// Tint color for the image in a `UIBarButtonItem`.
     var tintImageBarButtonItem: UIColor { get }
 
+    // MARK: Button
+
+    /// Primary tint color for an image in a `UIButton`.
+    var tintButtonImagePrimary: UIColor { get }
+    /// Disabled tint color for an image in a `UIButton`.
+    var tintButtonImageDisabled: UIColor { get }
+
     // MARK: Borders
 
     /// Standard border color.

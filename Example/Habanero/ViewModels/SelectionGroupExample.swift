@@ -20,6 +20,7 @@ struct SelectionGroupExample: SelectionGroupDisplayable {
     let tag: Int
     let style: SelectionGroupStyle
     
+    var isEnabled: Bool
     var selection: Selection
     var choices: [SelectionControlDisplayable] { return controls }
     
@@ -40,6 +41,8 @@ struct SelectionGroupExample: SelectionGroupDisplayable {
         case (.multi, _):
             self.selection = .multi([])
         }
+        
+        isEnabled = true
     }
     
     init(controls: [SelectionControlDisplayable], tag: Int, style: SelectionGroupStyle) {
@@ -53,6 +56,8 @@ struct SelectionGroupExample: SelectionGroupDisplayable {
         case .multi:
             selection = .multi([])
         }
+        
+        isEnabled = true
     }
 }
 
@@ -123,20 +128,35 @@ extension SelectionGroupExample {
                      tag: Int,
                      numberOfOptions: Int,
                      singleStyle: SelectionGroupSingleStyle,
-                     selectedIndex: Int?) -> SelectionGroupExample {
+                     selectedIndex: Int?,
+                     isEnabled: Bool = true) -> SelectionGroupExample {
         let controls = (0..<numberOfOptions).map {
-            SelectionControlExample(title: "Option \($0 + 1)", tip: "A tip", tipLinkable: false, selected: false)
+            SelectionControlExample(
+                title: "Option \($0 + 1)",
+                tip: "A tip",
+                tipLinkable: false,
+                isSelected: false,
+                isEnabled: isEnabled)
         }
-
-        return SelectionGroupExample(controls: controls,
-                                     tag: tag,
-                                     style: .single(singleStyle),
-                                     selection: .single(selectedIndex))
+        
+        var group = SelectionGroupExample(controls: controls,
+                                          tag: tag,
+                                          style: .single(singleStyle),
+                                          selection: .single(selectedIndex))
+        
+        group.isEnabled = isEnabled
+        
+        return group
     }
     
     static func mock(theme: Theme, tag: Int, numberOfOptions: Int, selectedIndices indices: [Int]) -> SelectionGroupExample {
         let controls = (0..<numberOfOptions).map {
-            SelectionControlExample(title: "Option \($0 + 1)", tip: "A tip", tipLinkable: false, selected: false)
+            SelectionControlExample(
+                title: "Option \($0 + 1)",
+                tip: "A tip",
+                tipLinkable: false,
+                isSelected: false,
+                isEnabled: true)
         }
         
         return SelectionGroupExample(controls: controls,
@@ -146,13 +166,13 @@ extension SelectionGroupExample {
     }
     
     static func mockWithVariableChoiceLengths(theme: Theme, tag: Int) -> SelectionGroupExample {
-        let illinois = SelectionControlExample(title: "Illinois", tip: nil, tipLinkable: false, selected: false)
-        let indiana = SelectionControlExample(title: "Indiana", tip: nil, tipLinkable: false, selected: false)
-        let michigan = SelectionControlExample(title: "Michigan", tip: nil, tipLinkable: false, selected: false)
-        let ohio = SelectionControlExample(title: "Ohio and I am not a shareholder-employee who is a \"twenty (20) percent or greater\" direct or indirect equity investor in an S corporation", tip: nil, tipLinkable: false, selected: false)
-        let virginia = SelectionControlExample(title: "Virginia and I commute daily to my place of employment in Kentucky", tip: nil, tipLinkable: false, selected: false)
-        let wisconsin = SelectionControlExample(title: "Wisconsin", tip: nil, tipLinkable: false, selected: false)
-        let westVirginia = SelectionControlExample(title: "West Virginia", tip: nil, tipLinkable: false, selected: false)
+        let illinois = SelectionControlExample(title: "Illinois", tip: nil, tipLinkable: false, isSelected: false, isEnabled: true)
+        let indiana = SelectionControlExample(title: "Indiana", tip: nil, tipLinkable: false, isSelected: false, isEnabled: true)
+        let michigan = SelectionControlExample(title: "Michigan", tip: nil, tipLinkable: false, isSelected: false, isEnabled: true)
+        let ohio = SelectionControlExample(title: "Ohio and I am not a shareholder-employee who is a \"twenty (20) percent or greater\" direct or indirect equity investor in an S corporation", tip: nil, tipLinkable: false, isSelected: false, isEnabled: true)
+        let virginia = SelectionControlExample(title: "Virginia and I commute daily to my place of employment in Kentucky", tip: nil, tipLinkable: false, isSelected: false, isEnabled: true)
+        let wisconsin = SelectionControlExample(title: "Wisconsin", tip: nil, tipLinkable: false, isSelected: false, isEnabled: true)
+        let westVirginia = SelectionControlExample(title: "West Virginia", tip: nil, tipLinkable: false, isSelected: false, isEnabled: true)
         
         let controls = [
             illinois,

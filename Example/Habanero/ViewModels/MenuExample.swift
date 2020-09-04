@@ -18,6 +18,7 @@ struct MenuExample: MenuDisplayable {
     let tag: Int
     let style: SelectionGroupStyle = .single(.menu)
     
+    var isEnabled: Bool = true    
     var selectedIndices: (Int?, Int?)
     
     // MARK: MenuDisplayable
@@ -92,7 +93,7 @@ struct MenuExample: MenuDisplayable {
     var choices: [SelectionControlDisplayable] {
         let selectedIndex = selection.selectedIndex
         return options[0].enumerated().map {
-            SelectionControlExample(title: $1, tip: nil, tipLinkable: false, selected: $0 == selectedIndex)
+            SelectionControlExample(title: $1, tip: nil, tipLinkable: false, isSelected: $0 == selectedIndex, isEnabled: isEnabled)
         }
     }
 }

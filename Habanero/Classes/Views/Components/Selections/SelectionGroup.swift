@@ -13,6 +13,9 @@ public protocol SelectionGroupDisplayable {
 
     /// The style of the `SelectionGroup`.
     var style: SelectionGroupStyle { get }
+
+    /// Is the `SelectionGroup` enabled?
+    var isEnabled: Bool { get set }
 }
 
 // MARK: - SelectionGroupDelegate
@@ -217,15 +220,24 @@ public class SelectionGroup: BaseView {
         for (index, choice) in displayable.choices.enumerated() {
             let selectionControl = selectionControls[index]
             let displayable = SimpleSelectionControl(title: choice.title,
-                                                     selected: selectedIndices.contains(index),
                                                      tip: choice.tip,
-                                                     tipLinkable: choice.tipLinkable)
+                                                     tipLinkable: choice.tipLinkable,
+                                                     isSelected: selectedIndices.contains(index),
+                                                     isEnabled: displayable.isEnabled)
 
             selectionControl.delegate = self
             selectionControl.tipDelegate = self
 
             selectionControl.styleWith(theme: theme, displayable: displayable)
             selectionControl.isHidden = showAll ? false : (index > topChoices)
+        }
+
+        let expandView = choiceStack.arrangedSubviews.first { $0 is UIButton }
+        if let expandView = expandView, let expandButton = expandView as? UIButton, !showAll {
+            let colors = theme.colors
+            expandButton.isEnabled = displayable.isEnabled
+            expandButton.tintColor = displayable.isEnabled ?
+                colors.tintButtonImagePrimary : colors.tintButtonImageDisabled
         }
     }
 }

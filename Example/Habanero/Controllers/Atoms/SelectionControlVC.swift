@@ -17,9 +17,9 @@ class SelectionControlVC: StateSwappingVC {
     let type: SelectionControlType
     
     var examples: [SelectionControlExample] = [
-        SelectionControlExample(title: SELECTION_CONTROL_TITLE, tip: nil, tipLinkable: false, selected: false),
-        SelectionControlExample(title: SELECTION_CONTROL_TITLE, tip: SELECTION_CONTROL_TIP, tipLinkable: false, selected: false),
-        SelectionControlExample(title: SELECTION_CONTROL_TITLE, tip: SELECTION_CONTROL_TIP, tipLinkable: true, selected: false)
+        SelectionControlExample(title: SELECTION_CONTROL_TITLE, tip: nil, tipLinkable: false, isSelected: false, isEnabled: true),
+        SelectionControlExample(title: SELECTION_CONTROL_TITLE, tip: SELECTION_CONTROL_TIP, tipLinkable: false, isSelected: false, isEnabled: true),
+        SelectionControlExample(title: SELECTION_CONTROL_TITLE, tip: SELECTION_CONTROL_TIP, tipLinkable: true, isSelected: false, isEnabled: true)
     ]
     
     // MARK: Initializer
@@ -104,15 +104,17 @@ class SelectionControlVC: StateSwappingVC {
             switch tag {
             case 0:
                 examples[index] = SelectionControlExample(title: text,
-                                                   tip: examples[index].tip,
-                                                   tipLinkable: examples[index].tipLinkable,
-                                                   selected: examples[index].selected)
+                                                          tip: examples[index].tip,
+                                                          tipLinkable: examples[index].tipLinkable,
+                                                          isSelected: examples[index].isSelected,
+                                                          isEnabled: examples[index].isEnabled)
             default:
                 if examples[index].tip != nil {
                     examples[index] = SelectionControlExample(title: examples[index].title,
-                                                       tip: text,
-                                                       tipLinkable: examples[index].tipLinkable,
-                                                       selected: examples[index].selected)
+                                                              tip: text,
+                                                              tipLinkable: examples[index].tipLinkable,
+                                                              isSelected: examples[index].isSelected,
+                                                              isEnabled: examples[index].isEnabled)
                 }
             }
         }

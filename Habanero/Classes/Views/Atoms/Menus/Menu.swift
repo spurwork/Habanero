@@ -86,8 +86,9 @@ public class Menu: BaseView {
 
         menuButton.styleWith(theme: theme)
         menuButton.setTitle(displayable.selectedValue ?? displayable.placeholder, for: .normal)
-
         styleTitleColor()
+
+        menuButton.isEnabled = displayable.isEnabled
     }
 
     private func styleTitleColor() {
