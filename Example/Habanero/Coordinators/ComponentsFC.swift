@@ -45,7 +45,8 @@ class ComponentsFC: HabaneroExampleFC {
                                             "Calendar (Multi Select)",
                                             "Calendar (Single Range)",
                                             "Calendar (Multi Range)",
-                                            "Footer"],
+                                            "Footer",
+                                            "Footer (Styles)"],
                                         forceBackable: true)
         componentsVC.delegate = self
         
@@ -92,7 +93,9 @@ extension ComponentsFC: ActionListVCDelegate {
         case 2: controller = SelectionGroupSingleVC()
         case 3: controller = SelectionGroupMultiVC()
         case 4, 5, 6, 7, 8: controller = calendarVC(atRow: row)
+            // TODO: make this one interactive
         case 9: controller = ExamplesVC.footers(theme: theme)
+        case 10: controller = ExamplesVC.footers(theme: theme)
         default: return
         }
         

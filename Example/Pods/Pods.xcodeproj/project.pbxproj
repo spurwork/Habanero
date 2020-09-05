@@ -89,6 +89,7 @@
 		A53FDCFEFCCA5064077AF363B03D26CA /* LayoutItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C59389BE492A16B5755C334BF138E8 /* LayoutItem.swift */; };
 		A64A66D3ED89F6B684EED40AF8DCE9AF /* FloatRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91E6C67972EB03A2B2F1DAC7CC5F62E /* FloatRule.swift */; };
 		A83BE1A38CCCD12377319AED4990F096 /* CalendarViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A3597AA2B0ABD74BD0615F54CDD108 /* CalendarViewContent.swift */; };
+		A92298532503CFCC00F2CCD7 /* FooterLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92298522503CFCC00F2CCD7 /* FooterLabel.swift */; };
 		A965D1B5250319DA0085B70B /* Footer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A965D1B4250319DA0085B70B /* Footer.swift */; };
 		A965D1B725031BA40085B70B /* FooterTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A965D1B625031BA40085B70B /* FooterTypes.swift */; };
 		A965D1BB2503235A0085B70B /* FooterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A965D1BA2503235A0085B70B /* FooterModel.swift */; };
@@ -298,6 +299,7 @@
 		A774809B946956E166AB33AAE068D16F /* MonthsLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MonthsLayout.swift; path = Sources/Public/MonthsLayout.swift; sourceTree = "<group>"; };
 		A7756EFE2E67CFC78BB217E86B7EB5AD /* CalendarDayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalendarDayView.swift; sourceTree = "<group>"; };
 		A795F19936C9FD8491538E4494B4D641 /* NumberInputFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NumberInputFormatter.swift; sourceTree = "<group>"; };
+		A92298522503CFCC00F2CCD7 /* FooterLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterLabel.swift; sourceTree = "<group>"; };
 		A965D1B4250319DA0085B70B /* Footer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Footer.swift; sourceTree = "<group>"; };
 		A965D1B625031BA40085B70B /* FooterTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterTypes.swift; sourceTree = "<group>"; };
 		A965D1BA2503235A0085B70B /* FooterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterModel.swift; sourceTree = "<group>"; };
@@ -494,6 +496,7 @@
 				5FEB92E0D678298A055C1B42890AD59E /* CalendarRange.swift */,
 				1F4CF609DD5816D53D2D99B1C4F056FC /* CalendarRanges.swift */,
 				A965D1BA2503235A0085B70B /* FooterModel.swift */,
+				A92298522503CFCC00F2CCD7 /* FooterLabel.swift */,
 				D1DD85EC48411259B446CCD634B5C984 /* SimpleSelectionControl.swift */,
 				24107C22A8E04EC3D9E61DB5B887B88F /* SimpleStatus.swift */,
 			);
@@ -1210,6 +1213,7 @@
 				A97AA823E434130548B5EABDC495B6B6 /* TextInput.swift in Sources */,
 				9F52DC50F24B17500D164CFD944F005B /* TextInputCountView.swift in Sources */,
 				6022756AE5429E8A3218A6E0DFEB3274 /* TextInputDisplayable.swift in Sources */,
+				A92298532503CFCC00F2CCD7 /* FooterLabel.swift in Sources */,
 				696366142A4DBD8FBBD5CE2B1039D8C4 /* TextInputError.swift in Sources */,
 				03EDA5254D5250FA6AA6B65011BE060E /* TextInputFormatter.swift in Sources */,
 				19748031645BF82CEF54CC14C9E65BE3 /* Theme.swift in Sources */,

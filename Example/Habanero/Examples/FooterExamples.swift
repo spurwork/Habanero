@@ -41,13 +41,27 @@ struct FooterExamples: ExamplesVCDisplayable {
 extension FooterExamples {
     static func mock(theme: Theme) -> FooterExamples {
         let titles = [
-            "Footer (Left, Right)",
-            "Footer (Center)"
+            "Buttons: None, Content: None",
+            "Buttons: None, Content: Label",
+            "Buttons: None, Content: Label (Tappable)",
+            "Buttons: LeftRight, Content: None",
+            "Buttons: LeftRight, Content: Label",
+            "Buttons: LeftRight, Content: Label (Tappable)",
+            "Buttons: Center, Content: None",
+            "Buttons: Center, Content: Label",
+            "Buttons: Center, Content: Label (Tappable)",
         ]
         
         let examples: [FooterModel] = [
+            FooterModel(buttonState: .none, content: .none),
+            FooterModel(buttonState: .none, content: .label(FooterLabel(text: "Label", icon: "🎁", isTappable: false))),
+            FooterModel(buttonState: .none, content: .label(FooterLabel(text: "Label", icon: "🎁", isTappable: true))),
             FooterModel(buttonState: .leftRight("Left", "Right", .primary), content: .none),
-            FooterModel(buttonState: .center("Center", .primary), content: .none)
+            FooterModel(buttonState: .leftRight("Left", "Right", .primary), content: .label(FooterLabel(text: "Label", icon: "🎁", isTappable: false))),
+            FooterModel(buttonState: .leftRight("Left", "Right", .primary), content: .label(FooterLabel(text: "Label", icon: "🎁", isTappable: true))),
+            FooterModel(buttonState: .center("Center", .primary), content: .none),
+            FooterModel(buttonState: .center("Center", .primary), content: .label(FooterLabel(text: "Label", icon: "🎁", isTappable: false))),
+            FooterModel(buttonState: .center("Center", .primary), content: .label(FooterLabel(text: "Label", icon: "🎁", isTappable: true))),
         ]
         
         return FooterExamples(titles: titles, examples: examples)

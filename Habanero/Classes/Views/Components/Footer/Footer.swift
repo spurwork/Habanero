@@ -1,3 +1,8 @@
+// TODO: when label is tappable make sure the textColor is different
+// TODO: figure out way such that whenever footer is added, it is fixed to the bottom of its containing view
+// TODO: test checkbox styles in FooterExamples
+// TODO: test delegate methods (interactive footer example)
+
 // MARK: - FooterDisplayable
 
 public protocol FooterDisplayable {
@@ -12,6 +17,9 @@ public protocol FooterDisplayable {
 
 public protocol FooterDelegate: class {
     func footerButtonWasTapped(_ footer: Footer, position: FooterButtonPosition)
+    func footerLabelWasTapped(_ footer: Footer)
+    func footerCheckboxWasTapped(_ footer: Footer)
+    func footerTipWasTapped(_ footer: Footer, backedValue: Any)
 }
 
 // MARK: - Footer: BaseView
@@ -21,7 +29,7 @@ public class Footer: BaseView {
     // MARK: Properites
 
     private let mainStackView = UIStackView(frame: .zero)
-    private let aboveContentStackView = UIStackView(frame: .zero)
+    private let contentStackView = UIStackView(frame: .zero)
     private let buttonStackView = UIStackView(frame: .zero)
 
     private let divider = UIView(frame: .zero)
@@ -48,6 +56,7 @@ public class Footer: BaseView {
 
     public weak var delegate: FooterDelegate?
 
+    private var theme: Theme?
     private var lastDisplayable: FooterDisplayable?
 
     // MARK: BaseView
@@ -57,7 +66,7 @@ public class Footer: BaseView {
         buttonStackView.addArrangedSubview(centerButton)
         buttonStackView.addArrangedSubview(rightButton)
 
-        mainStackView.addArrangedSubview(aboveContentStackView)
+        mainStackView.addArrangedSubview(contentStackView)
         mainStackView.addArrangedSubview(buttonStackView)
 
         addSubview(mainStackView)
@@ -90,6 +99,7 @@ public class Footer: BaseView {
     // MARK: Custom Styling
 
     public func styleWith(theme: Theme, displayable: FooterDisplayable) {
+        self.theme = theme
         lastDisplayable = displayable
 
         if case let .none = displayable.buttonState, case let .none = displayable.content {
@@ -106,6 +116,7 @@ public class Footer: BaseView {
         styleWith(theme: theme, buttonState: displayable.buttonState)
 
         // content
+        styleWith(theme: theme, content: displayable.content)
     }
 
     private func styleStackViews(theme: Theme) {
@@ -115,9 +126,9 @@ public class Footer: BaseView {
         mainStackView.axis = .vertical
         mainStackView.spacing = 18
 
-        aboveContentStackView.isLayoutMarginsRelativeArrangement = true
-        aboveContentStackView.layoutMargins = UIEdgeInsets(uniform: 16)
-        aboveContentStackView.axis = .vertical
+        contentStackView.isLayoutMarginsRelativeArrangement = true
+        contentStackView.layoutMargins = UIEdgeInsets(uniform: 16)
+        contentStackView.axis = .vertical
 
         buttonStackView.spacing = 16
         buttonStackView.distribution = .fillEqually
@@ -150,4 +161,112 @@ public class Footer: BaseView {
             rightButton.isHidden = false
         }
     }
+
+    private func styleWith(theme: Theme, content: FooterContent) {
+        clearContent()
+
+        switch content {
+        case .none: return
+        case .label(let displayable): addLabel(theme: theme, displayable: displayable)
+        case .checkbox(let displayable, _): addCheckbox(theme: theme, displayable: displayable)
+        }
+    }
+
+    // MARK: Content
+
+    private func clearContent() {
+        contentStackView.removeAllArrangedSubviews()
+        contentStackView.isHidden = true
+    }
+
+    private func addContentSubview(_ view: UIView) {
+        contentStackView.isHidden = false
+        contentStackView.layoutMargins = .zero
+        contentStackView.addArrangedSubview(view)
+    }
+
+    // MARK: Content (Checkbox)
+
+    private func addCheckbox(theme: Theme, displayable: SelectionControlDisplayable) {
+        let checkbox = SelectionControl(frame: .zero, type: .checkbox)
+        checkbox.delegate = self
+        checkbox.tipDelegate = self
+        addContentSubview(checkbox)
+
+        styleCheckbox(theme: theme, displayable: displayable)
+    }
+
+    private func styleCheckbox(theme: Theme, displayable: SelectionControlDisplayable) {
+        if let checkbox = contentStackView.subviews[0] as? SelectionControl {
+            checkbox.styleWith(theme: theme, displayable: displayable)
+        }
+    }
+
+    // MARK: Content (Label)
+
+    private func addLabel(theme: Theme, displayable: FooterLabelDisplayable) {
+        let selectionLabel = SelectionLabel(frame: .zero)
+        selectionLabel.theme = theme
+        if displayable.isTappable {
+            selectionLabel.delegate = self
+        }
+        addContentSubview(selectionLabel)
+
+        styleLabel(theme: theme, displayable: displayable)
+    }
+
+    private func styleLabel(theme: Theme, displayable: FooterLabelDisplayable) {
+        let text = displayable.text
+        let normalizedText = text.isEmpty ? " " : text
+
+        let finalText: String
+        if let icon = displayable.icon {
+            finalText = "\(icon)  \(normalizedText)"
+        } else {
+            finalText = normalizedText
+        }
+
+        if let selectionLabel = contentStackView.subviews[0] as? SelectionLabel {
+            selectionLabel.label.numberOfLines = 0
+            selectionLabel.label.attributedText = finalText.attributed(fontStyle: .labelLarge,
+                                                                       color: theme.colors.textHighEmphasis)
+        }
+    }
+}
+
+// MARK: - Footer: SelectionControlDelegate
+
+extension Footer: SelectionControlDelegate {
+    public func selectionControlWasTapped(_ selectionControl: SelectionControl) {
+        guard let theme = theme else { return }
+
+        if case .checkbox(let displayable, _) = lastDisplayable?.content {
+            let nextDisplayable = SimpleSelectionControl(toggle: displayable)
+            styleCheckbox(theme: theme, displayable: nextDisplayable)
+        }
+
+        delegate?.footerCheckboxWasTapped(self)
+    }
+}
+
+// MARK: - Footer: SelectionControlTipDelegate
+
+extension Footer: SelectionControlTipDelegate {
+    public func selectionControlTipWasTapped(_ selectionControl: SelectionControl) {
+        if case .checkbox(_, let backedValue) = lastDisplayable?.content {
+            delegate?.footerTipWasTapped(self, backedValue: backedValue)
+        }
+    }
+}
+
+// MARK: - Footer: SelectionLabelDelegate
+
+extension Footer: SelectionLabelDelegate {
+    func selectionLabelWasTouchedUp(_ selectionLabel: SelectionLabel) {
+        if !contentStackView.arrangedSubviews.isEmpty {
+            delegate?.footerLabelWasTapped(self)
+        }
+    }
+
+    func selectionLabelWasTouchedDown(_ selectionLabel: SelectionLabel) {}
 }
