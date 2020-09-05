@@ -87,6 +87,8 @@ public protocol Colors {
 
     // MARK: Footer
 
+    /// Background color for `Footer`.
+    var backgroundFooter: UIColor { get }
     /// Text color for `Footer` label when it is a tappable link.
     var textFooterLabelLink: UIColor { get }
 

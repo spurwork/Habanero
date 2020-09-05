@@ -115,6 +115,9 @@ public struct ColorsStandard: Colors, Bundlable {
 
     // MARK: Footer
 
+    public var backgroundFooter: UIColor {
+        return bundleColor(named: "BackgroundFooter", fallbackColor: .white)
+    }
     public var textFooterLabelLink: UIColor {
         return bundleColor(named: "TextFooterLabelLink", fallbackColor: .stateBlue)
     }

@@ -1,4 +1,3 @@
-// TODO: figure out way such that whenever footer is added, it is fixed to the bottom of its containing view
 // TODO: test checkbox styles in FooterExamples
 // TODO: test delegate methods (interactive footer example)
 
@@ -82,6 +81,22 @@ public class Footer: BaseView {
         rightButton.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
     }
 
+    // MARK: Life Cycle
+
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+
+        if let superview = superview {
+            layer.zPosition = 1
+            translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                bottomAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.bottomAnchor),
+                leadingAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.leadingAnchor),
+                trailingAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.trailingAnchor)
+            ])
+        }
+    }
+
     // MARK: Actions
 
     @objc func buttonTapped(_ button: UIButton) {
@@ -100,6 +115,8 @@ public class Footer: BaseView {
     public func styleWith(theme: Theme, displayable: FooterDisplayable) {
         self.theme = theme
         lastDisplayable = displayable
+
+        backgroundColor = theme.colors.backgroundFooter
 
         if case let .none = displayable.buttonState, case let .none = displayable.content {
             isHidden = true

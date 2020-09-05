@@ -92,9 +92,8 @@ extension ComponentsFC: ActionListVCDelegate {
         case 1: controller = ExamplesVC.selectionGroups(theme: theme)
         case 2: controller = SelectionGroupSingleVC()
         case 3: controller = SelectionGroupMultiVC()
-        case 4, 5, 6, 7, 8: controller = calendarVC(atRow: row)
-            // TODO: make this one interactive
-        case 9: controller = ExamplesVC.footers(theme: theme)
+        case 4, 5, 6, 7, 8: controller = calendarVC(atRow: row)            
+        case 9: controller = FooterVC(theme: theme)
         case 10: controller = ExamplesVC.footers(theme: theme)
         default: return
         }
