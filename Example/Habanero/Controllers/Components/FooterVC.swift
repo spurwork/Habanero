@@ -40,8 +40,15 @@ class FooterVC: UITableViewController {
         tableView.separatorInset = .zero
         tableView.registerCellWithType(ActionListCell.self)
         
+        let checkbox = SelectionControlExample(title: "Checkbox",
+                                               tip: "A link to something.",
+                                               tipLinkable: true,
+                                               isSelected: false,
+                                               isEnabled: true)
+        
         footer.delegate = self
-        footer.styleWith(theme: theme, displayable: FooterModel(buttonState: .center("Center", .primary), content: .none))
+        footer.styleWith(theme: theme, displayable: FooterModel(buttonState: .center("Center", .primary),
+                                                                content: .checkbox(checkbox, "https://spurwork.com")))
         
         view.addSubview(footer)
     }
@@ -64,18 +71,18 @@ class FooterVC: UITableViewController {
 
 extension FooterVC: FooterDelegate {
     func footerButtonWasTapped(_ footer: Footer, position: FooterButtonPosition) {
-        print("footerButtonWasTapped")
+        print("footer button at \(position) was tapped")
     }
     
     func footerLabelWasTapped(_ footer: Footer) {
-        print("footerLabelWasTapped")
+        print("footer label was tapped")
     }
     
     func footerCheckboxWasTapped(_ footer: Footer) {
-        print("footerCheckboxWasTapped")
+        print("footer checkbox was tapped")
     }
     
     func footerTipWasTapped(_ footer: Footer, backedValue: Any) {
-        print("footerTipWasTapped")
+        print(backedValue)
     }
 }

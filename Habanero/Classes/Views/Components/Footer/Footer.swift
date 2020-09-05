@@ -1,5 +1,3 @@
-// TODO: test delegate methods (interactive footer example)
-
 // MARK: - FooterDisplayable
 
 public protocol FooterDisplayable {
@@ -256,9 +254,13 @@ extension Footer: SelectionControlDelegate {
     public func selectionControlWasTapped(_ selectionControl: SelectionControl) {
         guard let theme = theme else { return }
 
-        if case .checkbox(let displayable, _) = lastDisplayable?.content {
-            let nextDisplayable = SimpleSelectionControl(toggle: displayable)
-            styleCheckbox(theme: theme, displayable: nextDisplayable)
+        if let lastDisplayable = lastDisplayable,
+            case .checkbox(let displayable, let backedValue) = lastDisplayable.content {
+            let nextCheckbox = SimpleSelectionControl(toggle: displayable)
+            let nextDisplayable = FooterModel(buttonState: lastDisplayable.buttonState,
+                                              content: .checkbox(nextCheckbox, backedValue))
+            self.lastDisplayable = nextDisplayable
+            styleCheckbox(theme: theme, displayable: nextCheckbox)
         }
 
         delegate?.footerCheckboxWasTapped(self)
