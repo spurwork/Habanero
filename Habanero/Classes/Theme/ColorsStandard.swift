@@ -113,6 +113,12 @@ public struct ColorsStandard: Colors, Bundlable {
         return bundleColor(named: "TextButtonContainedSecondary", fallbackColor: .supportBlack300)
     }
 
+    // MARK: General
+
+    public var backgroundDivider: UIColor {
+        return bundleColor(named: "BackgroundDivider", fallbackColor: .supportGrey200)
+    }
+
     // MARK: Menu
 
     public var borderButtonMenu: UIColor {

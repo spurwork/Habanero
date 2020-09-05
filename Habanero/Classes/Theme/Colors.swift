@@ -85,6 +85,11 @@ public protocol Colors {
     /// Contained Button - Secondary text color.
     var textButtonContainedSecondary: UIColor { get }
 
+    // MARK: General
+
+    /// Background color for divider line.
+    var backgroundDivider: UIColor { get }
+
     // MARK: Menu
 
     /// Border color used for the button contained within a `Menu`.

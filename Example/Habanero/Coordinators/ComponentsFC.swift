@@ -28,8 +28,6 @@ class ComponentsFC: HabaneroExampleFC {
         return navigationController
     }()
     
-    private lazy var calendar = Calendar(identifier: .gregorian)
-    
     weak var delegate: ComponentsFCDelegate?
     
     // MARK: Start
@@ -86,73 +84,79 @@ extension ComponentsFC: ActionListVCDelegate {
     }
     
     func actionListVCTappedRow(_ actionListVC: ActionListVC, row: Int) {
-        let controller: UIViewController
+        let controller: UIViewController?
         
         switch row {
         case 0: controller = actionListStylesVC()
         case 1: controller = ExamplesVC.selectionGroups(theme: theme)
         case 2: controller = SelectionGroupSingleVC()
         case 3: controller = SelectionGroupMultiVC()
-        case 4, 5, 6, 7, 8:
-            let startDateComponent = calendar.dateComponents([.year, .month], from: Date())
-            let startDate = calendar.date(from: startDateComponent)!
-            let endDate = calendar.date(byAdding: .year, value: 1, to: startDate)!
-            let dateRange = startDate...endDate
-            let datesToStatus: [Date: [CalendarDayStatus]] = [
-                calendar.date(byAdding: .day, value: 3, to: startDate)!: [.normal],
-                calendar.date(byAdding: .day, value: 4, to: startDate)!: [.normal, .needsAttention],
-                calendar.date(byAdding: .day, value: 5, to: startDate)!: [.normal],
-                Date(): [.needsAttention]
-            ]
-            let highlightedDates = [
-                calendar.date(byAdding: .day, value: 10, to: startDate)!,
-                calendar.date(byAdding: .day, value: 18, to: startDate)!
-            ]
-            
-            let config: CalendarViewConfig
-            switch row - 4 {
-            case 0:
-                config = CalendarViewConfig(dateRange: dateRange,
-                                            accessoryStyle: .multiStatus,
-                                            initialDateSelection: .none,
-                                            areDaysSelectable: false)
-            case 1:
-                config = CalendarViewConfig(dateRange: dateRange,
-                                            accessoryStyle: .none,
-                                            initialDateSelection: .date(nil),
-                                            areDaysSelectable: true)
-            case 2:
-                config = CalendarViewConfig(dateRange: dateRange,
-                                            accessoryStyle: .status,
-                                            initialDateSelection: .dates([
-                                                calendar.date(byAdding: .day, value: 2, to: startDate)!,
-                                                calendar.date(byAdding: .day, value: 3, to: startDate)!
-                                            ]),
-                                            areDaysSelectable: true)
-            case 3:
-                config = CalendarViewConfig(dateRange: dateRange,
-                                            accessoryStyle: .none,
-                                            initialDateSelection: .dateRange(nil),
-                                            areDaysSelectable: true)
-            case 4:
-                config = CalendarViewConfig(dateRange: dateRange,
-                                            accessoryStyle: .none,
-                                            initialDateSelection: .dateRanges([]),
-                                            areDaysSelectable: true)
-            default:
-                displayAlert(title: "Not Implemented", message: "TBD. Ask Jarrod.")
-                return
-            }
-            
-            controller = CalendarVC(theme: theme,
-                                    config: config,
-                                    datesToStatus: datesToStatus,
-                                    highlightedDates: highlightedDates)
-        default:
-            displayAlert(title: "Not Implemented", message: "TBD. Ask Jarrod.")
-            return
+        case 4, 5, 6, 7, 8: controller = calendarVC(atRow: row)
+        case 9: controller = ExamplesVC.footers(theme: theme)
+        default: return
         }
         
-        navigationController.pushViewController(controller, animated: true)
+        if let controller = controller {
+            navigationController.pushViewController(controller, animated: true)
+        } else {
+            displayAlert(title: "Not Implemented", message: "TBD. Ask Jarrod.")
+        }
+    }
+    
+    private func calendarVC(atRow row: Int) -> CalendarVC? {
+        let calendar = Calendar(identifier: .gregorian)
+        let startDateComponent = calendar.dateComponents([.year, .month], from: Date())
+        let startDate = calendar.date(from: startDateComponent)!
+        let endDate = calendar.date(byAdding: .year, value: 1, to: startDate)!
+        let dateRange = startDate...endDate
+        let datesToStatus: [Date: [CalendarDayStatus]] = [
+            calendar.date(byAdding: .day, value: 3, to: startDate)!: [.normal],
+            calendar.date(byAdding: .day, value: 4, to: startDate)!: [.normal, .needsAttention],
+            calendar.date(byAdding: .day, value: 5, to: startDate)!: [.normal],
+            Date(): [.needsAttention]
+        ]
+        let highlightedDates = [
+            calendar.date(byAdding: .day, value: 10, to: startDate)!,
+            calendar.date(byAdding: .day, value: 18, to: startDate)!
+        ]
+        
+        let config: CalendarViewConfig
+        switch row - 4 {
+        case 0:
+            config = CalendarViewConfig(dateRange: dateRange,
+                                        accessoryStyle: .multiStatus,
+                                        initialDateSelection: .none,
+                                        areDaysSelectable: false)
+        case 1:
+            config = CalendarViewConfig(dateRange: dateRange,
+                                        accessoryStyle: .none,
+                                        initialDateSelection: .date(nil),
+                                        areDaysSelectable: true)
+        case 2:
+            config = CalendarViewConfig(dateRange: dateRange,
+                                        accessoryStyle: .status,
+                                        initialDateSelection: .dates([
+                                            calendar.date(byAdding: .day, value: 2, to: startDate)!,
+                                            calendar.date(byAdding: .day, value: 3, to: startDate)!
+                                        ]),
+                                        areDaysSelectable: true)
+        case 3:
+            config = CalendarViewConfig(dateRange: dateRange,
+                                        accessoryStyle: .none,
+                                        initialDateSelection: .dateRange(nil),
+                                        areDaysSelectable: true)
+        case 4:
+            config = CalendarViewConfig(dateRange: dateRange,
+                                        accessoryStyle: .none,
+                                        initialDateSelection: .dateRanges([]),
+                                        areDaysSelectable: true)
+        default:
+            return nil
+        }
+        
+        return CalendarVC(theme: theme,
+                          config: config,
+                          datesToStatus: datesToStatus,
+                          highlightedDates: highlightedDates)
     }
 }
