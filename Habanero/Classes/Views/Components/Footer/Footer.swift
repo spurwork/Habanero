@@ -1,4 +1,3 @@
-// TODO: test checkbox styles in FooterExamples
 // TODO: test delegate methods (interactive footer example)
 
 // MARK: - FooterDisplayable

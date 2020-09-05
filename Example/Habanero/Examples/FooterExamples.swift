@@ -44,24 +44,41 @@ extension FooterExamples {
             "Buttons: None, Content: None",
             "Buttons: None, Content: Label",
             "Buttons: None, Content: Label (Tappable)",
+            "Buttons: None, Content: Checkbox",
+            "Buttons: None, Content: Checkbox (Tip)",
             "Buttons: LeftRight, Content: None",
             "Buttons: LeftRight, Content: Label",
             "Buttons: LeftRight, Content: Label (Tappable)",
+            "Buttons: LeftRight, Content: Checkbox",
+            "Buttons: LeftRight, Content: Checkbox (Tip)",
             "Buttons: Center, Content: None",
             "Buttons: Center, Content: Label",
             "Buttons: Center, Content: Label (Tappable)",
+            "Buttons: Center, Content: Checkbox",
+            "Buttons: Center, Content: Checkbox (Tip)",
         ]
+        
+        let footerLabel = FooterLabel(text: "Label", icon: "🎁", isTappable: false)
+        let footerLabelTappable = FooterLabel(text: "Label", icon: "🎁", isTappable: true)
+        let checkbox = SelectionControlExample(title: "Checkbox", tip: nil, tipLinkable: false, isSelected: false, isEnabled: true)
+        let checkboxTip = SelectionControlExample(title: "Checkbox", tip: "This is a tip.", tipLinkable: true, isSelected: false, isEnabled: true)
         
         let examples: [FooterModel] = [
             FooterModel(buttonState: .none, content: .none),
-            FooterModel(buttonState: .none, content: .label(FooterLabel(text: "Label", icon: "🎁", isTappable: false))),
-            FooterModel(buttonState: .none, content: .label(FooterLabel(text: "Label", icon: "🎁", isTappable: true))),
+            FooterModel(buttonState: .none, content: .label(footerLabel)),
+            FooterModel(buttonState: .none, content: .label(footerLabelTappable)),
+            FooterModel(buttonState: .none, content: .checkbox(checkbox, nil)),
+            FooterModel(buttonState: .none, content: .checkbox(checkboxTip, nil)),
             FooterModel(buttonState: .leftRight("Left", "Right", .primary), content: .none),
-            FooterModel(buttonState: .leftRight("Left", "Right", .primary), content: .label(FooterLabel(text: "Label", icon: "🎁", isTappable: false))),
-            FooterModel(buttonState: .leftRight("Left", "Right", .primary), content: .label(FooterLabel(text: "Label", icon: "🎁", isTappable: true))),
+            FooterModel(buttonState: .leftRight("Left", "Right", .primary), content: .label(footerLabel)),
+            FooterModel(buttonState: .leftRight("Left", "Right", .primary), content: .label(footerLabelTappable)),
+            FooterModel(buttonState: .leftRight("Left", "Right", .primary), content: .checkbox(checkbox, nil)),
+            FooterModel(buttonState: .leftRight("Left", "Right", .primary), content: .checkbox(checkboxTip, nil)),
             FooterModel(buttonState: .center("Center", .primary), content: .none),
-            FooterModel(buttonState: .center("Center", .primary), content: .label(FooterLabel(text: "Label", icon: "🎁", isTappable: false))),
-            FooterModel(buttonState: .center("Center", .primary), content: .label(FooterLabel(text: "Label", icon: "🎁", isTappable: true))),
+            FooterModel(buttonState: .center("Center", .primary), content: .label(footerLabel)),
+            FooterModel(buttonState: .center("Center", .primary), content: .label(footerLabelTappable)),
+            FooterModel(buttonState: .center("Center", .primary), content: .checkbox(checkbox, nil)),
+            FooterModel(buttonState: .center("Center", .primary), content: .checkbox(checkboxTip, nil)),
         ]
         
         return FooterExamples(titles: titles, examples: examples)

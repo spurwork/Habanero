@@ -32,5 +32,5 @@ public protocol FooterLabelDisplayable {
 public enum FooterContent {
     case none
     case label(FooterLabelDisplayable)
-    case checkbox(SelectionControlDisplayable, Any)
+    case checkbox(SelectionControlDisplayable, Any?)
 }
