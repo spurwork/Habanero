@@ -83,6 +83,12 @@ public struct ConstantsStandard: Constants {
         return UIEdgeInsets(top: 12, left: 8, bottom: 8, right: rightPadding + textInputSystemClearIconSideLength + 8)
     }
 
+    // MARK: Footer
+
+    public var footerButtonSpacing: CGFloat { return 16 }
+    public var footerContentInsets: UIEdgeInsets { return UIEdgeInsets(uniform: 16) }
+    public var footerContentSpacing: CGFloat { return 18 }
+
     // MARK: General
 
     public var alphaDisabled: CGFloat { return 0.6 }

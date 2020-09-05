@@ -1,10 +1,11 @@
 // MARK: - FooterDisplayable
 
+/// An object that can be displayed by a `Footer`.
 public protocol FooterDisplayable {
-    /// Describes the buttons that should be displayed in the `Footer`.
+    /// Describes the buttons to display.
     var buttonState: FooterButtonState { get }
 
-    /// The content to embed in the `Footer`.
+    /// The content to embed in the footer.
     var content: FooterContent { get }
 }
 
@@ -133,19 +134,20 @@ public class Footer: BaseView {
     }
 
     private func styleStackViews(theme: Theme) {
-        // TODO: remove magic!
+        let constants = theme.constants
+
         mainStackView.isLayoutMarginsRelativeArrangement = true
-        mainStackView.layoutMargins = UIEdgeInsets(uniform: 16)
+        mainStackView.layoutMargins = constants.footerContentInsets
         mainStackView.axis = .vertical
-        mainStackView.spacing = 18
+        mainStackView.spacing = constants.footerContentSpacing
 
         contentStackView.isLayoutMarginsRelativeArrangement = true
-        contentStackView.layoutMargins = UIEdgeInsets(uniform: 16)
+        contentStackView.layoutMargins = constants.footerContentInsets
         contentStackView.axis = .vertical
 
-        buttonStackView.spacing = 16
         buttonStackView.distribution = .fillEqually
         buttonStackView.axis = .horizontal
+        buttonStackView.spacing = constants.footerButtonSpacing
     }
 
     private func styleWith(theme: Theme, buttonState: FooterButtonState) {
