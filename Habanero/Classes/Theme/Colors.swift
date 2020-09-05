@@ -85,6 +85,11 @@ public protocol Colors {
     /// Contained Button - Secondary text color.
     var textButtonContainedSecondary: UIColor { get }
 
+    // MARK: Footer
+
+    /// Text color for `Footer` label when it is a tappable link.
+    var textFooterLabelLink: UIColor { get }
+
     // MARK: General
 
     /// Background color for divider line.

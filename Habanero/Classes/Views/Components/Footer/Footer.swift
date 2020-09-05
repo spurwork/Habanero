@@ -1,4 +1,3 @@
-// TODO: when label is tappable make sure the textColor is different
 // TODO: figure out way such that whenever footer is added, it is fixed to the bottom of its containing view
 // TODO: test checkbox styles in FooterExamples
 // TODO: test delegate methods (interactive footer example)
@@ -227,9 +226,10 @@ public class Footer: BaseView {
         }
 
         if let selectionLabel = contentStackView.subviews[0] as? SelectionLabel {
+            let colors = theme.colors
+            let textColor = displayable.isTappable ? colors.textFooterLabelLink : colors.textHighEmphasis
             selectionLabel.label.numberOfLines = 0
-            selectionLabel.label.attributedText = finalText.attributed(fontStyle: .labelLarge,
-                                                                       color: theme.colors.textHighEmphasis)
+            selectionLabel.label.attributedText = finalText.attributed(fontStyle: .labelLarge, color: textColor)
         }
     }
 }
