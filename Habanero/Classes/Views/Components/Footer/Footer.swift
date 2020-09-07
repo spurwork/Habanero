@@ -9,14 +9,29 @@ public protocol FooterDisplayable {
     var content: FooterContent { get }
 }
 
-// MARK: - FooterDelegate
+// MARK: - FooterButtonDelegate
 
-public protocol FooterDelegate: class {
+public protocol FooterButtonDelegate: class {
     func footerButtonWasTapped(_ footer: Footer, position: FooterButtonPosition)
+}
+
+// MARK: - FooterLabelDelegate
+
+public protocol FooterLabelDelegate: class {
     func footerLabelWasTapped(_ footer: Footer)
+}
+
+// MARK: - FooterCheckboxDelegate
+
+public protocol FooterCheckboxDelegate: class {
     func footerCheckboxWasTapped(_ footer: Footer)
     func footerTipWasTapped(_ footer: Footer, backedValue: Any)
 }
+
+// MARK: - FooterDelegate
+
+/// An object that responds to all messages omitted by a `Footer`.
+public typealias FooterDelegate = FooterButtonDelegate & FooterLabelDelegate & FooterCheckboxDelegate
 
 // MARK: - Footer: BaseView
 
@@ -50,7 +65,17 @@ public class Footer: BaseView {
         ]
     }
 
-    public weak var delegate: FooterDelegate?
+    public weak var delegate: FooterDelegate? {
+        didSet {
+            buttonDelegate = delegate
+            labelDelegate = delegate
+            checkboxDelegate = delegate
+        }
+    }
+
+    public weak var buttonDelegate: FooterButtonDelegate?
+    public weak var labelDelegate: FooterLabelDelegate?
+    public weak var checkboxDelegate: FooterCheckboxDelegate?
 
     private var theme: Theme?
     private var lastDisplayable: FooterDisplayable?
@@ -105,11 +130,11 @@ public class Footer: BaseView {
             position = (button.tag == 1) ? .center : .right
         }
 
-        delegate?.footerButtonWasTapped(self, position: position)
+        buttonDelegate?.footerButtonWasTapped(self, position: position)
     }
 
     // MARK: Custom Styling
-    
+
     public func styleWith(theme: Theme, displayable: FooterDisplayable) {
         self.theme = theme
         lastDisplayable = displayable
@@ -169,7 +194,7 @@ public class Footer: BaseView {
         case .checkbox(let displayable, _): addCheckbox(theme: theme, displayable: displayable)
         }
     }
-    
+
     private func styleStackViews(theme: Theme) {
         let constants = theme.constants
 
@@ -265,7 +290,7 @@ extension Footer: SelectionControlDelegate {
             styleCheckbox(theme: theme, displayable: nextCheckbox)
         }
 
-        delegate?.footerCheckboxWasTapped(self)
+        checkboxDelegate?.footerCheckboxWasTapped(self)
     }
 }
 
@@ -274,7 +299,7 @@ extension Footer: SelectionControlDelegate {
 extension Footer: SelectionControlTipDelegate {
     public func selectionControlTipWasTapped(_ selectionControl: SelectionControl) {
         if case .checkbox(_, let backedValue) = lastDisplayable?.content {
-            delegate?.footerTipWasTapped(self, backedValue: backedValue)
+            checkboxDelegate?.footerTipWasTapped(self, backedValue: backedValue)
         }
     }
 }
@@ -284,7 +309,7 @@ extension Footer: SelectionControlTipDelegate {
 extension Footer: SelectionLabelDelegate {
     func selectionLabelWasTouchedUp(_ selectionLabel: SelectionLabel) {
         if !contentStackView.arrangedSubviews.isEmpty {
-            delegate?.footerLabelWasTapped(self)
+            labelDelegate?.footerLabelWasTapped(self)
         }
     }
 
