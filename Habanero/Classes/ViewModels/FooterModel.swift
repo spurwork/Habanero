@@ -18,4 +18,9 @@ public struct FooterModel: FooterDisplayable {
         self.buttonState = buttonState
         content = .none
     }
+    
+    public init(content: FooterContent) {
+        self.content = content
+        buttonState = .none
+    }
 }
