@@ -109,7 +109,7 @@ public class Footer: BaseView {
     }
 
     // MARK: Custom Styling
-
+    
     public func styleWith(theme: Theme, displayable: FooterDisplayable) {
         self.theme = theme
         lastDisplayable = displayable
@@ -131,23 +131,6 @@ public class Footer: BaseView {
 
         // content
         styleWith(theme: theme, content: displayable.content)
-    }
-
-    private func styleStackViews(theme: Theme) {
-        let constants = theme.constants
-
-        mainStackView.isLayoutMarginsRelativeArrangement = true
-        mainStackView.layoutMargins = constants.footerContentInsets
-        mainStackView.axis = .vertical
-        mainStackView.spacing = constants.footerContentSpacing
-
-        contentStackView.isLayoutMarginsRelativeArrangement = true
-        contentStackView.layoutMargins = constants.footerContentInsets
-        contentStackView.axis = .vertical
-
-        buttonStackView.distribution = .fillEqually
-        buttonStackView.axis = .horizontal
-        buttonStackView.spacing = constants.footerButtonSpacing
     }
 
     private func styleWith(theme: Theme, buttonState: FooterButtonState) {
@@ -185,6 +168,23 @@ public class Footer: BaseView {
         case .label(let displayable): addLabel(theme: theme, displayable: displayable)
         case .checkbox(let displayable, _): addCheckbox(theme: theme, displayable: displayable)
         }
+    }
+    
+    private func styleStackViews(theme: Theme) {
+        let constants = theme.constants
+
+        mainStackView.isLayoutMarginsRelativeArrangement = true
+        mainStackView.layoutMargins = constants.footerContentInsets
+        mainStackView.axis = .vertical
+        mainStackView.spacing = constants.footerContentSpacing
+
+        contentStackView.isLayoutMarginsRelativeArrangement = true
+        contentStackView.layoutMargins = constants.footerContentInsets
+        contentStackView.axis = .vertical
+
+        buttonStackView.distribution = .fillEqually
+        buttonStackView.axis = .horizontal
+        buttonStackView.spacing = constants.footerButtonSpacing
     }
 
     // MARK: Content
