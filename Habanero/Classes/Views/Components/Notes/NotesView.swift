@@ -70,6 +70,7 @@ public class NotesView: BaseView {
             mainStackView.spacing = constants.notesContentSpacing
         }
 
+        mainStackView.removeAllArrangedSubviews()
         for (index, note) in displayable.notes.enumerated() {
             let selectionLabel = SelectionLabel(frame: .zero)
             let normalColor = (note.link != nil) ? colors.textNotesLink : colors.textHighEmphasis
