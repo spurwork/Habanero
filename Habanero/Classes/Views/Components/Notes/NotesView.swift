@@ -60,7 +60,7 @@ public class NotesView: BaseView {
         let constants = theme.constants
 
         layer.cornerRadius = constants.notesViewCornerRadius
-        backgroundColor = colors.backgroundDivider
+        backgroundColor = displayable.useBackground ? colors.backgroundNotes : nil
 
         mainStackView.isHidden = false
         if !mainStackView.isLayoutMarginsRelativeArrangement {
