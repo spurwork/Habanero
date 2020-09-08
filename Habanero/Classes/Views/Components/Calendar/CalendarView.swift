@@ -146,14 +146,14 @@ public class CalendarView: BaseView {
     @objc func leftButtonTapped() {
         if let minVisibleDate = managedCalendarView.minVisibleDate,
             let oneMonthBefore = Calendar.current.date(byAdding: .day, value: -1, to: minVisibleDate) {
-            scrollTo(date: oneMonthBefore)
+            scrollTo(date: oneMonthBefore, animated: true)
         }
     }
 
     @objc func rightButtonTapped() {
         if let maxVisibleDate = managedCalendarView.maxVisibleDate,
             let oneMonthAfter = Calendar.current.date(byAdding: .day, value: 1, to: maxVisibleDate) {
-            scrollTo(date: oneMonthAfter)
+            scrollTo(date: oneMonthAfter, animated: true)
         }
     }
 
