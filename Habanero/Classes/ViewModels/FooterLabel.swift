@@ -15,9 +15,9 @@ public struct FooterLabel: FooterLabelDisplayable {
         self.icon = icon
         self.isTappable = isTappable
     }
-    
+
     public init(text: String) {
-        self.text = text        
+        self.text = text
         icon = nil
         isTappable = false
     }

@@ -273,10 +273,26 @@ public class Footer: BaseView {
             selectionLabel.label.attributedText = finalText.attributed(fontStyle: .labelLarge, color: textColor)
         }
     }
-    
+
     // MARK: Helpers
-    
-    func enableButtons(_ isEnabled: Bool, positions: Set<FooterButtonPosition>) {
+
+    public func hide(_ hide: Bool) {
+        isUserInteractionEnabled = !hide
+
+        UIView.animate(withDuration: 0.25) {
+            self.alpha = hide ? 0.0 : 1.0
+        }
+    }
+
+    public func enableBackButton(_ isEnabled: Bool) {
+        enableButtons(isEnabled, positions: [.left])
+    }
+
+    public func enableForwardButtons(_ isEnabled: Bool) {
+        enableButtons(isEnabled, positions: [.center, .right])
+    }
+
+    private func enableButtons(_ isEnabled: Bool, positions: Set<FooterButtonPosition>) {
         for position in positions {
             switch position {
             case .left: leftButton.isEnabled = isEnabled
@@ -285,14 +301,7 @@ public class Footer: BaseView {
             }
         }
     }
-    
-    func hide(_ hide: Bool) {
-        isUserInteractionEnabled = !hide
 
-        UIView.animate(withDuration: 0.25) {
-            self.alpha = hide ? 0.0 : 1.0
-        }
-    }
 }
 
 // MARK: - Footer: SelectionControlDelegate
