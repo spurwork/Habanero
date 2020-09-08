@@ -4,6 +4,9 @@
 public protocol NotesViewDisplayable {
     /// A list of notes to display within a `NotesView`.
     var notes: [Note] { get }
+
+    /// Should the list of notes use a background?
+    var useBackground: Bool { get }
 }
 
 // MARK: - NotesViewDelegate
@@ -54,23 +57,23 @@ public class NotesView: BaseView {
         }
 
         let colors = theme.colors
+        let constants = theme.constants
 
-        layer.cornerRadius = theme.constants.notesViewCornerRadius
+        layer.cornerRadius = constants.notesViewCornerRadius
         backgroundColor = colors.backgroundDivider
 
-        // TODO: remove magic
         mainStackView.isHidden = false
         if !mainStackView.isLayoutMarginsRelativeArrangement {
             mainStackView.isLayoutMarginsRelativeArrangement = true
-            mainStackView.layoutMargins = UIEdgeInsets(uniform: 16)
+            mainStackView.layoutMargins = displayable.useBackground ? constants.notesContentInsets : .zero
             mainStackView.axis = .vertical
-            mainStackView.spacing = 8
+            mainStackView.spacing = constants.notesContentSpacing
         }
 
         for (index, note) in displayable.notes.enumerated() {
             let selectionLabel = SelectionLabel(frame: .zero)
-            // TODO: if link provided, then use link color if custom text color isn't provided
-            let textColor = note.customTextColor ?? colors.textHighEmphasis
+            let normalColor = (note.link != nil) ? colors.textNotesLink : colors.textHighEmphasis
+            let textColor = note.customTextColor ?? normalColor
 
             selectionLabel.tag = index
             selectionLabel.delegate = (note.link == nil) ? nil : self

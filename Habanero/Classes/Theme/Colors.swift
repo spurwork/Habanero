@@ -119,6 +119,8 @@ public protocol Colors {
 
     /// Background color for `NotesView`.
     var backgroundNotes: UIColor { get }
+    /// Text color for links contained within a `NotesView`.
+    var textNotesLink: UIColor { get }
 
     // MARK: Outline Button
 

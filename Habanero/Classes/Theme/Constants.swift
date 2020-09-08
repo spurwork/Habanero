@@ -209,7 +209,13 @@ public protocol Constants {
 
     // MARK: Notes
 
-    /// The amount of rounding to apply to the corners of an `NotesView`.
+    /// The insets to use for content within a `NotesView`.
+    var notesContentInsets: UIEdgeInsets { get }
+
+    /// The spacing to use between content within a `NotesView`.
+    var notesContentSpacing: CGFloat { get }
+
+    /// The amount of rounding to apply to the corners of a `NotesView`.
     var notesViewCornerRadius: CGFloat { get }
 
     // MARK: Radio Button

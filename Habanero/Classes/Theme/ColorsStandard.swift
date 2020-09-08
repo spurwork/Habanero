@@ -157,6 +157,9 @@ public struct ColorsStandard: Colors, Bundlable {
     public var backgroundNotes: UIColor {
         return bundleColor(named: "BackgroundNotes", fallbackColor: .supportGrey200)
     }
+    public var textNotesLink: UIColor {
+        return bundleColor(named: "TextNotesLink", fallbackColor: .stateBlue)
+    }
 
     // MARK: Outline Button
 

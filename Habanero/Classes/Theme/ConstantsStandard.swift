@@ -108,6 +108,8 @@ public struct ConstantsStandard: Constants {
 
     // MARK: Notes
 
+    public var notesContentInsets: UIEdgeInsets { return UIEdgeInsets(uniform: 16) }
+    public var notesContentSpacing: CGFloat { return 8 }
     public var notesViewCornerRadius: CGFloat { return 8 }
 
     // MARK: Radio Button
