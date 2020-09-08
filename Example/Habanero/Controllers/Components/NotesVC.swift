@@ -36,13 +36,10 @@ class NotesVC: UIViewController {
         
         view.backgroundColor = theme.colors.backgroundCell
         
+        let note = Note(fontStyle: .labelLarge, value: "Contact Support", backedValue: "https://spurwork.com")
         let notesView = NotesView(frame: CGRect(x: 20, y: 100, width: view.frame.width - 40, height: 60))
         notesView.delegate = self
-
-        notesView.styleWith(theme: theme,
-                            displayable: Notes(notes: [
-                                Note(fontStyle: .labelLarge, value: "Contact Support", link: "https://spurwork.com")
-                            ]))
+        notesView.styleWith(theme: theme, displayable: Notes(notes: [note]))
         
         view.addSubview(notesView)
     }
@@ -52,7 +49,7 @@ class NotesVC: UIViewController {
 
 extension NotesVC: NotesViewDelegate {
     func notesViewTappedLink(_ notesView: NotesView, link: String) {
-        let alert = Alert(type: .info, message: "Link tapped: \(link)", duration: 2.0, anchor: .bottom)                
+        let alert = Alert(type: .info, message: "Link tapped: \(link)", duration: 2.0, anchor: .bottom)
         AlertManager.shared.show(alert, onView: view, withTheme: theme)
     }
 }

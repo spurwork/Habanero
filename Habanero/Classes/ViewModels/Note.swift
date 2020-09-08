@@ -10,7 +10,7 @@ public struct Note {
 
     let indentation: CGFloat
     let customTextColor: UIColor?
-    let link: String?
+    let backedValue: String?
 
     // MARK: Initializer
 
@@ -20,17 +20,17 @@ public struct Note {
     ///   - value: The note.
     ///   - indentation: Indentation.
     ///   - customTextColor: Custom text color to use.
-    ///   - link: An optional link to connect to the note.
+    ///   - backedValue: An optional value to connect to the note.
     public init(fontStyle: FontStyle,
                 value: String,
                 indentation: CGFloat = 0,
                 customTextColor: UIColor? = nil,
-                link: String? = nil) {
+                backedValue: String? = nil) {
         self.fontStyle = fontStyle
         self.value = value
         self.indentation = indentation
         self.customTextColor = customTextColor
-        self.link = link
+        self.backedValue = backedValue
     }
 
     /// Creates a `Note`.
@@ -43,6 +43,6 @@ public struct Note {
 
         indentation = 0
         customTextColor = nil
-        link = nil
+        backedValue = nil
     }
 }

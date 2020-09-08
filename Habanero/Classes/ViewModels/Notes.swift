@@ -11,7 +11,10 @@ public struct Notes: NotesViewDisplayable {
 
     // MARK: Initializer
 
-    public init(notes: [Note], showBackground: Bool, isContentInset: Bool, customContentInsets: UIEdgeInsets?) {
+    public init(notes: [Note],
+                showBackground: Bool = true,
+                isContentInset: Bool = true,
+                customContentInsets: UIEdgeInsets? = nil) {
         self.notes = notes
         self.showBackground = showBackground
         self.isContentInset = isContentInset

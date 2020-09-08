@@ -54,12 +54,10 @@ extension NotesViewExamples {
             Notes(notes: []),
             Notes(notes: [Note(fontStyle: .bodyLarge, value: "Some body text.")],
                   showBackground: false,
-                  isContentInset: false,
-                  customContentInsets: nil),
+                  isContentInset: false),
             Notes(notes: [Note(fontStyle: .bodyLarge, value: "Some body text.")],
                   showBackground: false,
-                  isContentInset: true,
-                  customContentInsets: nil),
+                  isContentInset: true),
             Notes(notes: [
                 Note(fontStyle: .bodyLarge, value: "Some body text."),
                 Note(fontStyle: .bodyLarge, value: "Some body text."),
@@ -67,14 +65,14 @@ extension NotesViewExamples {
             ]),
             Notes(notes: [
                 Note(fontStyle: .bodyLarge, value: "Some body text about a website."),
-                Note(fontStyle: .labelSmall, value: "A link to website.", link: "https://spurwork.com")
+                Note(fontStyle: .labelSmall, value: "A link to website.", backedValue: "https://spurwork.com")
             ]),
             Notes(notes: [
                 Note(fontStyle: .labelLarge, value: "Section Title"),
                 Note(fontStyle: .bodyLarge, value: "Some body text about the section.")
             ]),
             Notes(notes: [
-                Note(fontStyle: .labelLarge, value: "Contact Support", link: "https://spurwork.com")                
+                Note(fontStyle: .labelLarge, value: "Contact Support", backedValue: "https://spurwork.com")                
             ])
         ]
         

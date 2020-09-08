@@ -80,11 +80,11 @@ public class NotesView: BaseView {
         mainStackView.removeAllArrangedSubviews()
         for (index, note) in displayable.notes.enumerated() {
             let selectionLabel = SelectionLabel(frame: .zero)
-            let normalColor = (note.link != nil) ? colors.textNotesLink : colors.textHighEmphasis
+            let normalColor = (note.backedValue != nil) ? colors.textNotesLink : colors.textHighEmphasis
             let textColor = note.customTextColor ?? normalColor
 
             selectionLabel.tag = index
-            selectionLabel.delegate = (note.link == nil) ? nil : self
+            selectionLabel.delegate = (note.backedValue == nil) ? nil : self
             selectionLabel.label.numberOfLines = 0
             selectionLabel.label.attributedText = note.value.attributed(fontStyle: note.fontStyle,
                                                                         color: textColor,
@@ -98,7 +98,7 @@ public class NotesView: BaseView {
 
 extension NotesView: SelectionLabelDelegate {
     func selectionLabelWasTouchedUp(_ selectionLabel: SelectionLabel) {
-        if let link = displayable?.notes[selectionLabel.tag].link {
+        if let link = displayable?.notes[selectionLabel.tag].backedValue {
             delegate?.notesViewTappedLink(self, link: link)
         }
     }
