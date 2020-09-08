@@ -20,7 +20,7 @@ public struct ConstantsStandard: Constants {
     public var alertViewCornerRadius: CGFloat { return 8 }
     public var alertViewFadeDuration: CGFloat { return 0.2 }
     public var alertViewIconWidth: CGFloat { return 20 }
-    public var alertViewInsets: UIEdgeInsets { return UIEdgeInsets(top: 10, left: 12, bottom: 10, right: 12) }
+    public var alertViewInsets: UIEdgeInsets { return UIEdgeInsets(vertical: 10, horizontal: 12) }
     public var alertViewShowDuration: Double { return 2.0 }
 
     // MARK: Bar Button Item
@@ -37,7 +37,7 @@ public struct ConstantsStandard: Constants {
     // MARK: Button
 
     public var buttonBorderWidth: CGFloat { return 1 }
-    public var buttonContentEdgeInsets: UIEdgeInsets { return UIEdgeInsets(top: 8, left: 16, bottom: 8, right: 16) }
+    public var buttonContentEdgeInsets: UIEdgeInsets { return UIEdgeInsets(vertical: 8, horizontal: 16) }
     public var buttonCornerRadiusSmall: CGFloat { return 4 }
     public var buttonCornerRadiusStandard: CGFloat { return 8 }
     public var buttonHeight: CGFloat { return 44 }
@@ -98,7 +98,7 @@ public struct ConstantsStandard: Constants {
 
     // MARK: Menu
 
-    public var menuButtonTitleEdgeInsets: UIEdgeInsets { return UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16) }
+    public var menuButtonTitleEdgeInsets: UIEdgeInsets { return UIEdgeInsets(horizontal: 16) }
     public var menuBaseInsetDimension: CGFloat { return 8 }
 
     // MARK: Menu Picker
