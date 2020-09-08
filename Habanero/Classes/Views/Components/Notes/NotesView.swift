@@ -5,8 +5,14 @@ public protocol NotesViewDisplayable {
     /// A list of notes to display within a `NotesView`.
     var notes: [Note] { get }
 
-    /// Should the list of notes use a background?
-    var useBackground: Bool { get }
+    /// Should the background color be shown?
+    var showBackground: Bool { get }
+
+    /// Should the content be inset?
+    var isContentInset: Bool { get }
+
+    /// A custom amount of spacing to apply to the `NotesView`.
+    var customContentInsets: UIEdgeInsets? { get }
 }
 
 // MARK: - NotesViewDelegate
@@ -60,12 +66,13 @@ public class NotesView: BaseView {
         let constants = theme.constants
 
         layer.cornerRadius = constants.notesViewCornerRadius
-        backgroundColor = displayable.useBackground ? colors.backgroundNotes : nil
+        backgroundColor = displayable.showBackground ? colors.backgroundNotes : nil
 
         mainStackView.isHidden = false
         if !mainStackView.isLayoutMarginsRelativeArrangement {
+            let insets = displayable.customContentInsets ?? constants.notesContentInsets
             mainStackView.isLayoutMarginsRelativeArrangement = true
-            mainStackView.layoutMargins = displayable.useBackground ? constants.notesContentInsets : .zero
+            mainStackView.layoutMargins = displayable.isContentInset ? insets : .zero
             mainStackView.axis = .vertical
             mainStackView.spacing = constants.notesContentSpacing
         }

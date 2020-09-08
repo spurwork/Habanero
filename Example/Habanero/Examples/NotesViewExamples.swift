@@ -43,6 +43,7 @@ extension NotesViewExamples {
         let titles = [
             "Notes: Empty",
             "Notes: Text (No Background)",
+            "Notes: Text (No Background, Inset)",
             "Notes: Text",
             "Notes: Text, Link",
             "Notes: Title, Text",
@@ -51,7 +52,14 @@ extension NotesViewExamples {
         
         let examples: [NotesViewDisplayable] = [
             Notes(notes: []),
-            Notes(notes: [Note(fontStyle: .bodyLarge, value: "Some body text.")], useBackground: false),
+            Notes(notes: [Note(fontStyle: .bodyLarge, value: "Some body text.")],
+                  showBackground: false,
+                  isContentInset: false,
+                  customContentInsets: nil),
+            Notes(notes: [Note(fontStyle: .bodyLarge, value: "Some body text.")],
+                  showBackground: false,
+                  isContentInset: true,
+                  customContentInsets: nil),
             Notes(notes: [
                 Note(fontStyle: .bodyLarge, value: "Some body text."),
                 Note(fontStyle: .bodyLarge, value: "Some body text."),
