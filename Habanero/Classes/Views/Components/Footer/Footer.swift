@@ -276,14 +276,6 @@ public class Footer: BaseView {
 
     // MARK: Helpers
 
-    public func hide(_ hide: Bool) {
-        isUserInteractionEnabled = !hide
-
-        UIView.animate(withDuration: 0.25) {
-            self.alpha = hide ? 0.0 : 1.0
-        }
-    }
-
     public func enableBackButton(_ isEnabled: Bool) {
         enableButtons(isEnabled, positions: [.left])
     }
