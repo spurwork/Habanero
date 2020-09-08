@@ -106,6 +106,10 @@ public struct ConstantsStandard: Constants {
     public var menuPickerRowHeight: CGFloat { return 44 }
     public var menuPickerTextMinimumScaleFactor: CGFloat { return 0.75 }
 
+    // MARK: Notes
+
+    public var notesViewCornerRadius: CGFloat { return 8 }
+
     // MARK: Radio Button
 
     public var radioButtonDiameter: CGFloat { return 29 }

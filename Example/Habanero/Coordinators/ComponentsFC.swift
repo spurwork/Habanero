@@ -46,7 +46,9 @@ class ComponentsFC: HabaneroExampleFC {
                                             "Calendar (Single Range)",
                                             "Calendar (Multi Range)",
                                             "Footer",
-                                            "Footer (Styles)"],
+                                            "Footer (Styles)",
+                                            "Notes",
+                                            "Notes (Styles)"],
                                         forceBackable: true)
         componentsVC.delegate = self
         
@@ -95,6 +97,8 @@ extension ComponentsFC: ActionListVCDelegate {
         case 4, 5, 6, 7, 8: controller = calendarVC(atRow: row)            
         case 9: controller = FooterVC(theme: theme)
         case 10: controller = ExamplesVC.footers(theme: theme)
+        case 11: controller = NotesVC(theme: theme)
+        case 12: controller = ExamplesVC.notesViews(theme: theme)
         default: return
         }
         

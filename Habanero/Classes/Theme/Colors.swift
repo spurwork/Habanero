@@ -94,7 +94,7 @@ public protocol Colors {
 
     // MARK: General
 
-    /// Background color for divider line.
+    /// Background color for divider lines.
     var backgroundDivider: UIColor { get }
 
     // MARK: Menu
@@ -114,6 +114,11 @@ public protocol Colors {
 
     /// Text color for `MenuPicker` rows.
     var textMenuPickerRow: UIColor { get }
+
+    // MARK: Notes
+
+    /// Background color for `NotesView`.
+    var backgroundNotes: UIColor { get }
 
     // MARK: Outline Button
 

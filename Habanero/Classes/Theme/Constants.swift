@@ -207,6 +207,11 @@ public protocol Constants {
     /// The minimum scaling factor for the text labels inside of a `MenuPicker`.
     var menuPickerTextMinimumScaleFactor: CGFloat { get }
 
+    // MARK: Notes
+
+    /// The amount of rounding to apply to the corners of an `NotesView`.
+    var notesViewCornerRadius: CGFloat { get }
+
     // MARK: Radio Button
 
     /// The diameter for a `RadioButton`.

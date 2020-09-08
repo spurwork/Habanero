@@ -152,6 +152,12 @@ public struct ColorsStandard: Colors, Bundlable {
         return bundleColor(named: "TextMenuPickerRow", fallbackColor: .supportBlack300)
     }
 
+    // MARK: Notes
+
+    public var backgroundNotes: UIColor {
+        return bundleColor(named: "BackgroundNotes", fallbackColor: .supportGrey200)
+    }
+
     // MARK: Outline Button
 
     public var borderButtonOutlinePrimary: UIColor {
