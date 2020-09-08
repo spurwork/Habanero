@@ -30,6 +30,8 @@
 		A958C00724D3031C005C48E7 /* ButtonExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = A958C00624D3031C005C48E7 /* ButtonExamples.swift */; };
 		A95A68C824EC092A00514CAB /* AlertExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95A68C724EC092A00514CAB /* AlertExamples.swift */; };
 		A964822C2486F2BF00D0693D /* HabaneroExampleFC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A964822B2486F2BF00D0693D /* HabaneroExampleFC.swift */; };
+		A965D1B9250322B00085B70B /* FooterExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = A965D1B8250322B00085B70B /* FooterExamples.swift */; };
+		A96AB9E12504031C00ABAABA /* FooterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96AB9E02504031C00ABAABA /* FooterVC.swift */; };
 		A96C96E224D2FC3C0067D9BE /* SelectionGroupExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96C96E124D2FC3C0067D9BE /* SelectionGroupExamples.swift */; };
 		A96C96E524D2FCAA0067D9BE /* TextInputExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96C96E424D2FCAA0067D9BE /* TextInputExamples.swift */; };
 		A9760F5124FACCEA0038D0D5 /* FontStyle+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9760F5024FACCEA0038D0D5 /* FontStyle+Helpers.swift */; };
@@ -100,6 +102,8 @@
 		A95A68C724EC092A00514CAB /* AlertExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExamples.swift; sourceTree = "<group>"; };
 		A95A8FD924F54C4300271B1C /* CalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
 		A964822B2486F2BF00D0693D /* HabaneroExampleFC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabaneroExampleFC.swift; sourceTree = "<group>"; };
+		A965D1B8250322B00085B70B /* FooterExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterExamples.swift; sourceTree = "<group>"; };
+		A96AB9E02504031C00ABAABA /* FooterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterVC.swift; sourceTree = "<group>"; };
 		A96C96E124D2FC3C0067D9BE /* SelectionGroupExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionGroupExamples.swift; sourceTree = "<group>"; };
 		A96C96E424D2FCAA0067D9BE /* TextInputExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputExamples.swift; sourceTree = "<group>"; };
 		A9760F5024FACCEA0038D0D5 /* FontStyle+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FontStyle+Helpers.swift"; sourceTree = "<group>"; };
@@ -269,6 +273,7 @@
 				A9DE53F224EAD6870037BBC8 /* StatusViewExamples.swift */,
 				A96C96E424D2FCAA0067D9BE /* TextInputExamples.swift */,
 				A95A68C724EC092A00514CAB /* AlertExamples.swift */,
+				A965D1B8250322B00085B70B /* FooterExamples.swift */,
 			);
 			path = Examples;
 			sourceTree = "<group>";
@@ -302,6 +307,7 @@
 			children = (
 				A90E1D9D2469E17E0073AF4A /* ActionListVC.swift */,
 				A95A8FD924F54C4300271B1C /* CalendarVC.swift */,
+				A96AB9E02504031C00ABAABA /* FooterVC.swift */,
 				A936AD1124D9C76B001F882D /* SelectionGroupSingleVC.swift */,
 				A936AD1324D9C778001F882D /* SelectionGroupMultiVC.swift */,
 			);
@@ -582,6 +588,7 @@
 				A99ED9F224894D32003EC33E /* ButtonsVC.swift in Sources */,
 				A9410A2F248559E000757448 /* ButtonsOutlineVC.swift in Sources */,
 				A9D5D3F924697EDF005B7ED9 /* Icon.swift in Sources */,
+				A965D1B9250322B00085B70B /* FooterExamples.swift in Sources */,
 				A9A0C1A624B7534F00FDE4E5 /* TextInputVC.swift in Sources */,
 				A9760F5224FACEB60038D0D5 /* CalendarVC.swift in Sources */,
 				A987EFF924D245AA00D86272 /* BaseTableVC.swift in Sources */,
@@ -606,6 +613,7 @@
 				A90E1DA12469E4550073AF4A /* ColorCell.swift in Sources */,
 				A9E91C232468407700B6BF1B /* ColorCategory.swift in Sources */,
 				A9410A382485706400757448 /* ButtonsTextVC.swift in Sources */,
+				A96AB9E12504031C00ABAABA /* FooterVC.swift in Sources */,
 				A90E1D9E2469E17E0073AF4A /* ActionListVC.swift in Sources */,
 				A9BEC31E24D21E7D00CD4825 /* ExampleCell.swift in Sources */,
 				A92C418C2491CBFE00DF32F5 /* MenuPickerExample.swift in Sources */,

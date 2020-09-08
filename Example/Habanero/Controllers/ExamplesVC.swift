@@ -87,6 +87,13 @@ extension ExamplesVC {
                           displayable: ButtonExamples.mock(theme: theme))
     }
     
+    static func footers(theme: Theme) -> ExamplesVC {
+        return ExamplesVC(theme: theme,
+                          sizer: BaseTableVCSizer(),
+                          title: "Footer (Styles)",
+                          displayable: FooterExamples.mock(theme: theme))
+    }
+    
     static func selectionGroups(theme: Theme) -> ExamplesVC {
         let examples = SelectionGroupExamples.mock(theme: theme)
         let examplesVC = ExamplesVC(theme: theme,

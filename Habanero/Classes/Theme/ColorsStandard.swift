@@ -113,6 +113,21 @@ public struct ColorsStandard: Colors, Bundlable {
         return bundleColor(named: "TextButtonContainedSecondary", fallbackColor: .supportBlack300)
     }
 
+    // MARK: Footer
+
+    public var backgroundFooter: UIColor {
+        return bundleColor(named: "BackgroundFooter", fallbackColor: .white)
+    }
+    public var textFooterLabelLink: UIColor {
+        return bundleColor(named: "TextFooterLabelLink", fallbackColor: .stateBlue)
+    }
+
+    // MARK: General
+
+    public var backgroundDivider: UIColor {
+        return bundleColor(named: "BackgroundDivider", fallbackColor: .supportGrey200)
+    }
+
     // MARK: Menu
 
     public var borderButtonMenu: UIColor {

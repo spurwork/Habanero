@@ -89,6 +89,10 @@
 		A53FDCFEFCCA5064077AF363B03D26CA /* LayoutItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C59389BE492A16B5755C334BF138E8 /* LayoutItem.swift */; };
 		A64A66D3ED89F6B684EED40AF8DCE9AF /* FloatRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91E6C67972EB03A2B2F1DAC7CC5F62E /* FloatRule.swift */; };
 		A83BE1A38CCCD12377319AED4990F096 /* CalendarViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A3597AA2B0ABD74BD0615F54CDD108 /* CalendarViewContent.swift */; };
+		A92298532503CFCC00F2CCD7 /* FooterLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92298522503CFCC00F2CCD7 /* FooterLabel.swift */; };
+		A965D1B5250319DA0085B70B /* Footer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A965D1B4250319DA0085B70B /* Footer.swift */; };
+		A965D1B725031BA40085B70B /* FooterTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A965D1B625031BA40085B70B /* FooterTypes.swift */; };
+		A965D1BB2503235A0085B70B /* FooterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A965D1BA2503235A0085B70B /* FooterModel.swift */; };
 		A97AA823E434130548B5EABDC495B6B6 /* TextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF184F3C9FBC1A57B3DD746306E2E564 /* TextInput.swift */; };
 		AB8BC335076D76442146ACE9728480FE /* Calendar+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FF9016241AFD10D105B8F18A6210AB /* Calendar+Helpers.swift */; };
 		AED661BB4F5833D81DF156E957F15216 /* LayoutItemTypeEnumerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B8B086E060FD6EE1A64DA43E716BF3 /* LayoutItemTypeEnumerator.swift */; };
@@ -210,9 +214,9 @@
 		1E1875BBD7781C6D063C890E4FA5ABD0 /* TextInputCountView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextInputCountView.swift; sourceTree = "<group>"; };
 		1F4CF609DD5816D53D2D99B1C4F056FC /* CalendarRanges.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalendarRanges.swift; sourceTree = "<group>"; };
 		20549AFB1FCFB9339BDA45EE210A4394 /* CalendarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CalendarView.swift; path = Sources/Public/CalendarView.swift; sourceTree = "<group>"; };
-		213831ED32A19F44D9E7E75C0D086246 /* Habanero.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Habanero.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		213831ED32A19F44D9E7E75C0D086246 /* Habanero.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = Habanero.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		24107C22A8E04EC3D9E61DB5B887B88F /* SimpleStatus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SimpleStatus.swift; sourceTree = "<group>"; };
-		25069BA3F7300EECCF349849A17A7411 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		25069BA3F7300EECCF349849A17A7411 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		2613DCC5F782935FAE0479F420DF7F41 /* ButtonStyleText.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ButtonStyleText.swift; sourceTree = "<group>"; };
 		284E08798168493D634A226F1E07558E /* Validator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Validator-dummy.m"; sourceTree = "<group>"; };
 		2860D641F3CE3B6620F073AD381D7F34 /* SelectionGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SelectionGroup.swift; sourceTree = "<group>"; };
@@ -240,20 +244,20 @@
 		51A3597AA2B0ABD74BD0615F54CDD108 /* CalendarViewContent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CalendarViewContent.swift; path = Sources/Public/CalendarViewContent.swift; sourceTree = "<group>"; };
 		552DD92C1F427C63A6001CA9886AC7C9 /* StatusType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StatusType.swift; sourceTree = "<group>"; };
 		558C07059A868D034B8D9E1BBE1307FF /* NSAttributedString+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Helpers.swift"; sourceTree = "<group>"; };
-		5E4446448C2C25C0899E10630DA0B5B0 /* Habanero.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Habanero.bundle; path = "Habanero-Habanero.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E4446448C2C25C0899E10630DA0B5B0 /* Habanero.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Habanero.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F2417DF95BEC9DB73C924275133949F /* Validator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validator.swift; path = Validator/Classes/Validator.swift; sourceTree = "<group>"; };
 		5F64EFEB31233C1D789767984298DAEC /* PaddedTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaddedTextField.swift; sourceTree = "<group>"; };
 		5FEB92E0D678298A055C1B42890AD59E /* CalendarRange.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalendarRange.swift; sourceTree = "<group>"; };
 		69893263FFDD3EA6BFBFD4E010ECED9F /* Day+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Day+Helpers.swift"; sourceTree = "<group>"; };
 		6D52E1B3F52C432A736BA9A4F13BC60F /* Habanero-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Habanero-prefix.pch"; sourceTree = "<group>"; };
-		6F7365BB36B67315930B504AC5B8FEC0 /* Habanero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Habanero.framework; path = Habanero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F7365BB36B67315930B504AC5B8FEC0 /* Habanero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Habanero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70E882CC7BAD5F67CDA15F3DEE4E8EE3 /* SelectionControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SelectionControl.swift; sourceTree = "<group>"; };
-		72567DC8456723C0FB66DD5E9AE3A1CE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		72567DC8456723C0FB66DD5E9AE3A1CE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		733E2C5FED0A790DCA11891E1F0ADD58 /* RequiredRule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequiredRule.swift; path = Validator/Classes/Rules/RequiredRule.swift; sourceTree = "<group>"; };
 		74A493A147B2FF78CE27130477CA66B7 /* Pods-Habanero-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Habanero-umbrella.h"; sourceTree = "<group>"; };
 		76492037C9F5F273514D658F3A5CF294 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Habanero/Assets/Assets.xcassets; sourceTree = "<group>"; };
 		76783C953D9F2E6B91F5B37D8B07FA43 /* UIButton+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIButton+Helpers.swift"; sourceTree = "<group>"; };
-		778A43DE3EA035383F503F3CB114C303 /* Validator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Validator.framework; path = Validator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		778A43DE3EA035383F503F3CB114C303 /* Validator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Validator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78FF8378098DCD9051C0834B19583A9F /* VisibleItemsProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VisibleItemsProvider.swift; path = Sources/Internal/VisibleItemsProvider.swift; sourceTree = "<group>"; };
 		7AEFDFD0469FCD68B719B29EC37B4388 /* Selection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Selection.swift; sourceTree = "<group>"; };
 		7C9BBF4BCCEFC44F80A93C97126B72A7 /* RegexRule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RegexRule.swift; path = Validator/Classes/Rules/RegexRule.swift; sourceTree = "<group>"; };
@@ -277,14 +281,14 @@
 		8B3E2B3C6751F3D179F6BE1B73F49FDD /* CalendarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		8E294AB61D8EAA51B51E3FD6F1A7F053 /* ManagedCalendarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ManagedCalendarView.swift; sourceTree = "<group>"; };
 		8E3B61E1D6F8DE69E521176BDAFDCB86 /* Pods-Habanero-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Habanero-acknowledgements.plist"; sourceTree = "<group>"; };
-		8E92A93407E270AE035EA3B9DCF754BB /* Pods_Habanero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Habanero.framework; path = "Pods-Habanero.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E92A93407E270AE035EA3B9DCF754BB /* Pods_Habanero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Habanero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91623BCA5360F375FAA66BD0F5B83562 /* DayRange.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DayRange.swift; path = Sources/Public/DayRange.swift; sourceTree = "<group>"; };
 		949DD2625B97B270160343819E5555FC /* Validator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Validator-prefix.pch"; sourceTree = "<group>"; };
 		97E81FFF2C3985F558A9B60A9F4D5B8E /* UIEdgeInsets+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Helpers.swift"; sourceTree = "<group>"; };
 		9818B81CAE292DF5C95A77AEDE4C202C /* Calendar+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Calendar+Helpers.swift"; sourceTree = "<group>"; };
 		99CD8497A8733311DF018587A245B121 /* Habanero-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Habanero-dummy.m"; sourceTree = "<group>"; };
 		9C437872B69A65ED57E447F636B3EE5C /* Theme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DA98B552272B063AABA5AC00E52A864 /* CalendarRangesView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalendarRangesView.swift; sourceTree = "<group>"; };
 		9E5E5968828CA7AEC48FAF2197FD3B1F /* DateRelationRule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateRelationRule.swift; path = Validator/Classes/Rules/DateRelationRule.swift; sourceTree = "<group>"; };
 		9F13CAF127286B36002C793EB9ADEF6D /* OffScreenCalendarItemAccessibilityElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OffScreenCalendarItemAccessibilityElement.swift; path = Sources/Internal/OffScreenCalendarItemAccessibilityElement.swift; sourceTree = "<group>"; };
@@ -295,9 +299,13 @@
 		A774809B946956E166AB33AAE068D16F /* MonthsLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MonthsLayout.swift; path = Sources/Public/MonthsLayout.swift; sourceTree = "<group>"; };
 		A7756EFE2E67CFC78BB217E86B7EB5AD /* CalendarDayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalendarDayView.swift; sourceTree = "<group>"; };
 		A795F19936C9FD8491538E4494B4D641 /* NumberInputFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NumberInputFormatter.swift; sourceTree = "<group>"; };
+		A92298522503CFCC00F2CCD7 /* FooterLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterLabel.swift; sourceTree = "<group>"; };
+		A965D1B4250319DA0085B70B /* Footer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Footer.swift; sourceTree = "<group>"; };
+		A965D1B625031BA40085B70B /* FooterTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterTypes.swift; sourceTree = "<group>"; };
+		A965D1BA2503235A0085B70B /* FooterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterModel.swift; sourceTree = "<group>"; };
 		AE77BC53A09E4B4E002D42C97D838034 /* CalendarItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CalendarItem.swift; path = Sources/Public/CalendarItem.swift; sourceTree = "<group>"; };
 		AEF33BE45ADBF5F7C563CFAB2EF07FB2 /* StringInputFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StringInputFormatter.swift; sourceTree = "<group>"; };
-		B0301BF907EF962E46200990C0787163 /* Pods_Habanero_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Habanero_Tests.framework; path = "Pods-Habanero_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0301BF907EF962E46200990C0787163 /* Pods_Habanero_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Habanero_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0AFD7487F7DA14A1529A84AC08F357F /* Pods-Habanero_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Habanero_Tests-umbrella.h"; sourceTree = "<group>"; };
 		B14CE2D69762C6ED6D9D98035608E793 /* FontStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FontStyle.swift; path = Habanero/Classes/FontStyle.swift; sourceTree = "<group>"; };
 		B3EE309DA170FC54EB79E7C9B86F2C96 /* CalendarItemView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CalendarItemView.swift; path = Sources/Internal/CalendarItemView.swift; sourceTree = "<group>"; };
@@ -346,7 +354,7 @@
 		F20C6DE4307F73AFC07E54CDAFC27993 /* DetailTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DetailTextView.swift; sourceTree = "<group>"; };
 		F3326FBC7D2696857881550C6B9706A4 /* AlertView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		F43453FDE8383D74F864B08B953265AF /* Validator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Validator-umbrella.h"; sourceTree = "<group>"; };
-		F45579511528B62D4DDD4ED7123E55D2 /* HorizonCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HorizonCalendar.framework; path = HorizonCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F45579511528B62D4DDD4ED7123E55D2 /* HorizonCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HorizonCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4E123F0BB0035B06E4411760409FD4C /* SetRule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SetRule.swift; path = Validator/Classes/Rules/SetRule.swift; sourceTree = "<group>"; };
 		F5497B264A1E9DB2C0AE89EABD0BCC2A /* ActionListDetail.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ActionListDetail.swift; sourceTree = "<group>"; };
 		FA21E087D5C46A4314D3C1195C55586C /* Pods-Habanero_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Habanero_Tests.modulemap"; sourceTree = "<group>"; };
@@ -438,11 +446,11 @@
 		188E906BF9F25F50B5530D33041CD0A2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A965D1B3250319C90085B70B /* Footer */,
 				1FD3489145401E69237A0E0A7AF48C27 /* Calendar */,
 				ACA2F2C7BB6EBC50C70559BBC50DCE13 /* Lists */,
 				42845735369B95466CB5965037A324BA /* Selections */,
 			);
-			name = Components;
 			path = Components;
 			sourceTree = "<group>";
 		};
@@ -464,7 +472,6 @@
 				8B3E2B3C6751F3D179F6BE1B73F49FDD /* CalendarView.swift */,
 				8E294AB61D8EAA51B51E3FD6F1A7F053 /* ManagedCalendarView.swift */,
 			);
-			name = Calendar;
 			path = Calendar;
 			sourceTree = "<group>";
 		};
@@ -488,6 +495,8 @@
 				B8EA1C21CE5F281895E147FC3E0455ED /* CalendarDaySelection.swift */,
 				5FEB92E0D678298A055C1B42890AD59E /* CalendarRange.swift */,
 				1F4CF609DD5816D53D2D99B1C4F056FC /* CalendarRanges.swift */,
+				A965D1BA2503235A0085B70B /* FooterModel.swift */,
+				A92298522503CFCC00F2CCD7 /* FooterLabel.swift */,
 				D1DD85EC48411259B446CCD634B5C984 /* SimpleSelectionControl.swift */,
 				24107C22A8E04EC3D9E61DB5B887B88F /* SimpleStatus.swift */,
 			);
@@ -502,7 +511,6 @@
 				2860D641F3CE3B6620F073AD381D7F34 /* SelectionGroup.swift */,
 				462CF234F3BBE03E17BB14B4989D2079 /* SelectionGroupStyle.swift */,
 			);
-			name = Selections;
 			path = Selections;
 			sourceTree = "<group>";
 		};
@@ -512,7 +520,6 @@
 				552DD92C1F427C63A6001CA9886AC7C9 /* StatusType.swift */,
 				B73594727F31AEC413E91BA4D3092989 /* StatusView.swift */,
 			);
-			name = Status;
 			path = Status;
 			sourceTree = "<group>";
 		};
@@ -558,7 +565,6 @@
 				4F42F2D9DAE98843F90255FFC0F5EE4A /* ValidatorError.swift */,
 				B8B967B7EF498E81F7A1FE6B9D2CF0D5 /* Support Files */,
 			);
-			name = Validator;
 			path = Validator;
 			sourceTree = "<group>";
 		};
@@ -568,7 +574,6 @@
 				87F2004A647A1D243B43140F004EECBA /* Menu.swift */,
 				7F8210CB69C1076945EFDA83F9FBC913 /* MenuPicker.swift */,
 			);
-			name = Menus;
 			path = Menus;
 			sourceTree = "<group>";
 		};
@@ -581,6 +586,15 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		A965D1B3250319C90085B70B /* Footer */ = {
+			isa = PBXGroup;
+			children = (
+				A965D1B4250319DA0085B70B /* Footer.swift */,
+				A965D1B625031BA40085B70B /* FooterTypes.swift */,
+			);
+			path = Footer;
+			sourceTree = "<group>";
+		};
 		ACA2F2C7BB6EBC50C70559BBC50DCE13 /* Lists */ = {
 			isa = PBXGroup;
 			children = (
@@ -588,7 +602,6 @@
 				A343556D57FE667488232CAAA2979EED /* ActionListCell.swift */,
 				882B2317EAA8C8816F8743049B7B7CFD /* ActionListNavigationStyle.swift */,
 			);
-			name = Lists;
 			path = Lists;
 			sourceTree = "<group>";
 		};
@@ -602,7 +615,6 @@
 				68600FE27BFD2BA7D1B4DC17062D6271 /* Status */,
 				ED74B329A2F5A3C8879E3221D7115F31 /* Text */,
 			);
-			name = Atoms;
 			path = Atoms;
 			sourceTree = "<group>";
 		};
@@ -653,7 +665,6 @@
 				DA95BBCC3EA3DA86D97EDE495896618B /* AlertType.swift */,
 				F3326FBC7D2696857881550C6B9706A4 /* AlertView.swift */,
 			);
-			name = Alerts;
 			path = Alerts;
 			sourceTree = "<group>";
 		};
@@ -666,7 +677,6 @@
 				1D9D1C182576AB6AD33448DEF6A56B4D /* ButtonStyleOutline.swift */,
 				2613DCC5F782935FAE0479F420DF7F41 /* ButtonStyleText.swift */,
 			);
-			name = Buttons;
 			path = Buttons;
 			sourceTree = "<group>";
 		};
@@ -761,7 +771,6 @@
 				2CEEF2FC79F4BE69E00A6F5B1807D5D1 /* TextInputError.swift */,
 				FA1B2911D23EE78C62A55DF27E3FEA63 /* Formatters */,
 			);
-			name = Text;
 			path = Text;
 			sourceTree = "<group>";
 		};
@@ -774,7 +783,6 @@
 				BB961132B913343FE1D776D5CE67AF1E /* SelectionControlButton.swift */,
 				82CB2D422EA7E8EB6F65F604C80500D0 /* SelectionLabel.swift */,
 			);
-			name = Selections;
 			path = Selections;
 			sourceTree = "<group>";
 		};
@@ -821,7 +829,6 @@
 				78FF8378098DCD9051C0834B19583A9F /* VisibleItemsProvider.swift */,
 				F092425AE15EE257E52648AEB69364C3 /* Support Files */,
 			);
-			name = HorizonCalendar;
 			path = HorizonCalendar;
 			sourceTree = "<group>";
 		};
@@ -832,7 +839,6 @@
 				AEF33BE45ADBF5F7C563CFAB2EF07FB2 /* StringInputFormatter.swift */,
 				D6944732C4262139325C580C1FF0FCC3 /* TextInputFormatter.swift */,
 			);
-			name = Formatters;
 			path = Formatters;
 			sourceTree = "<group>";
 		};
@@ -1157,6 +1163,7 @@
 				2B0649C616D13A0081571062B0F7E320 /* ButtonStyle.swift in Sources */,
 				0D416479569C61B3E52B89E5E57AE463 /* ButtonStyleContained.swift in Sources */,
 				64A20AB1D60C886D33E3C461427F13D3 /* ButtonStyleOutline.swift in Sources */,
+				A965D1BB2503235A0085B70B /* FooterModel.swift in Sources */,
 				376484A78870AA470091610F3CEBB3BB /* ButtonStyleText.swift in Sources */,
 				B3C2C138F5240F7673764BB35B3032CB /* Calendar+Helpers.swift in Sources */,
 				EA6A3B681E0BB6E4C98A363AE5C47890 /* CalendarDateSelection.swift in Sources */,
@@ -1180,6 +1187,7 @@
 				28B1D5A785665C16845641C3B9B8270C /* FontStyle.swift in Sources */,
 				9805BE350FDB1C7F936A48BF41C162F2 /* Habanero-dummy.m in Sources */,
 				BD30ADAC8FF873795E5901E863F9085C /* Images.swift in Sources */,
+				A965D1B725031BA40085B70B /* FooterTypes.swift in Sources */,
 				17C5A6C11D3208557D2129B45C6643DA /* ImagesStandard.swift in Sources */,
 				914415ED93C9E9FB19D30CF850762C13 /* ManagedCalendarView.swift in Sources */,
 				87EFE6A3E6985C7BE9EB00445E7891BA /* Menu.swift in Sources */,
@@ -1193,6 +1201,7 @@
 				EF305B4CBAAF742C5DA61DBD4820CF63 /* SelectionControl.swift in Sources */,
 				D095BB6996C74212F9DAA5CDC126EA8D /* SelectionControlButton.swift in Sources */,
 				4630177F33B37491B9BD749877146F80 /* SelectionGroup.swift in Sources */,
+				A965D1B5250319DA0085B70B /* Footer.swift in Sources */,
 				71351736A288EB844AD9E1EC8DC8274E /* SelectionGroupStyle.swift in Sources */,
 				347BCF75BEFE3368F0F63AFF23838445 /* SelectionLabel.swift in Sources */,
 				9E3605EE38AC9D7042628CFB2349C840 /* SimpleSelectionControl.swift in Sources */,
@@ -1204,6 +1213,7 @@
 				A97AA823E434130548B5EABDC495B6B6 /* TextInput.swift in Sources */,
 				9F52DC50F24B17500D164CFD944F005B /* TextInputCountView.swift in Sources */,
 				6022756AE5429E8A3218A6E0DFEB3274 /* TextInputDisplayable.swift in Sources */,
+				A92298532503CFCC00F2CCD7 /* FooterLabel.swift in Sources */,
 				696366142A4DBD8FBBD5CE2B1039D8C4 /* TextInputError.swift in Sources */,
 				03EDA5254D5250FA6AA6B65011BE060E /* TextInputFormatter.swift in Sources */,
 				19748031645BF82CEF54CC14C9E65BE3 /* Theme.swift in Sources */,

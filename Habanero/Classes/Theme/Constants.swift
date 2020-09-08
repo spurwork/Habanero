@@ -166,6 +166,17 @@ public protocol Constants {
     /// - Parameter showCharacterCount: Is the character count being shown alongside the text?
     func detailTextViewInsets(showCharacterCount: Bool) -> UIEdgeInsets
 
+    // MARK: Footer
+
+    /// The amount of spacing between buttons in a `Footer`.
+    var footerButtonSpacing: CGFloat { get }
+
+    /// The content insets for a `Footer`.
+    var footerContentInsets: UIEdgeInsets { get }
+
+    /// The amount of spacing between any content and buttons in a `Footer`.
+    var footerContentSpacing: CGFloat { get }
+
     // MARK: General
 
     /// The alpha value to use when a control is disabled.
