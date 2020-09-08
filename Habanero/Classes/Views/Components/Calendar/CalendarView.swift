@@ -137,8 +137,8 @@ public class CalendarView: BaseView {
 
     // MARK: Helpers
 
-    public func scrollTo(date: Date) {
-        managedCalendarView.scrollTo(date: date)
+    public func scrollTo(date: Date, animated: Bool) {
+        managedCalendarView.scrollTo(date: date, animated: animated)
     }
 
     // MARK: Action

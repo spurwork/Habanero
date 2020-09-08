@@ -252,9 +252,9 @@ class ManagedCalendarView {
 
     // MARK: Scroll
 
-    public func scrollTo(date: Date) {
+    public func scrollTo(date: Date, animated: Bool) {
         if config.dateRange.contains(date) {
-            calendarView.scroll(toMonthContaining: date, scrollPosition: .centered, animated: true)
+            calendarView.scroll(toMonthContaining: date, scrollPosition: .centered, animated: animated)
         } else {
             delegate?.managedCalendarViewTriedOverscroll(self)
         }
