@@ -24,7 +24,7 @@ public protocol FooterLabelDelegate: class {
 // MARK: - FooterCheckboxDelegate
 
 public protocol FooterCheckboxDelegate: class {
-    func footerCheckboxWasTapped(_ footer: Footer)
+    func footerCheckboxWasTapped(_ footer: Footer, isSelected: Bool)
     func footerTipWasTapped(_ footer: Footer, backedValue: Any)
 }
 
@@ -309,9 +309,9 @@ extension Footer: SelectionControlDelegate {
                                               content: .checkbox(nextCheckbox, backedValue))
             self.lastDisplayable = nextDisplayable
             styleCheckbox(theme: theme, displayable: nextCheckbox)
-        }
 
-        checkboxDelegate?.footerCheckboxWasTapped(self)
+            checkboxDelegate?.footerCheckboxWasTapped(self, isSelected: nextCheckbox.isSelected)
+        }
     }
 }
 

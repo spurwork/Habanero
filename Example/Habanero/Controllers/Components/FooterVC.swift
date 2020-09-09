@@ -78,8 +78,8 @@ extension FooterVC: FooterDelegate {
         print("footer label was tapped")
     }
     
-    func footerCheckboxWasTapped(_ footer: Footer) {
-        print("footer checkbox was tapped")
+    func footerCheckboxWasTapped(_ footer: Footer, isSelected: Bool) {
+        print("footer checkbox was tapped. isSelected: \(isSelected)")
     }
     
     func footerTipWasTapped(_ footer: Footer, backedValue: Any) {

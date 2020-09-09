@@ -78,7 +78,7 @@ public class NotesView: BaseView {
 
         layer.cornerRadius = constants.notesViewCornerRadius
         backgroundColor = displayable.showBackground ? colors.backgroundNotes : nil
-        
+
         let insets = displayable.customContentInsets ?? constants.notesContentInsets
         mainStackView.isLayoutMarginsRelativeArrangement = true
         mainStackView.layoutMargins = displayable.isContentInset ? insets : .zero
