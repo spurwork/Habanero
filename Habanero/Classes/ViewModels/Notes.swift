@@ -8,23 +8,27 @@ public struct Notes: NotesViewDisplayable {
     public let showBackground: Bool
     public let isContentInset: Bool
     public let customContentInsets: UIEdgeInsets?
+    public let customContentSpacing: CGFloat?
 
     // MARK: Initializer
 
     public init(notes: [Note],
                 showBackground: Bool = true,
                 isContentInset: Bool = true,
-                customContentInsets: UIEdgeInsets? = nil) {
+                customContentInsets: UIEdgeInsets? = nil,
+                customContentSpacing: CGFloat? = nil) {
         self.notes = notes
         self.showBackground = showBackground
         self.isContentInset = isContentInset
         self.customContentInsets = customContentInsets
+        self.customContentSpacing = customContentSpacing
     }
 
     public init(notes: [Note]) {
         self.notes = notes
-        self.showBackground = true
-        self.isContentInset = true
-        self.customContentInsets = nil
+        showBackground = true
+        isContentInset = true
+        customContentInsets = nil
+        customContentSpacing = nil
     }
 }

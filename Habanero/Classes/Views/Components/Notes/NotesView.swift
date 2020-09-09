@@ -13,6 +13,9 @@ public protocol NotesViewDisplayable {
 
     /// A custom amount of spacing to apply to the `NotesView`.
     var customContentInsets: UIEdgeInsets? { get }
+
+    /// A custom amount of spacing to apply between notes within the `NotesView`.
+    var customContentSpacing: CGFloat? { get }
 }
 
 // MARK: - NotesViewDelegate
@@ -82,7 +85,7 @@ public class NotesView: BaseView {
             mainStackView.isLayoutMarginsRelativeArrangement = true
             mainStackView.layoutMargins = displayable.isContentInset ? insets : .zero
             mainStackView.axis = .vertical
-            mainStackView.spacing = constants.notesContentSpacing
+            mainStackView.spacing = displayable.customContentSpacing ?? constants.notesContentSpacing
         }
 
         mainStackView.removeAllArrangedSubviews()
