@@ -48,8 +48,8 @@ class NotesVC: UIViewController {
 // MARK: - NotesVC: NotesViewDelegate
 
 extension NotesVC: NotesViewDelegate {
-    func notesViewTappedLink(_ notesView: NotesView, link: String) {
-        let alert = Alert(type: .info, message: "Link tapped: \(link)", duration: 2.0, anchor: .bottom)
+    func notesViewTappedLabel(_ notesView: NotesView, backedValue: String?) {
+        let alert = Alert(type: .info, message: "Label tapped: \(backedValue ?? "nil")", duration: 2.0, anchor: .bottom)
         AlertManager.shared.show(alert, onView: view, withTheme: theme)
     }
 }

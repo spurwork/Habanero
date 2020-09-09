@@ -18,7 +18,7 @@ public protocol NotesViewDisplayable {
 // MARK: - NotesViewDelegate
 
 public protocol NotesViewDelegate: class {
-    func notesViewTappedLink(_ notesView: NotesView, link: String)
+    func notesViewTappedLabel(_ notesView: NotesView, backedValue: String?)
 }
 
 // MARK: - NotesView: BaseView
@@ -84,7 +84,7 @@ public class NotesView: BaseView {
             let textColor = note.customTextColor ?? normalColor
 
             selectionLabel.tag = index
-            selectionLabel.delegate = (note.backedValue == nil) ? nil : self
+            selectionLabel.delegate = self
             selectionLabel.label.numberOfLines = 0
             selectionLabel.label.attributedText = note.value.attributed(fontStyle: note.fontStyle,
                                                                         color: textColor,
@@ -98,8 +98,8 @@ public class NotesView: BaseView {
 
 extension NotesView: SelectionLabelDelegate {
     func selectionLabelWasTouchedUp(_ selectionLabel: SelectionLabel) {
-        if let link = displayable?.notes[selectionLabel.tag].backedValue {
-            delegate?.notesViewTappedLink(self, link: link)
+        if let note = displayable?.notes[selectionLabel.tag] {
+            delegate?.notesViewTappedLabel(self, backedValue: note.backedValue)
         }
     }
 
