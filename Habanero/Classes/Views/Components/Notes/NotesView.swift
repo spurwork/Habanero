@@ -18,7 +18,7 @@ public protocol NotesViewDisplayable {
 // MARK: - NotesViewDelegate
 
 public protocol NotesViewDelegate: class {
-    func notesViewTappedLabel(_ notesView: NotesView, backedValue: String?)
+    func notesViewTappedNote(_ notesView: NotesView, backedValue: String?)
 }
 
 // MARK: - NotesView: BaseView
@@ -56,7 +56,7 @@ public class NotesView: BaseView {
 
     @objc func noteTapped(button: UIButton) {
         if let note = displayable?.notes[button.tag] {
-            delegate?.notesViewTappedLabel(self, backedValue: note.backedValue)
+            delegate?.notesViewTappedNote(self, backedValue: note.backedValue)
         }
     }
 
