@@ -52,27 +52,27 @@ extension NotesViewExamples {
         
         let examples: [NotesViewDisplayable] = [
             Notes(notes: []),
-            Notes(notes: [Note(fontStyle: .bodyLarge, text: "Some body text.")],
+            Notes(notes: [Note(config: .text(.bodyLarge, nil, nil), text: "Some body text.")],
                   showBackground: false,
                   isContentInset: false),
-            Notes(notes: [Note(fontStyle: .bodyLarge, text: "Some body text.")],
+            Notes(notes: [Note(config: .text(.bodyLarge, nil, nil), text: "Some body text.")],
                   showBackground: false,
                   isContentInset: true),
             Notes(notes: [
-                Note(fontStyle: .bodyLarge, text: "Some body text."),
-                Note(fontStyle: .bodyLarge, text: "Some body text."),
-                Note(fontStyle: .bodyLarge, text: "Some body text.")
+                Note(config: .text(.bodyLarge, nil, nil), text: "Some body text."),
+                Note(config: .text(.bodyLarge, nil, nil), text: "Some body text."),
+                Note(config: .text(.bodyLarge, nil, nil), text: "Some body text.")
             ]),
             Notes(notes: [
-                Note(fontStyle: .labelLarge, text: "Some body text about a website."),
-                Note(fontStyle: .labelSmall, text: "A link to website.", isTappable: true, backedValue: "https://spurwork.com")
+                Note(config: .text(.labelLarge, nil, nil), text: "Some body text about a website."),
+                Note(config: .link("https://spurwork.com"), text: "A link to website.")
             ]),
             Notes(notes: [
-                Note(fontStyle: .labelLarge, text: "Section Title"),
-                Note(fontStyle: .bodyLarge, text: "Some body text about the section.")
+                Note(config: .text(.labelLarge, nil, nil), text: "Section Title"),
+                Note(config: .text(.bodyLarge, nil, nil), text: "Some body text about a section.")
             ]),
             Notes(notes: [
-                Note(fontStyle: .labelLarge, text: "Contact Support", isTappable: true, backedValue: "https://spurwork.com")
+                Note(config: .link("https://spurwork.com"), text: "Contact Support")
             ])
         ]
         

@@ -21,7 +21,7 @@ public protocol NotesViewDisplayable {
 // MARK: - NotesViewDelegate
 
 public protocol NotesViewDelegate: class {
-    func notesViewTappedNote(_ notesView: NotesView, backedValue: String?)
+    func notesViewTappedNote(_ notesView: NotesView, backedValue: Any?)
 }
 
 // MARK: - NotesView: BaseView
@@ -58,8 +58,8 @@ public class NotesView: BaseView {
     // MARK: Actions
 
     @objc func noteTapped(button: UIButton) {
-        if let note = displayable?.notes[button.tag] {
-            delegate?.notesViewTappedNote(self, backedValue: note.backedValue)
+        if let note = displayable?.notes[button.tag], case .link(let backedValue) = note.config {
+            delegate?.notesViewTappedNote(self, backedValue: backedValue)
         }
     }
 
@@ -90,21 +90,22 @@ public class NotesView: BaseView {
 
         mainStackView.removeAllArrangedSubviews()
         for (index, note) in displayable.notes.enumerated() {
-            if note.isTappable {
+            switch note.config {
+            case .link:
                 let button = Button(frame: .zero, style: .text(.primary, .left))
                 button.tag = index
                 button.styleWith(theme: theme)
                 button.setTitle(note.text, for: .normal)
                 button.addTarget(self, action: #selector(noteTapped(button:)), for: .touchUpInside)
                 mainStackView.addArrangedSubview(button)
-            } else {
+            case .text(let fontStyle, let customTextColor, let indentation):
                 let label = UILabel(frame: .zero)
-                let textColor = note.customTextColor ?? colors.textHighEmphasis
+                let textColor = customTextColor ?? colors.textHighEmphasis
 
                 label.numberOfLines = 0
-                label.attributedText = note.text.attributed(fontStyle: note.fontStyle,
+                label.attributedText = note.text.attributed(fontStyle: fontStyle,
                                                             color: textColor,
-                                                            indentation: note.indentation)
+                                                            indentation: indentation ?? 0)
                 mainStackView.addArrangedSubview(label)
             }
         }

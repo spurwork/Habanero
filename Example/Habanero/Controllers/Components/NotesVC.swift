@@ -36,7 +36,7 @@ class NotesVC: UIViewController {
         
         view.backgroundColor = theme.colors.backgroundCell
         
-        let note = Note(fontStyle: .labelLarge, text: "Contact Support", isTappable: true, backedValue: "https://spurwork.com")
+        let note = Note(config: .link("https://spurwork.com"), text: "Contact Support")
         let notesView = NotesView(frame: CGRect(x: 20, y: 100, width: view.frame.width - 40, height: 76))
         notesView.delegate = self
         notesView.styleWith(theme: theme, displayable: Notes(notes: [note]))
@@ -48,7 +48,7 @@ class NotesVC: UIViewController {
 // MARK: - NotesVC: NotesViewDelegate
 
 extension NotesVC: NotesViewDelegate {
-    func notesViewTappedNote(_ notesView: NotesView, backedValue: String?) {
+    func notesViewTappedNote(_ notesView: NotesView, backedValue: Any?) {
         let alert = Alert(type: .info, message: "Label tapped: \(backedValue ?? "nil")", duration: 2.0, anchor: .bottom)
         AlertManager.shared.show(alert, onView: view, withTheme: theme)
     }

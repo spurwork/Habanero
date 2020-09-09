@@ -1,3 +1,13 @@
+// MARK: - NoteConfig
+
+/// Parameters describing how to configure a `Note`.
+public enum NoteConfig {
+    /// A note that specifies a font style, optional text color override, and optional indentation.
+    case text(FontStyle, UIColor?, CGFloat?)
+    /// A note that is tappable and provides an optional backed value.
+    case link(Any?)
+}
+
 // MARK: - Note
 
 /// An object that represents a textual observation.
@@ -5,50 +15,17 @@ public struct Note {
 
     // MARK: Properties
 
-    let fontStyle: FontStyle
+    let config: NoteConfig
     let text: String
-    let customTextColor: UIColor?
-    let indentation: CGFloat
-
-    let isTappable: Bool
-    let backedValue: String?
 
     // MARK: Initializer
 
     /// Creates a `Note`.
     /// - Parameters:
-    ///   - fontStyle: Font style.
+    ///   - config: Describes how to assemble the note.
     ///   - text: The note.
-    ///   - customTextColor: A custom text color.
-    ///   - indentation: Indentation.
-    ///   - isTappable: Can the note be tapped?
-    ///   - backedValue: An optional value to connect to the note.
-    public init(fontStyle: FontStyle,
-                text: String,
-                customTextColor: UIColor? = nil,
-                indentation: CGFloat = 0,
-                isTappable: Bool = false,
-                backedValue: String? = nil) {
-        self.fontStyle = fontStyle
+    public init(config: NoteConfig, text: String) {
+        self.config = config
         self.text = text
-        self.customTextColor = customTextColor
-        self.indentation = indentation
-
-        self.isTappable = isTappable
-        self.backedValue = backedValue
-    }
-
-    /// Creates a `Note`.
-    /// - Parameters:
-    ///   - fontStyle: Font style.
-    ///   - text: The note.
-    public init(fontStyle: FontStyle, text: String) {
-        self.fontStyle = fontStyle
-        self.text = text
-        customTextColor = nil
-        indentation = 0
-
-        isTappable = false
-        backedValue = nil
     }
 }
