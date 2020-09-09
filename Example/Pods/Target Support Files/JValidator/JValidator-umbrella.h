@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double ValidatorVersionNumber;
-FOUNDATION_EXPORT const unsigned char ValidatorVersionString[];
+FOUNDATION_EXPORT double JValidatorVersionNumber;
+FOUNDATION_EXPORT const unsigned char JValidatorVersionString[];
 

@@ -52,27 +52,27 @@ extension NotesViewExamples {
         
         let examples: [NotesViewDisplayable] = [
             Notes(notes: []),
-            Notes(notes: [Note(fontStyle: .bodyLarge, value: "Some body text.")],
+            Notes(notes: [Note(fontStyle: .bodyLarge, text: "Some body text.")],
                   showBackground: false,
                   isContentInset: false),
-            Notes(notes: [Note(fontStyle: .bodyLarge, value: "Some body text.")],
+            Notes(notes: [Note(fontStyle: .bodyLarge, text: "Some body text.")],
                   showBackground: false,
                   isContentInset: true),
             Notes(notes: [
-                Note(fontStyle: .bodyLarge, value: "Some body text."),
-                Note(fontStyle: .bodyLarge, value: "Some body text."),
-                Note(fontStyle: .bodyLarge, value: "Some body text.")
+                Note(fontStyle: .bodyLarge, text: "Some body text."),
+                Note(fontStyle: .bodyLarge, text: "Some body text."),
+                Note(fontStyle: .bodyLarge, text: "Some body text.")
             ]),
             Notes(notes: [
-                Note(fontStyle: .bodyLarge, value: "Some body text about a website."),
-                Note(fontStyle: .labelSmall, value: "A link to website.", backedValue: "https://spurwork.com")
+                Note(fontStyle: .labelLarge, text: "Some body text about a website."),
+                Note(fontStyle: .labelSmall, text: "A link to website.", isTappable: true, backedValue: "https://spurwork.com")
             ]),
             Notes(notes: [
-                Note(fontStyle: .labelLarge, value: "Section Title"),
-                Note(fontStyle: .bodyLarge, value: "Some body text about the section.")
+                Note(fontStyle: .labelLarge, text: "Section Title"),
+                Note(fontStyle: .bodyLarge, text: "Some body text about the section.")
             ]),
             Notes(notes: [
-                Note(fontStyle: .labelLarge, value: "Contact Support", backedValue: "https://spurwork.com")                
+                Note(fontStyle: .labelLarge, text: "Contact Support", isTappable: true, backedValue: "https://spurwork.com")
             ])
         ]
         

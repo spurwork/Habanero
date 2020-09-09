@@ -36,8 +36,8 @@ class NotesVC: UIViewController {
         
         view.backgroundColor = theme.colors.backgroundCell
         
-        let note = Note(fontStyle: .labelLarge, value: "Contact Support", backedValue: "https://spurwork.com")
-        let notesView = NotesView(frame: CGRect(x: 20, y: 100, width: view.frame.width - 40, height: 60))
+        let note = Note(fontStyle: .labelLarge, text: "Contact Support", isTappable: true, backedValue: "https://spurwork.com")
+        let notesView = NotesView(frame: CGRect(x: 20, y: 100, width: view.frame.width - 40, height: 76))
         notesView.delegate = self
         notesView.styleWith(theme: theme, displayable: Notes(notes: [note]))
         

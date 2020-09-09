@@ -1,6 +1,6 @@
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Habanero" "${PODS_CONFIGURATION_BUILD_DIR}/HorizonCalendar" "${PODS_CONFIGURATION_BUILD_DIR}/Validator"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Habanero" "${PODS_CONFIGURATION_BUILD_DIR}/HorizonCalendar" "${PODS_CONFIGURATION_BUILD_DIR}/JValidator"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Habanero/Habanero.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/HorizonCalendar/HorizonCalendar.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Validator/Validator.framework/Headers"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Habanero/Habanero.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/HorizonCalendar/HorizonCalendar.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/JValidator/JValidator.framework/Headers"
 OTHER_LDFLAGS = $(inherited) -framework "Foundation" -framework "HorizonCalendar" -framework "UIKit"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)

@@ -1,5 +1,4 @@
 source 'https://github.com/CocoaPods/Specs.git'
-source 'git@github.com:jarrodparkes/cocoapod-specs.git'
 
 platform :ios, '12.0'
 
@@ -10,7 +9,7 @@ use_frameworks!
 
 target 'Habanero' do
   pod 'Habanero', :path => '../'
-  pod 'Validator', '~> 0.1.6' # string validation
+  pod 'JValidator', '~> 0.1.0' # string validation
 
   target 'Habanero_Tests' do
     inherit! :search_paths

@@ -1,19 +1,19 @@
 {
   "name": "Habanero",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": {
     "type": "Apache 2.0",
     "text": "      Copyright (c) Jarrod Parkes. All rights reserved.\n"
   },
   "homepage": "https://jarrodparkes.com",
-  "summary": "A component library.",
+  "summary": "A visual components library.",
   "description": "A library containing visual components.",
   "authors": {
     "Jarrod Parkes": "parkesfjarrod@gmail.com"
   },
   "source": {
     "git": "https://github.com/jarrodparkes/Habanero.git",
-    "tag": "0.1.0",
+    "tag": "0.2.0",
     "submodules": true
   },
   "swift_versions": [

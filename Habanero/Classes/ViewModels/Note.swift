@@ -1,15 +1,16 @@
 // MARK: - Note
 
-/// An object that captures an observation to be listed.
+/// An object that represents a textual observation.
 public struct Note {
 
     // MARK: Properties
 
     let fontStyle: FontStyle
-    let value: String
-
-    let indentation: CGFloat
+    let text: String
     let customTextColor: UIColor?
+    let indentation: CGFloat
+
+    let isTappable: Bool
     let backedValue: String?
 
     // MARK: Initializer
@@ -17,32 +18,37 @@ public struct Note {
     /// Creates a `Note`.
     /// - Parameters:
     ///   - fontStyle: Font style.
-    ///   - value: The note.
+    ///   - text: The note.
+    ///   - customTextColor: A custom text color.
     ///   - indentation: Indentation.
-    ///   - customTextColor: Custom text color to use.
+    ///   - isTappable: Can the note be tapped?
     ///   - backedValue: An optional value to connect to the note.
     public init(fontStyle: FontStyle,
-                value: String,
-                indentation: CGFloat = 0,
+                text: String,
                 customTextColor: UIColor? = nil,
+                indentation: CGFloat = 0,
+                isTappable: Bool = false,
                 backedValue: String? = nil) {
         self.fontStyle = fontStyle
-        self.value = value
-        self.indentation = indentation
+        self.text = text
         self.customTextColor = customTextColor
+        self.indentation = indentation
+
+        self.isTappable = isTappable
         self.backedValue = backedValue
     }
 
     /// Creates a `Note`.
     /// - Parameters:
     ///   - fontStyle: Font style.
-    ///   - value: The note.
-    public init(fontStyle: FontStyle, value: String) {
+    ///   - text: The note.
+    public init(fontStyle: FontStyle, text: String) {
         self.fontStyle = fontStyle
-        self.value = value
-
-        indentation = 0
+        self.text = text
         customTextColor = nil
+        indentation = 0
+
+        isTappable = false
         backedValue = nil
     }
 }

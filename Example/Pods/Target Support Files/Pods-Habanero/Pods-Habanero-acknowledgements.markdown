@@ -211,7 +211,7 @@ Copyright (c) Jarrod Parkes. All rights reserved.
    limitations under the License.
 
 
-## Validator
+## JValidator
 
 Copyright (c) Jarrod Parkes. All rights reserved.
 

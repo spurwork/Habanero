@@ -6,7 +6,7 @@
 //
 
 import Habanero
-import Validator
+import JValidator
 
 // MARK: - TextInputExample: TextInputDisplayable
 

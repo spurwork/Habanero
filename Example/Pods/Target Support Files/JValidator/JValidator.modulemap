@@ -1,0 +1,6 @@
+framework module JValidator {
+  umbrella header "JValidator-umbrella.h"
+
+  export *
+  module * { export * }
+}

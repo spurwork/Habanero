@@ -52,6 +52,14 @@ public class NotesView: BaseView {
         addSubview(mainStackView)
     }
 
+    // MARK: Actions
+
+    @objc func noteTapped(button: UIButton) {
+        if let note = displayable?.notes[button.tag] {
+            delegate?.notesViewTappedLabel(self, backedValue: note.backedValue)
+        }
+    }
+
     // MARK: Custom Styling
 
     public func styleWith(theme: Theme, displayable: NotesViewDisplayable) {
@@ -79,29 +87,23 @@ public class NotesView: BaseView {
 
         mainStackView.removeAllArrangedSubviews()
         for (index, note) in displayable.notes.enumerated() {
-            let selectionLabel = SelectionLabel(frame: .zero)
-            let normalColor = (note.backedValue != nil) ? colors.textNotesLink : colors.textHighEmphasis
-            let textColor = note.customTextColor ?? normalColor
+            if note.isTappable {
+                let button = Button(frame: .zero, style: .text(.primary, .left))
+                button.tag = index
+                button.styleWith(theme: theme)
+                button.setTitle(note.text, for: .normal)
+                button.addTarget(self, action: #selector(noteTapped(button:)), for: .touchUpInside)
+                mainStackView.addArrangedSubview(button)
+            } else {
+                let label = UILabel(frame: .zero)
+                let textColor = note.customTextColor ?? colors.textHighEmphasis
 
-            selectionLabel.tag = index
-            selectionLabel.delegate = self
-            selectionLabel.label.numberOfLines = 0
-            selectionLabel.label.attributedText = note.value.attributed(fontStyle: note.fontStyle,
-                                                                        color: textColor,
-                                                                        indentation: note.indentation)
-            mainStackView.addArrangedSubview(selectionLabel)
+                label.numberOfLines = 0
+                label.attributedText = note.text.attributed(fontStyle: note.fontStyle,
+                                                            color: textColor,
+                                                            indentation: note.indentation)
+                mainStackView.addArrangedSubview(label)
+            }
         }
     }
-}
-
-// MARK: - NotesView: SelectionLabelDelegate
-
-extension NotesView: SelectionLabelDelegate {
-    func selectionLabelWasTouchedUp(_ selectionLabel: SelectionLabel) {
-        if let note = displayable?.notes[selectionLabel.tag] {
-            delegate?.notesViewTappedLabel(self, backedValue: note.backedValue)
-        }
-    }
-
-    func selectionLabelWasTouchedDown(_ selectionLabel: SelectionLabel) {}
 }
