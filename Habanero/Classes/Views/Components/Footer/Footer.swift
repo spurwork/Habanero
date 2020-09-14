@@ -141,7 +141,7 @@ public class Footer: BaseView {
 
         backgroundColor = theme.colors.backgroundFooter
 
-        if case let .none = displayable.buttonState, case let .none = displayable.content {
+        if case .none = displayable.buttonState, case .none = displayable.content {
             isHidden = true
             return
         } else {
@@ -319,7 +319,7 @@ extension Footer: SelectionControlDelegate {
 
 extension Footer: SelectionControlTipDelegate {
     public func selectionControlTipWasTapped(_ selectionControl: SelectionControl) {
-        if case .checkbox(_, let backedValue) = lastDisplayable?.content {
+        if case .checkbox(_, let optBackedValue) = lastDisplayable?.content, let backedValue = optBackedValue {
             checkboxDelegate?.footerTipWasTapped(self, backedValue: backedValue)
         }
     }
