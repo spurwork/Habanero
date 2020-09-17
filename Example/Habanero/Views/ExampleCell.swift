@@ -36,6 +36,7 @@ class ExampleCell: BaseTableViewCell {
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
+        self.contentView.isUserInteractionEnabled = false
     }
     
     override func addSubviews() {
@@ -44,8 +45,8 @@ class ExampleCell: BaseTableViewCell {
 
     // MARK: Style
 
-    func styleWith(theme: Theme, title: String, contentView: UIView) {        
-        isUserInteractionEnabled = false
+    func styleWith(theme: Theme, title: String, contentView: UIView) {
+        isUserInteractionEnabled = true
         stackView.removeAllArrangedSubviews(deactivateConstraints: false)
         
         stackView.axis = .vertical                
