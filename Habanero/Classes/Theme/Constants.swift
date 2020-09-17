@@ -103,22 +103,22 @@ public protocol Constants {
     /// The insets to apply to a `CalendarDayView` with a status.
     var calendarDayViewInsetsWithStatus: UIEdgeInsets { get }
 
-    /// The image insets to apply to buttons in a `CalendarView`.
+    /// The image insets to apply to buttons in a `HCalendarView`.
     var calendarViewButtonImageInsets: UIEdgeInsets { get }
 
     /// The amount of horizontal and vertical spacing between each `CalendarDayView`.
     var calendarViewDaySpacing: CGFloat { get }
 
-    /// The dimension to use for a `CalendarView` dot's width and height.
+    /// The dimension to use for a `HCalendarView` dot's width and height.
     var calendarViewDotDimension: CGFloat { get }
 
-    /// The insets to apply to the directional layout of a `CalendarView`.
+    /// The insets to apply to the directional layout of a `HCalendarView`.
     var calendarViewDirectionalLayoutMargins: NSDirectionalEdgeInsets { get }
 
-    /// The amount of spacing between each month in a `CalendarView`.
+    /// The amount of spacing between each month in a `HCalendarView`.
     var calendarViewInterMonthSpacing: CGFloat { get }
 
-    /// The minimum dimension to use for a `CalendarView` button.
+    /// The minimum dimension to use for a `HCalendarView` button.
     var calendarViewMinimumButtonDimension: CGFloat { get }
 
     // MARK: Checkbox

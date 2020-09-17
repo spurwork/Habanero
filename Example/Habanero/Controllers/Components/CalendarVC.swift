@@ -15,15 +15,15 @@ class CalendarVC: UIViewController {
     // MARK: Properties
     
     let theme: Theme
-    let config: CalendarViewConfig
+    let config: HCalendarViewConfig
     let datesToStatus: [Date: [CalendarDayStatus]]
     let highlightedDates: [Date]
             
-    var calendarView: CalendarView!
+    var calendarView: HCalendarView!
         
     // MARK: Initializer
     
-    init(theme: Theme, config: CalendarViewConfig, datesToStatus: [Date: [CalendarDayStatus]], highlightedDates: [Date] = []) {
+    init(theme: Theme, config: HCalendarViewConfig, datesToStatus: [Date: [CalendarDayStatus]], highlightedDates: [Date] = []) {
         self.theme = theme
         self.config = config
         self.datesToStatus = datesToStatus
@@ -46,7 +46,7 @@ class CalendarVC: UIViewController {
         
         view.backgroundColor = theme.colors.backgroundCell
                         
-        calendarView = CalendarView(theme: theme,
+        calendarView = HCalendarView(theme: theme,
                                     width: view.bounds.width - 16,
                                     config: config)
         calendarView.delegate = self
@@ -64,16 +64,16 @@ class CalendarVC: UIViewController {
     }
 }
 
-// MARK: - CalendarVC: CalendarViewDelegate
+// MARK: - CalendarVC: HCalendarViewDelegate
 
-extension CalendarVC: CalendarViewDelegate {
-    func calendarViewTriedOverscroll(_ calendarView: CalendarView) {
+extension CalendarVC: HCalendarViewDelegate {
+    func calendarViewTriedOverscroll(_ calendarView: HCalendarView) {
         let message = "Can't overscroll"
         let alert = Alert(type: .error, message: message, duration: 2.0, anchor: .bottom)
         AlertManager.shared.show(alert, onView: view, withTheme: theme)
     }
     
-    func calendarViewSelectionDidChange(_ calendarView: CalendarView,
+    func calendarViewSelectionDidChange(_ calendarView: HCalendarView,
                                         selection: CalendarDaySelection,
                                         selectedDates: [Date]) {}
 }

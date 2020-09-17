@@ -21,7 +21,7 @@ class ManagedCalendarView {
 
     private let theme: Theme
     private let width: CGFloat
-    private let config: CalendarViewConfig
+    private let config: HCalendarViewConfig
 
     private var selection: CalendarDaySelection {
         didSet {
@@ -55,7 +55,7 @@ class ManagedCalendarView {
 
     init(theme: Theme,
          width: CGFloat,
-         config: CalendarViewConfig) {
+         config: HCalendarViewConfig) {
         self.theme = theme
         self.width = width
         self.config = config

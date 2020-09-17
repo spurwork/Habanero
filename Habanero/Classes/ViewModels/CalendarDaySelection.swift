@@ -2,7 +2,7 @@ import HorizonCalendar
 
 // MARK: - CalendarDaySelection
 
-/// A selection on a `CalendarView` specified as `Day` objects.
+/// A selection on a `HCalendarView` specified as `Day` objects.
 public enum CalendarDaySelection {
     /// A single day selection.
     case singleDay(Day?)
@@ -208,7 +208,7 @@ public enum CalendarDaySelection {
 
 // MARK: - CalendarPartialDaySelection
 
-/// A partial selection on a `CalendarView`.
+/// A partial selection on a `HCalendarView`.
 public enum CalendarPartialDaySelection {
     /// A partial range selection consisting of one bound.
     case startRange(Day)

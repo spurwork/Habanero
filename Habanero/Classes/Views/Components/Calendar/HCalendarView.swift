@@ -1,20 +1,20 @@
 import HorizonCalendar
 
-// MARK: - CalendarViewConfig
+// MARK: - HCalendarViewConfig
 
-/// Settings to apply to a `CalendarView`.
-public struct CalendarViewConfig {
+/// Settings to apply to a `HCalendarView`.
+public struct HCalendarViewConfig {
     let dateRange: ClosedRange<Date>
     let accessoryStyle: CalendarDayViewAccessoryStyle
     let initialDateSelection: CalendarDateSelection
     let areDaysSelectable: Bool
 
-    /// Creates a `CalendarViewConfig`.
+    /// Creates a `HCalendarViewConfig`.
     /// - Parameters:
-    ///   - dateRange: The range of dates to display with a `CalendarView`.
-    ///   - accessoryStyle: The style to apply to `CalendarDayView` within a `CalendarView`.
+    ///   - dateRange: The range of dates to display with a `HCalendarView`.
+    ///   - accessoryStyle: The style to apply to `CalendarDayView` within a `HCalendarView`.
     ///   - initialDateSelection: Dates to show as selected on initialization.
-    ///   - areDaysSelectable: Can the `CalendarView` selection be adjusted?
+    ///   - areDaysSelectable: Can the `HCalendarView` selection be adjusted?
     public init(dateRange: ClosedRange<Date>,
                 accessoryStyle: CalendarDayViewAccessoryStyle,
                 initialDateSelection: CalendarDateSelection,
@@ -26,18 +26,18 @@ public struct CalendarViewConfig {
     }
 }
 
-// MARK: - CalendarViewDelegate
+// MARK: - HCalendarViewDelegate
 
-public protocol CalendarViewDelegate: class {
-    func calendarViewTriedOverscroll(_ calendarView: CalendarView)
-    func calendarViewSelectionDidChange(_ calendarView: CalendarView,
+public protocol HCalendarViewDelegate: class {
+    func calendarViewTriedOverscroll(_ calendarView: HCalendarView)
+    func calendarViewSelectionDidChange(_ calendarView: HCalendarView,
                                         selection: CalendarDaySelection,
                                         selectedDates: [Date])
 }
 
-// MARK: - CalendarView: BaseView
+// MARK: - HCalendarView: BaseView
 
-public class CalendarView: BaseView {
+public class HCalendarView: BaseView {
 
     // MARK: Properties
 
@@ -49,13 +49,13 @@ public class CalendarView: BaseView {
     private let managedCalendarView: ManagedCalendarView
     private let theme: Theme
 
-    public weak var delegate: CalendarViewDelegate?
+    public weak var delegate: HCalendarViewDelegate?
 
     // MARK: Initializer
 
     public init(theme: Theme,
                 width: CGFloat,
-                config: CalendarViewConfig) {
+                config: HCalendarViewConfig) {
         self.theme = theme
 
         let sideButtonWidth = theme.constants.calendarViewMinimumButtonDimension
@@ -162,9 +162,9 @@ public class CalendarView: BaseView {
     }
 }
 
-// MARK: - CalendarView: ManagedCalendarViewDelegate
+// MARK: - HCalendarView: ManagedCalendarViewDelegate
 
-extension CalendarView: ManagedCalendarViewDelegate {
+extension HCalendarView: ManagedCalendarViewDelegate {
     func managedCalendarViewTriedOverscroll(_ managedCalendarView: ManagedCalendarView) {
         delegate?.calendarViewTriedOverscroll(self)
     }

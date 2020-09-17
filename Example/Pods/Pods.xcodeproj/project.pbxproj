@@ -97,7 +97,7 @@
 		B1596BEB089140823774393AC85666B9 /* CalendarRangesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD4301D259796B7596C92346D45AD75 /* CalendarRangesView.swift */; };
 		B30FD8CB17A3AC0D90E3394C81FB190E /* CAShapeLayer+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F595AA7CED5623E314B1059CEE3C21A /* CAShapeLayer+Helpers.swift */; };
 		B40921427956A91A5FC498F50831C899 /* BaseUIConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55743BEB26266D63F18C25EE42CCBC1 /* BaseUIConfigurable.swift */; };
-		B4F4051FB1F61F5585B37E9CF7D26E32 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1916BA579FE33834F3BA6154B97DCF0 /* CalendarView.swift */; };
+		B4F4051FB1F61F5585B37E9CF7D26E32 /* HCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1916BA579FE33834F3BA6154B97DCF0 /* HCalendarView.swift */; };
 		B5ECBF7328E5AECD01D353D25ABF3C24 /* TextInputError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA14A957FFDA34632F8882A2E905E31 /* TextInputError.swift */; };
 		B6AA1C9C1609EB44C5B3E6C177A71B18 /* UIStackView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AAA6E6466B289577A0D4B3FF8DB561 /* UIStackView+Helpers.swift */; };
 		B93061FD299E89486BA454BC3A4CDBCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDED63DC476BDFFCDD2CAA2ACF74B529 /* Assets.xcassets */; };
@@ -232,7 +232,7 @@
 		4484FBB9BD23C0B083204BBDFFA3FFF2 /* Habanero-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Habanero-dummy.m"; sourceTree = "<group>"; };
 		4774B8D19AB674FA9DD84F8A2D4742AB /* SimpleSelectionControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SimpleSelectionControl.swift; sourceTree = "<group>"; };
 		49345ECF6BE2BE6999F48E991665ACD4 /* Selection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Selection.swift; sourceTree = "<group>"; };
-		4ACB4CEE8AD57BD7EA8C637555AA51D5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		4ACB4CEE8AD57BD7EA8C637555AA51D5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4C23B12BECA990354CD057C71910E599 /* JValidator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JValidator-umbrella.h"; sourceTree = "<group>"; };
 		508BB6590BC7829F8BC91CE27954C382 /* VisibleItemsProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VisibleItemsProvider.swift; path = Sources/Internal/VisibleItemsProvider.swift; sourceTree = "<group>"; };
 		53161425B9FF719C00E77774E2D96AA3 /* Bundlable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Bundlable.swift; sourceTree = "<group>"; };
@@ -243,7 +243,7 @@
 		5AA2E0D9587BE49CFDD4A07C95DF0977 /* ActionListAccessoryViews.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ActionListAccessoryViews.swift; sourceTree = "<group>"; };
 		5AD1342AE3927123BD7DC7F3CF1E2C7A /* ResourceBundle-Habanero-Habanero-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Habanero-Habanero-Info.plist"; sourceTree = "<group>"; };
 		5B977035F35765B092C61F5C34776BED /* ValidatorError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValidatorError.swift; path = Validator/Classes/ValidatorError.swift; sourceTree = "<group>"; };
-		5E4446448C2C25C0899E10630DA0B5B0 /* Habanero.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Habanero.bundle; path = "Habanero-Habanero.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E4446448C2C25C0899E10630DA0B5B0 /* Habanero.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Habanero.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F0AB762D56870536F56A70ACF02562B /* JValidator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JValidator.debug.xcconfig; sourceTree = "<group>"; };
 		5F595AA7CED5623E314B1059CEE3C21A /* CAShapeLayer+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "CAShapeLayer+Helpers.swift"; sourceTree = "<group>"; };
 		606C5AFE4945CD182606729AA2CD7758 /* Button.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
@@ -261,7 +261,7 @@
 		6E0AB1955835A0E18185873758734D21 /* SimpleStatus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SimpleStatus.swift; sourceTree = "<group>"; };
 		6EF470D786F92637018B52FDA6886A08 /* FooterTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FooterTypes.swift; sourceTree = "<group>"; };
 		6F73277A4AF7FEAB4C55439742E6DC9A /* FloatRule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatRule.swift; path = Validator/Classes/Rules/FloatRule.swift; sourceTree = "<group>"; };
-		6F7365BB36B67315930B504AC5B8FEC0 /* Habanero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Habanero.framework; path = Habanero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F7365BB36B67315930B504AC5B8FEC0 /* Habanero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Habanero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F7822AFC9D9AEC48C4FE0BB54A12C95 /* JValidator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JValidator-dummy.m"; sourceTree = "<group>"; };
 		706B2695068683FE5548A1022E5B89DA /* String+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Helpers.swift"; path = "Validator/Classes/Extensions/String+Helpers.swift"; sourceTree = "<group>"; };
 		740E444303011600861D91B24BCA673D /* SelectionControlButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SelectionControlButton.swift; sourceTree = "<group>"; };
@@ -280,7 +280,7 @@
 		8D37EB930E4D2A7AC9CBE7750DBF118A /* Habanero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Habanero.debug.xcconfig; sourceTree = "<group>"; };
 		8DB10F2BAC16FB0334B0763A07E3017A /* NotesView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
 		8E3B61E1D6F8DE69E521176BDAFDCB86 /* Pods-Habanero-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Habanero-acknowledgements.plist"; sourceTree = "<group>"; };
-		8E92A93407E270AE035EA3B9DCF754BB /* Pods_Habanero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Habanero.framework; path = "Pods-Habanero.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E92A93407E270AE035EA3B9DCF754BB /* Pods_Habanero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Habanero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		902FC42C24FDDCE68EA93A182B0D0106 /* CalendarDay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalendarDay.swift; sourceTree = "<group>"; };
 		9045BDCBC15C46370254E760A3C8D6E0 /* Month.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Month.swift; path = Sources/Public/Month.swift; sourceTree = "<group>"; };
 		91118B8786B470C07B96DF6E7F601AE4 /* PaddedTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaddedTextField.swift; sourceTree = "<group>"; };
@@ -292,7 +292,7 @@
 		9D1876C095C670CD5024E33535380CBE /* ScreenPixelAlignment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScreenPixelAlignment.swift; path = Sources/Internal/ScreenPixelAlignment.swift; sourceTree = "<group>"; };
 		9D3DC50D0C44421952DA27612CF3F349 /* JValidator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JValidator.release.xcconfig; sourceTree = "<group>"; };
 		9D77C018414C6F9BC12AEB2B23322073 /* HorizonCalendar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HorizonCalendar-umbrella.h"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E2512F7371C6349D50D0B5A0C60B3F7 /* Dictionary+MutatingValueForKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Dictionary+MutatingValueForKey.swift"; path = "Sources/Internal/Dictionary+MutatingValueForKey.swift"; sourceTree = "<group>"; };
 		A2D045584C78C2286730DA252CAA0438 /* Pods-Habanero_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Habanero_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A5A2FE50AA2577021BE23DC5CFBF7408 /* UIEdgeInsets+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Helpers.swift"; sourceTree = "<group>"; };
@@ -302,10 +302,10 @@
 		A86EE83AFE5AF46C6F9B664AC4ECE085 /* ActionListItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ActionListItem.swift; sourceTree = "<group>"; };
 		A998DED87843EADD88338DE7C9D9C501 /* ConstantsStandard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConstantsStandard.swift; sourceTree = "<group>"; };
 		AB8956F66666269C41445468B4CE1018 /* ActionListCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ActionListCell.swift; sourceTree = "<group>"; };
-		AC235D42BB13A0D16006AF05DC557B43 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		AC235D42BB13A0D16006AF05DC557B43 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		ACF5E5ADDB3C740EE7D7095A66EFE1E6 /* CalendarDateSelection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalendarDateSelection.swift; sourceTree = "<group>"; };
 		AD545CC33C98DB9EAFCA3F2966F487EF /* HorizonCalendar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HorizonCalendar-prefix.pch"; sourceTree = "<group>"; };
-		B0301BF907EF962E46200990C0787163 /* Pods_Habanero_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Habanero_Tests.framework; path = "Pods-Habanero_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0301BF907EF962E46200990C0787163 /* Pods_Habanero_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Habanero_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0A20FA6FD76BA8B01E869A14BED2523 /* TextInputFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextInputFormatter.swift; sourceTree = "<group>"; };
 		B0A4A1DF40AE051C7C1672C023CDF4CE /* DateRelationRule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateRelationRule.swift; path = Validator/Classes/Rules/DateRelationRule.swift; sourceTree = "<group>"; };
 		B0AFD7487F7DA14A1529A84AC08F357F /* Pods-Habanero_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Habanero_Tests-umbrella.h"; sourceTree = "<group>"; };
@@ -323,7 +323,7 @@
 		C1D92CDA13B28647CD2F8DCD3D2F98AD /* Pods-Habanero-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Habanero-dummy.m"; sourceTree = "<group>"; };
 		C3804B196AB8249B6A70A0F1587A6943 /* RequiredRule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequiredRule.swift; path = Validator/Classes/Rules/RequiredRule.swift; sourceTree = "<group>"; };
 		C62F006DA19A442A9ADFC3E4DF314CB7 /* CheckboxButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CheckboxButton.swift; sourceTree = "<group>"; };
-		C6B722DCC5CCEF6FBBDA89DFC49CE392 /* JValidator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JValidator.framework; path = JValidator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6B722DCC5CCEF6FBBDA89DFC49CE392 /* JValidator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JValidator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C788BC7EAF4671BA1A315BCDF98719F9 /* AlertView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		CB2523709F85B4B3ABC70A716D1332A7 /* SetRule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SetRule.swift; path = Validator/Classes/Rules/SetRule.swift; sourceTree = "<group>"; };
 		CB41E4AA0C61F9BB526DDC6960117E94 /* Menu.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
@@ -354,13 +354,13 @@
 		EAE174DE3E76380C7EBDBA3889E01D2C /* Calendar+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Calendar+Helpers.swift"; path = "Sources/Internal/Calendar+Helpers.swift"; sourceTree = "<group>"; };
 		EC00C699BB266FC4B1D659F48108500D /* ButtonStyleContained.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ButtonStyleContained.swift; sourceTree = "<group>"; };
 		EC0A5C4223D078E6B4DEFD87AB56D380 /* BaseControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseControl.swift; path = Habanero/Classes/BaseControl.swift; sourceTree = "<group>"; };
-		EC306114130B141CDE7A6B6B46D968D0 /* Habanero.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Habanero.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		EC306114130B141CDE7A6B6B46D968D0 /* Habanero.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = Habanero.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		ECCF61BEA864A717368B8DB32652F46D /* Pods-Habanero_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Habanero_Tests-Info.plist"; sourceTree = "<group>"; };
 		EDED63DC476BDFFCDD2CAA2ACF74B529 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Habanero/Assets/Assets.xcassets; sourceTree = "<group>"; };
 		F0CA17BCEF8686DD378E74A6697CF9AF /* BaseTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseTableViewCell.swift; path = Habanero/Classes/BaseTableViewCell.swift; sourceTree = "<group>"; };
 		F0FD82A149253DD452BC02103A7562B1 /* UIColor+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIColor+Helpers.swift"; sourceTree = "<group>"; };
-		F1916BA579FE33834F3BA6154B97DCF0 /* CalendarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
-		F45579511528B62D4DDD4ED7123E55D2 /* HorizonCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HorizonCalendar.framework; path = HorizonCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1916BA579FE33834F3BA6154B97DCF0 /* HCalendarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HCalendarView.swift; sourceTree = "<group>"; };
+		F45579511528B62D4DDD4ED7123E55D2 /* HorizonCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HorizonCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7AAEE5AD9C05CA92DBB8181AF44C3E8 /* String+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+Helpers.swift"; sourceTree = "<group>"; };
 		FA21E087D5C46A4314D3C1195C55586C /* Pods-Habanero_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Habanero_Tests.modulemap"; sourceTree = "<group>"; };
 		FAD4301D259796B7596C92346D45AD75 /* CalendarRangesView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalendarRangesView.swift; sourceTree = "<group>"; };
@@ -460,7 +460,6 @@
 				3C68C18400122913DFBBAF3B9945CA43 /* SelectionGroup.swift */,
 				D99012894213D5AAA2BD9F6853159AF4 /* SelectionGroupStyle.swift */,
 			);
-			name = Selections;
 			path = Selections;
 			sourceTree = "<group>";
 		};
@@ -498,10 +497,9 @@
 			children = (
 				BB9D5669FE66898DC6F21913702D4454 /* CalendarDayView.swift */,
 				FAD4301D259796B7596C92346D45AD75 /* CalendarRangesView.swift */,
-				F1916BA579FE33834F3BA6154B97DCF0 /* CalendarView.swift */,
+				F1916BA579FE33834F3BA6154B97DCF0 /* HCalendarView.swift */,
 				4119B18AFE45923DEB493175F8B4C069 /* ManagedCalendarView.swift */,
 			);
-			name = Calendar;
 			path = Calendar;
 			sourceTree = "<group>";
 		};
@@ -514,7 +512,6 @@
 				740E444303011600861D91B24BCA673D /* SelectionControlButton.swift */,
 				DBF3EAFF1D6109E3090BD4D5EB272FEE /* SelectionLabel.swift */,
 			);
-			name = Selections;
 			path = Selections;
 			sourceTree = "<group>";
 		};
@@ -569,7 +566,6 @@
 				508BB6590BC7829F8BC91CE27954C382 /* VisibleItemsProvider.swift */,
 				F0DE7103CD1A1EED6700E5426C6A74C9 /* Support Files */,
 			);
-			name = HorizonCalendar;
 			path = HorizonCalendar;
 			sourceTree = "<group>";
 		};
@@ -594,7 +590,6 @@
 				3AA14A957FFDA34632F8882A2E905E31 /* TextInputError.swift */,
 				98F3BC1B3C00950EEA7E2CB6D6C939C4 /* Formatters */,
 			);
-			name = Text;
 			path = Text;
 			sourceTree = "<group>";
 		};
@@ -607,7 +602,6 @@
 				275D720D0FE20DF996B886C0BB7A1A48 /* ButtonStyleOutline.swift */,
 				E268EE6C53981CCE7B180ABBB1ED9555 /* ButtonStyleText.swift */,
 			);
-			name = Buttons;
 			path = Buttons;
 			sourceTree = "<group>";
 		};
@@ -617,7 +611,6 @@
 				D07D0A7DB0BAEA143BC56ED1DA5C698D /* StatusType.swift */,
 				2DEE1ACC3DD1EF74F97B7783472BF673 /* StatusView.swift */,
 			);
-			name = Status;
 			path = Status;
 			sourceTree = "<group>";
 		};
@@ -627,7 +620,6 @@
 				CB41E4AA0C61F9BB526DDC6960117E94 /* Menu.swift */,
 				E0D79804C86AE3575C829EAEA9BC747F /* MenuPicker.swift */,
 			);
-			name = Menus;
 			path = Menus;
 			sourceTree = "<group>";
 		};
@@ -668,7 +660,6 @@
 				55689DF14335FF77CBE21A3D77B6A4C4 /* StringInputFormatter.swift */,
 				B0A20FA6FD76BA8B01E869A14BED2523 /* TextInputFormatter.swift */,
 			);
-			name = Formatters;
 			path = Formatters;
 			sourceTree = "<group>";
 		};
@@ -727,7 +718,6 @@
 				5A17C74E998D85935ECE323BBE9144A3 /* AlertType.swift */,
 				C788BC7EAF4671BA1A315BCDF98719F9 /* AlertView.swift */,
 			);
-			name = Alerts;
 			path = Alerts;
 			sourceTree = "<group>";
 		};
@@ -752,7 +742,6 @@
 			children = (
 				8DB10F2BAC16FB0334B0763A07E3017A /* NotesView.swift */,
 			);
-			name = Notes;
 			path = Notes;
 			sourceTree = "<group>";
 		};
@@ -773,7 +762,6 @@
 				BE8F47C3270C808DABBED06146EE48F8 /* Notes */,
 				0FF4DF1A1D35D90DA02AC57A4F400ACD /* Selections */,
 			);
-			name = Components;
 			path = Components;
 			sourceTree = "<group>";
 		};
@@ -784,7 +772,6 @@
 				AB8956F66666269C41445468B4CE1018 /* ActionListCell.swift */,
 				E874EAF6704AF967A268DB204A75FA51 /* ActionListNavigationStyle.swift */,
 			);
-			name = Lists;
 			path = Lists;
 			sourceTree = "<group>";
 		};
@@ -832,7 +819,6 @@
 				750CE5D9A73814126BFC8FD511013605 /* Footer.swift */,
 				6EF470D786F92637018B52FDA6886A08 /* FooterTypes.swift */,
 			);
-			name = Footer;
 			path = Footer;
 			sourceTree = "<group>";
 		};
@@ -846,7 +832,6 @@
 				7BE0E2C390448F7A5B5C2E34028D5B0D /* Status */,
 				6439821A4F2ACFCF9973480AAD6255E9 /* Text */,
 			);
-			name = Atoms;
 			path = Atoms;
 			sourceTree = "<group>";
 		};
@@ -884,7 +869,6 @@
 				5B977035F35765B092C61F5C34776BED /* ValidatorError.swift */,
 				5C5C7190670C999429031480BD6BD3C2 /* Support Files */,
 			);
-			name = JValidator;
 			path = JValidator;
 			sourceTree = "<group>";
 		};
@@ -1064,7 +1048,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1200;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -1168,7 +1152,7 @@
 				F5B0C475EDF5ABFDA43E087D76CE0C83 /* CalendarRange.swift in Sources */,
 				2A52B2BCAB6F9555EAA8BB5C5B4EB8BB /* CalendarRanges.swift in Sources */,
 				B1596BEB089140823774393AC85666B9 /* CalendarRangesView.swift in Sources */,
-				B4F4051FB1F61F5585B37E9CF7D26E32 /* CalendarView.swift in Sources */,
+				B4F4051FB1F61F5585B37E9CF7D26E32 /* HCalendarView.swift in Sources */,
 				B30FD8CB17A3AC0D90E3394C81FB190E /* CAShapeLayer+Helpers.swift in Sources */,
 				2F8788C649BC8FBA8D248BE8FC3DBC4B /* CheckboxButton.swift in Sources */,
 				A1D73F182B4C14802FF8549AEBC2FC45 /* Colors.swift in Sources */,
@@ -1364,7 +1348,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/HorizonCalendar/HorizonCalendar-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/HorizonCalendar/HorizonCalendar-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1426,6 +1410,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1632,7 +1617,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/JValidator/JValidator-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/JValidator/JValidator-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1708,7 +1693,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/HorizonCalendar/HorizonCalendar-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/HorizonCalendar/HorizonCalendar-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1810,6 +1795,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1860,7 +1846,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/JValidator/JValidator-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/JValidator/JValidator-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

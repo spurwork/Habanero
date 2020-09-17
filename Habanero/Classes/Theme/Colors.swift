@@ -46,13 +46,13 @@ public protocol Colors {
     var backgroundCalendarDayNeedsAttention: UIColor { get }
     /// Background color for a calendar day that has normal status.
     var backgroundCalendarDayNormal: UIColor { get }
-    /// Background color for a range boundary in a `CalendarView`.
+    /// Background color for a range boundary in a `HCalendarView`.
     var backgroundCalendarRangeBoundary: UIColor { get }
-    /// Background color for a starting range boundary in a `CalendarView`.
+    /// Background color for a starting range boundary in a `HCalendarView`.
     var backgroundCalendarRangeBoundaryStart: UIColor { get }
-    /// Background color for an inactive range boundary in a `CalendarView`.
+    /// Background color for an inactive range boundary in a `HCalendarView`.
     var backgroundCalendarRangeBoundaryInactive: UIColor { get }
-    /// Tint color for buttons in a `CalendarView`.
+    /// Tint color for buttons in a `HCalendarView`.
     var tintCalendarButton: UIColor { get }
 
     // MARK: Cells

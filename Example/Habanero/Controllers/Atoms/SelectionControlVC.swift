@@ -94,9 +94,9 @@ class SelectionControlVC: StateSwappingVC {
         let message = "There are \(controls.count) selection controls on this screen."
         let alert = Alert(type: .error, message: message, duration: 2.0, anchor: .center)
         
-        AlertManager.shared.show(alert, onView: view, withTheme: theme) {
+        AlertManager.shared.show(alert, onView: view, withTheme: theme, completionHandler: {
             print("Alert finshed!")
-        }
+        })
     }
     
     override func textFieldHasUpdated(text: String, tag: Int) {

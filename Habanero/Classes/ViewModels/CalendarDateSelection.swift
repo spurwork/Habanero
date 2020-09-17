@@ -2,7 +2,7 @@ import HorizonCalendar
 
 // MARK: - CalendarDateSelection
 
-/// A selection on a `CalendarView` specified as `Date` objects.
+/// A selection on a `HCalendarView` specified as `Date` objects.
 public enum CalendarDateSelection {
     /// A single date.
     case date(Date?)

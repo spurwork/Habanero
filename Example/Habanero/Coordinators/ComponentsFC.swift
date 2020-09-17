@@ -126,36 +126,36 @@ extension ComponentsFC: ActionListVCDelegate {
             calendar.date(byAdding: .day, value: 18, to: startDate)!
         ]
         
-        let config: CalendarViewConfig
+        let config: HCalendarViewConfig
         switch row - 4 {
         case 0:
-            config = CalendarViewConfig(dateRange: dateRange,
-                                        accessoryStyle: .multiStatus,
-                                        initialDateSelection: .none,
-                                        areDaysSelectable: false)
+            config = HCalendarViewConfig(dateRange: dateRange,
+                                         accessoryStyle: .multiStatus,
+                                         initialDateSelection: .none,
+                                         areDaysSelectable: false)
         case 1:
-            config = CalendarViewConfig(dateRange: dateRange,
-                                        accessoryStyle: .none,
-                                        initialDateSelection: .date(nil),
-                                        areDaysSelectable: true)
+            config = HCalendarViewConfig(dateRange: dateRange,
+                                         accessoryStyle: .none,
+                                         initialDateSelection: .date(nil),
+                                         areDaysSelectable: true)
         case 2:
-            config = CalendarViewConfig(dateRange: dateRange,
-                                        accessoryStyle: .status,
-                                        initialDateSelection: .dates([
+            config = HCalendarViewConfig(dateRange: dateRange,
+                                         accessoryStyle: .status,
+                                         initialDateSelection: .dates([
                                             calendar.date(byAdding: .day, value: 2, to: startDate)!,
                                             calendar.date(byAdding: .day, value: 3, to: startDate)!
-                                        ]),
-                                        areDaysSelectable: true)
+                                         ]),
+                                         areDaysSelectable: true)
         case 3:
-            config = CalendarViewConfig(dateRange: dateRange,
-                                        accessoryStyle: .none,
-                                        initialDateSelection: .dateRange(nil),
-                                        areDaysSelectable: true)
+            config = HCalendarViewConfig(dateRange: dateRange,
+                                         accessoryStyle: .none,
+                                         initialDateSelection: .dateRange(nil),
+                                         areDaysSelectable: true)
         case 4:
-            config = CalendarViewConfig(dateRange: dateRange,
-                                        accessoryStyle: .none,
-                                        initialDateSelection: .dateRanges([]),
-                                        areDaysSelectable: true)
+            config = HCalendarViewConfig(dateRange: dateRange,
+                                         accessoryStyle: .none,
+                                         initialDateSelection: .dateRanges([]),
+                                         areDaysSelectable: true)
         default:
             return nil
         }
