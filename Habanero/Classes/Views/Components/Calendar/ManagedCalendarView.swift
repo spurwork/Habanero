@@ -104,6 +104,7 @@ class ManagedCalendarView {
         return CalendarViewContent(calendar: calendar,
                                    visibleDateRange: config.dateRange,
                                    monthsLayout: MonthsLayout.horizontal(monthWidth: width))
+            .withBackgroundColor(theme.colors.backgroundCalendar)
             .withInterMonthSpacing(constants.calendarViewInterMonthSpacing)
             .withVerticalDayMargin(daySpacing)
             .withHorizontalDayMargin(daySpacing)

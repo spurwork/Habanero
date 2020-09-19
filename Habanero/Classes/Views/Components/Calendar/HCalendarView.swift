@@ -43,7 +43,6 @@ public class HCalendarView: BaseView {
 
     private let leftButton = UIButton(type: .system)
     private let rightButton = UIButton(type: .system)
-    // NOTE: Consider simple popover for contextual actions÷
     private let clearButton = UIButton(type: .system)
 
     private let managedCalendarView: ManagedCalendarView

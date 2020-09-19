@@ -52,6 +52,12 @@ public struct ColorsStandard: Colors, Bundlable {
 
     // MARK: Calendar
 
+    public var backgroundCalendar: UIColor {
+        return bundleColor(named: "BackgroundCalendar", fallbackColor: .white)
+    }
+    public var backgroundCalendarDayHighlighted: UIColor {
+        return bundleColor(named: "BackgroundCalendarDayHighlighted", fallbackColor: .supportGrey300)
+    }
     public var backgroundCalendarDayNeedsAttention: UIColor {
         return bundleColor(named: "BackgroundCalendarDayNeedsAttention", fallbackColor: .errorRed)
     }

@@ -42,6 +42,10 @@ public protocol Colors {
 
     // MARK: Calendar
 
+    /// Background color for calendar.
+    var backgroundCalendar: UIColor { get }
+    /// Background color for a calendar day that is highlighted.
+    var backgroundCalendarDayHighlighted: UIColor { get }
     /// Background color for a calendar day that needs attention.
     var backgroundCalendarDayNeedsAttention: UIColor { get }
     /// Background color for a calendar day that has normal status.

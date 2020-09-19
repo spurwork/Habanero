@@ -62,6 +62,14 @@ enum CalendarDayViewSelectionStyle: String {
         case .none: return .clear
         }
     }
+
+    func textColor(colors: Colors) -> UIColor {
+        switch self {
+        case .activeRangeBoundary, .singleSelect, .inactiveRangeBoundary: return .white
+        case .startRangeBoundary: return .supportBlack100
+        case .none: return colors.textMediumEmphasis
+        }
+    }
 }
 
 // MARK: - CalendarDayViewDisplayable
@@ -89,10 +97,8 @@ class CalendarDayView: BaseView {
     private let accessoryLabel = UILabel(frame: .zero)
 
     private var displayable: CalendarDayViewDisplayable?
-
-    private let baseHighlightColor = UIColor.black.withAlphaComponent(0.1)
-
     private var theme: Theme?
+    
     var dayAccessibilityText: String?
 
     var isHighlighted = false {
@@ -100,7 +106,8 @@ class CalendarDayView: BaseView {
             guard let theme = theme else { return }
 
             if let displayable = displayable, displayable.selectionStyle == .none {
-                backgroundColor = isHighlighted ? baseHighlightColor : .clear
+                backgroundColor = isHighlighted ?
+                    theme.colors.backgroundCalendarDayHighlighted : .clear
             } else if let displayable = displayable {
                 backgroundColor = isHighlighted ? displayable.selectionStyle
                     .backgroundColor(colors: theme.colors).withAlphaComponent(0.1) : .clear
@@ -168,7 +175,8 @@ class CalendarDayView: BaseView {
 
         // background
         if !selectionStyle.isBoundaryStyle {
-            backgroundView.backgroundColor = displayable.isHighlighted ? baseHighlightColor : .clear
+            backgroundView.backgroundColor = displayable.isHighlighted
+                ? colors.backgroundCalendarDayHighlighted : .clear
         } else {
             backgroundView.backgroundColor = selectionStyle.backgroundColor(colors: colors)
         }
@@ -233,8 +241,7 @@ class CalendarDayView: BaseView {
         }
 
         // day label
-        let lightTextColor = isToday ? colors.textHighEmphasis : colors.textMediumEmphasis
-        let textColor = selectionStyle.darkBackground ? .white : lightTextColor
+        let textColor = isToday ? colors.textHighEmphasis : selectionStyle.textColor(colors: colors)
         dayLabel.attributedText = "\(day.day)".attributed(fontStyle: .bodyLarge,
                                                           color: textColor,
                                                           alignment: .center)
