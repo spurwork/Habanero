@@ -47,6 +47,7 @@ public class HCalendarView: BaseView {
 
     private let managedCalendarView: ManagedCalendarView
     private let theme: Theme
+    private let calendarWidth: CGFloat
 
     public weak var delegate: HCalendarViewDelegate?
 
@@ -58,9 +59,8 @@ public class HCalendarView: BaseView {
         self.theme = theme
 
         let sideButtonWidth = theme.constants.calendarViewMinimumButtonDimension
-        managedCalendarView = ManagedCalendarView(theme: theme,
-                                                  width: width - (sideButtonWidth * 2),
-                                                  config: config)
+        calendarWidth = width - (sideButtonWidth * 2)
+        managedCalendarView = ManagedCalendarView(theme: theme, width: calendarWidth, config: config)
         managedCalendarView.initContent()
 
         super.init(frame: .zero)
@@ -114,6 +114,12 @@ public class HCalendarView: BaseView {
     }
 
     private func addExtraConstraints(theme: Theme) {
+        let sideButtonWidth = theme.constants.calendarViewMinimumButtonDimension
+        managedCalendarView.calendarView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            managedCalendarView.calendarView.heightAnchor.constraint(equalToConstant: calendarWidth + sideButtonWidth)
+        ])
+
         let visualConstraintViews: [String: AnyObject] = [
             "leftButton": leftButton,
             "rightButton": rightButton,
