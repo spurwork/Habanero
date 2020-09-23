@@ -63,11 +63,11 @@ enum CalendarDayViewSelectionStyle: String {
         }
     }
 
-    func textColor(colors: Colors) -> UIColor {
+    func textColor(colors: Colors, isToday: Bool) -> UIColor {
         switch self {
         case .activeRangeBoundary, .singleSelect, .inactiveRangeBoundary: return .white
         case .startRangeBoundary: return .supportBlack100
-        case .none: return colors.textMediumEmphasis
+        case .none: return isToday ? colors.textHighEmphasis : colors.textMediumEmphasis
         }
     }
 }
@@ -98,7 +98,7 @@ class CalendarDayView: BaseView {
 
     private var displayable: CalendarDayViewDisplayable?
     private var theme: Theme?
-    
+
     var dayAccessibilityText: String?
 
     var isHighlighted = false {
@@ -241,7 +241,7 @@ class CalendarDayView: BaseView {
         }
 
         // day label
-        let textColor = isToday ? colors.textHighEmphasis : selectionStyle.textColor(colors: colors)
+        let textColor = selectionStyle.textColor(colors: colors, isToday: isToday)
         dayLabel.attributedText = "\(day.day)".attributed(fontStyle: .bodyLarge,
                                                           color: textColor,
                                                           alignment: .center)
