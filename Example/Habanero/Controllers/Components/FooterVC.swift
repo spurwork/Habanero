@@ -38,6 +38,7 @@ class FooterVC: UITableViewController {
         view.backgroundColor = theme.colors.backgroundCell
         
         tableView.separatorInset = .zero
+        tableView.showsVerticalScrollIndicator = false
         tableView.registerCellWithType(ActionListCell.self)
         
         let checkbox = SelectionControlExample(title: "Checkbox",

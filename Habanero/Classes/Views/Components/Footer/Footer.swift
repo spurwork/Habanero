@@ -39,6 +39,7 @@ public class Footer: BaseView {
 
     // MARK: Properites
 
+    private let contentView = UIView(frame: .zero)
     private let mainStackView = UIStackView(frame: .zero)
     private let contentStackView = UIStackView(frame: .zero)
     private let buttonStackView = UIStackView(frame: .zero)
@@ -51,6 +52,7 @@ public class Footer: BaseView {
 
     public override var visualConstraintViews: [String: AnyObject] {
         return [
+            "contentView": contentView,
             "mainStackView": mainStackView,
             "divider": divider
         ]
@@ -58,6 +60,7 @@ public class Footer: BaseView {
 
     public override var visualConstraints: [String] {
         return [
+            "H:|[contentView]|",
             "H:|[mainStackView]|",
             "V:|[mainStackView]|",
             "H:|[divider]|",
@@ -90,7 +93,9 @@ public class Footer: BaseView {
         mainStackView.addArrangedSubview(contentStackView)
         mainStackView.addArrangedSubview(buttonStackView)
 
-        addSubview(mainStackView)
+        contentView.addSubview(mainStackView)
+
+        addSubview(contentView)
         addSubview(divider)
     }
 
@@ -112,8 +117,12 @@ public class Footer: BaseView {
         if let superview = superview {
             layer.zPosition = 1
             translatesAutoresizingMaskIntoConstraints = false
+
             NSLayoutConstraint.activate([
-                bottomAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.bottomAnchor),
+                contentView.bottomAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.bottomAnchor),
+                topAnchor.constraint(equalTo: contentView.topAnchor),
+                bottomAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.bottomAnchor,
+                                        constant: superview.safeAreaInsets.bottom),
                 leadingAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.leadingAnchor),
                 trailingAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.trailingAnchor)
             ])
@@ -139,7 +148,9 @@ public class Footer: BaseView {
         self.theme = theme
         lastDisplayable = displayable
 
-        backgroundColor = theme.colors.backgroundFooter
+        let backgroundColor = theme.colors.backgroundFooter
+        contentView.backgroundColor = backgroundColor
+        self.backgroundColor = backgroundColor
 
         if case .none = displayable.buttonState, case .none = displayable.content {
             isHidden = true
@@ -305,7 +316,7 @@ extension Footer: SelectionControlDelegate {
         guard let theme = theme else { return }
 
         if let lastDisplayable = lastDisplayable,
-            case .checkbox(let displayable, let backedValue) = lastDisplayable.content {
+           case .checkbox(let displayable, let backedValue) = lastDisplayable.content {
             let nextCheckbox = SimpleSelectionControl(toggle: displayable)
             let nextDisplayable = FooterModel(buttonState: lastDisplayable.buttonState,
                                               content: .checkbox(nextCheckbox, backedValue))
