@@ -161,11 +161,12 @@ public class Footer: BaseView {
     private func styleWith(theme: Theme, buttonState: FooterButtonState) {
         switch buttonState {
         case .none:
+            buttonStackView.isHidden = true
             centerButton.isHidden = true
             leftButton.isHidden = true
             rightButton.isHidden = true
-            buttonStackView.isHidden = true
         case .center(let title, let containedStyle):
+            buttonStackView.isHidden = false
             centerButton.styleWith(theme: theme, style: .contained(containedStyle))
             centerButton.setTitle(title, for: .normal)
             centerButton.setTitle(title, for: .disabled)
@@ -173,6 +174,7 @@ public class Footer: BaseView {
             leftButton.isHidden = true
             rightButton.isHidden = true
         case .leftRight(let leftTitle, let rightTitle, let containedStyle):
+            buttonStackView.isHidden = false
             leftButton.styleWith(theme: theme, style: .outline(.secondary0))
             leftButton.setTitle(leftTitle, for: .normal)
             leftButton.setTitle(leftTitle, for: .disabled)
