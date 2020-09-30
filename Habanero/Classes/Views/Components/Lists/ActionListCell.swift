@@ -140,8 +140,9 @@ public class ActionListCell: BaseTableViewCell {
             accessoryImageView?.image = navigationStyle.icon(images: theme.images)
             accessoryView = (detailString.isEmpty && navigationStyle == .none) ? nil : accessoryStackView
         case .statusAndDetail(let displayable, _):
-            accessoryStatusView?.styleWith(theme: theme, displayable: displayable)
+            accessoryStatusView?.isHidden = false
             accessoryImageView?.isHidden = true
+            accessoryStatusView?.styleWith(theme: theme, displayable: displayable)
             accessoryView = accessoryStackView
         case .none:
             accessoryView = nil
