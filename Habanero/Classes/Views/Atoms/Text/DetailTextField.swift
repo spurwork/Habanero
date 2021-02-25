@@ -19,6 +19,12 @@ class DetailTextField: BaseControl {
     private var displayable: TextInputDisplayable?
 
     weak var delegate: DetailTextFieldDelegate?
+    
+    override var accessibilityLabel: String? {
+        didSet {
+            textField.accessibilityLabel = accessibilityLabel
+        }
+    }
 
     public override var visualConstraintViews: [String: AnyObject] {
         return [
