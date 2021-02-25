@@ -188,6 +188,7 @@ public class SelectionControl: BaseControl {
         titleLabel.label.numberOfLines = 0
         titleLabel.label.attributedText = displayable.title.attributed(fontStyle: .labelLarge,
                                                                        color: colors.textHighEmphasis)
+        accessibilityLabel = displayable.title
 
         tipLabel.label.numberOfLines = 0
         if let tip = displayable.tip {
