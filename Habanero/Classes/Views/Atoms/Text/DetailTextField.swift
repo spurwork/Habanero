@@ -23,6 +23,7 @@ class DetailTextField: BaseControl {
     override var accessibilityLabel: String? {
         didSet {
             textField.accessibilityLabel = accessibilityLabel
+            accessibilityIdentifier = accessibilityLabel
         }
     }
 
