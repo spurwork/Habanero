@@ -165,7 +165,7 @@ final class RadioButton: UIButton, SelectionControlButton {
         frame.size = CGSize(width: diameter, height: diameter)
 
         isAccessibilityElement = true
-        accessibilityIdentifier = "radio"
+        accessibilityIdentifier = accessibilityIdentifier ?? "radio"
 
         styleSelected(theme: theme, selected: isSelected)
     }
