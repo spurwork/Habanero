@@ -151,7 +151,7 @@ final class CheckboxButton: UIButton, SelectionControlButton {
         tintColor = colors.tintSelectionButtonCheckbox
 
         isAccessibilityElement = true
-        accessibilityIdentifier = accessibilityIdentifier ?? "checkbox"
+        accessibilityIdentifier = "checkbox"
 
         styleSelected(theme: theme, selected: isSelected)
     }
