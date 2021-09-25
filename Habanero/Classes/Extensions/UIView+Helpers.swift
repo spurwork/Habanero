@@ -16,6 +16,7 @@ public extension UIView {
     /// Returns an anchor point within a view.
     /// - Parameters:
     ///   - view: The view whose anchor point will be returned.
+    ///   - theme: Provides layout values for things like padding.
     ///   - anchorPoint: Determines the anchor point used within the `view`.
     /// - Returns: An anchor point.
     func anchor(onView view: UIView, withTheme theme: Theme, atAnchorPoint anchorPoint: AnchorPoint) -> CGPoint {
@@ -34,6 +35,42 @@ public extension UIView {
             return CGPoint(x: view.bounds.size.width / 2.0,
                            y: view.bounds.size.height - (frame.size.height / 2) - bottomPadding)
         }
+    }
+
+    /// Returns an anchor point within a view. Anchor will be adjusted based on the size of `self` to attempt
+    /// to keep the view in the visible area, as close to the `atPoint` location as possible.
+    /// - Parameters:
+    ///   - onSubview: The `view` around which to anchor `self`.
+    ///   - view: The parent view used to calculate the final anchor point.
+    ///   - withAnchor: Calculate final anchor to position the `self` above, inline with, or below the `subview`.
+    ///   - theme: Provides layout values for things like padding.
+    /// - Returns: An anchor point.
+    func anchor(onSubview subview: UIView,
+                inSuperview superview: UIView,
+                withAnchor anchor: AnchorPoint?,
+                withTheme theme: Theme) -> CGPoint {
+        let constants = theme.constants
+
+        var centerPosition = superview.convert(subview.center, from: subview.superview)
+        let anchor = anchor ?? (centerPosition.y > superview.bounds.midY ? .top : .bottom)
+
+        switch anchor {
+        case .top:
+            centerPosition.y -= subview.frame.height / 2
+            centerPosition.y -= frame.height / 2
+        case .center:
+            break
+        case .bottom:
+            centerPosition.y += subview.frame.height / 2
+            centerPosition.y += frame.height / 2
+        }
+
+        centerPosition.x = max(centerPosition.x,
+                               superview.bounds.minX + frame.width/2 + constants.minimumAnchoredViewSideInset)
+        centerPosition.x = min(centerPosition.x,
+                               superview.bounds.maxX - frame.width/2 - constants.minimumAnchoredViewSideInset)
+
+        return centerPosition
     }
 
     /// Adds visually-specified constaints to the view.

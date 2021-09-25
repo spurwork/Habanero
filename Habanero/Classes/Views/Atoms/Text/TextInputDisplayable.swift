@@ -28,6 +28,9 @@ public protocol TextInputDisplayable: UIKeyboardDisplayable {
     /// An optional tip to display below the `TextInput`.
     var tip: String? { get }
 
+    /// An optional tip to display behind a Help buton.
+    var popoverHelpText: String? { get }
+
     /// Should the `TextInput` use a secure text entry mode?
     var useSecureTextEntry: Bool { get }
 

@@ -81,6 +81,8 @@
 		8FBF533E004F49EF1481F061D88376CA /* FooterTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF470D786F92637018B52FDA6886A08 /* FooterTypes.swift */; };
 		92B7F95922B9D340AA69CF411B43B2D0 /* MonthRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = D709C3960CEB872F78FC8698126FCBAD /* MonthRange.swift */; };
 		93FD63BB51F65E291FA9E4AD6A94060B /* ScrollToItemContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47100F2CE9F8EBA7C53878A7D79E5F7 /* ScrollToItemContext.swift */; };
+		9429E4B126EA5ECB008C6B3B /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429E4B026EA5ECB008C6B3B /* Tip.swift */; };
+		9429E4B326EA5EF9008C6B3B /* TipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429E4B226EA5EF9008C6B3B /* TipView.swift */; };
 		94A3D1407F9B3BB7D9D9E1E6A47A3578 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF66B4CE2B4A73A272497631FC286D58 /* Day.swift */; };
 		95E26799AE7B5D16E26BC0A05DACD229 /* Pods-Habanero_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B0AFD7487F7DA14A1529A84AC08F357F /* Pods-Habanero_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9A36C93B4DE4B68F6B1B4E227FC3B7BA /* Day+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2D629D0085761C46DBCB884A524F63 /* Day+Helpers.swift */; };
@@ -284,6 +286,8 @@
 		902FC42C24FDDCE68EA93A182B0D0106 /* CalendarDay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalendarDay.swift; sourceTree = "<group>"; };
 		9045BDCBC15C46370254E760A3C8D6E0 /* Month.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Month.swift; path = Sources/Public/Month.swift; sourceTree = "<group>"; };
 		91118B8786B470C07B96DF6E7F601AE4 /* PaddedTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaddedTextField.swift; sourceTree = "<group>"; };
+		9429E4B026EA5ECB008C6B3B /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
+		9429E4B226EA5EF9008C6B3B /* TipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipView.swift; sourceTree = "<group>"; };
 		955949329602C327E77A8B20FF44A350 /* UITableView+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UITableView+Helpers.swift"; sourceTree = "<group>"; };
 		985D2659EB09DAD28624D8993980B124 /* CalendarRanges.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalendarRanges.swift; sourceTree = "<group>"; };
 		9B0F682B29ADCED503FD545D25F44ECC /* DateFormatter+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DateFormatter+Helpers.swift"; path = "Validator/Classes/Extensions/DateFormatter+Helpers.swift"; sourceTree = "<group>"; };
@@ -681,6 +685,7 @@
 				43533FC46B1E3A864BF56188B4F7D475 /* Notes.swift */,
 				4774B8D19AB674FA9DD84F8A2D4742AB /* SimpleSelectionControl.swift */,
 				6E0AB1955835A0E18185873758734D21 /* SimpleStatus.swift */,
+				9429E4B026EA5ECB008C6B3B /* Tip.swift */,
 			);
 			name = ViewModels;
 			path = Habanero/Classes/ViewModels;
@@ -717,6 +722,7 @@
 				66AA6457916B5E45A8C8524E9AEA80FA /* AlertManager.swift */,
 				5A17C74E998D85935ECE323BBE9144A3 /* AlertType.swift */,
 				C788BC7EAF4671BA1A315BCDF98719F9 /* AlertView.swift */,
+				9429E4B226EA5EF9008C6B3B /* TipView.swift */,
 			);
 			path = Alerts;
 			sourceTree = "<group>";
@@ -1199,10 +1205,12 @@
 				B5ECBF7328E5AECD01D353D25ABF3C24 /* TextInputError.swift in Sources */,
 				CF940B9A1F5DBCA65C4D0FE7BD80F915 /* TextInputFormatter.swift in Sources */,
 				C5ADE39DBB6AF4585E645731D768F3CF /* Theme.swift in Sources */,
+				9429E4B126EA5ECB008C6B3B /* Tip.swift in Sources */,
 				49B04576F72A1E2F261A49F334F571B5 /* ThemeStandard.swift in Sources */,
 				65547CCB0E3223DC33ADCA9A2C4D1A69 /* UIBarButtonItem+Helpers.swift in Sources */,
 				E04A191323E2E587EDEDFA5BCFE912B5 /* UIButton+Helpers.swift in Sources */,
 				BC39D2B8088BF936F0BDBC6ADDDEF05F /* UIColor+Helpers.swift in Sources */,
+				9429E4B326EA5EF9008C6B3B /* TipView.swift in Sources */,
 				5DE3799B404835D02697C9DC1148CC48 /* UIEdgeInsets+Helpers.swift in Sources */,
 				6EEF7084BF0DAC42B5FC5DC6A8693561 /* UIFont+Helpers.swift in Sources */,
 				B6AA1C9C1609EB44C5B3E6C177A71B18 /* UIStackView+Helpers.swift in Sources */,

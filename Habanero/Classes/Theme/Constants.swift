@@ -46,6 +46,14 @@ public protocol Constants {
     /// The amount of time an `AlertView` is shown.
     var alertViewShowDuration: Double { get }
 
+    // MARK: Tip View
+
+    /// The percentage (0.0-1.0) of the containing view's width to use for an `AlertView` of the type `.help`.
+    var tipViewContainingViewWidthFactor: CGFloat { get }
+
+    /// The insets for a `TipView`.
+    var tipViewInsets: UIEdgeInsets { get }
+
     // MARK: Bar Button Item
 
     /// The size of the badge circle for a `UIBarButtonItem`.
@@ -187,6 +195,9 @@ public protocol Constants {
 
     /// The amount of additional vertical padding to apply to a top anchor.
     var anchorTopExtraVerticalPadding: CGFloat { get }
+
+    /// The minimum padding to leave on the left or right of an anchored view.
+    var minimumAnchoredViewSideInset: CGFloat { get }
 
     /// The minimum touch size according to Apple's Human Interface Guidelines.
     var minimumTouchSize: CGSize { get }

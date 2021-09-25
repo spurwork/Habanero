@@ -5,6 +5,7 @@ public protocol TextInputDelegate: class {
     func textInputShouldReturn(_ textInput: TextInput) -> Bool
     func textInputTextDidChange(_ textInput: TextInput, text: String)
     func textInputHasInputError(_ textInput: TextInput, error: Error)
+    func showTip(withText text: String, presentedFrom: UIView?)
 }
 
 // MARK: - TextInput: BaseControl
@@ -14,6 +15,7 @@ public class TextInput: BaseControl {
     // MARK: Properties
 
     private let stackView = UIStackView(frame: .zero)
+    private let mainLabelContainer = UIView(frame: .zero)
     private let mainLabel = UILabel(frame: .zero)
 
     private var textInputView: UIControl?
@@ -24,6 +26,8 @@ public class TextInput: BaseControl {
     private let errorLabel = UILabel(frame: .zero)
     private let tipLabel = UILabel(frame: .zero)
 
+    private var popoverTipButton = UIButton(type: .custom)
+
     private var theme: Theme?
     private var displayable: TextInputDisplayable?
 
@@ -31,14 +35,19 @@ public class TextInput: BaseControl {
 
     public override var visualConstraintViews: [String: AnyObject] {
         return [
-            "stackView": stackView
+            "stackView": stackView,
+            "mainLabel": mainLabel,
+            "helpButton": popoverTipButton
         ]
     }
 
     public override var visualConstraints: [String] {
         return [
             "H:|[stackView]|",
-            "V:|[stackView]|"
+            "V:|[stackView]|",
+            "H:[mainLabel][helpButton(30)]",
+            "V:|[mainLabel]|",
+            "V:|-0-[helpButton]-0-|"
         ]
     }
 
@@ -52,7 +61,7 @@ public class TextInput: BaseControl {
             if let theme = theme {
                 let constants = theme.constants
                 let disabledAlpha = constants.alphaDisabled
-                mainLabel.alpha = isEnabled ? 1.0 : disabledAlpha
+                mainLabelContainer.alpha = isEnabled ? 1.0 : disabledAlpha
                 textInputView?.alpha = isEnabled ? 1.0 : disabledAlpha
                 errorLabel.alpha = isEnabled ? 1.0 : disabledAlpha
                 tipLabel.alpha = isEnabled ? 1.0 : disabledAlpha
@@ -103,7 +112,9 @@ public class TextInput: BaseControl {
     // MARK: BaseView
 
     public override func addSubviews() {
-        stackView.addArrangedSubview(mainLabel)
+        mainLabelContainer.addSubview(mainLabel)
+        mainLabelContainer.addSubview(popoverTipButton)
+        stackView.addArrangedSubview(mainLabelContainer)
         stackView.addArrangedSubview(textField)
         stackView.addArrangedSubview(textView)
         stackView.addArrangedSubview(errorLabel)
@@ -116,6 +127,7 @@ public class TextInput: BaseControl {
     public override func addTargets() {
         textField.delegate = self
         textView.delegate = self
+        popoverTipButton.addTarget(self, action: #selector(popoverTipButtonWasTapped), for: .primaryActionTriggered)
     }
 
     // MARK: Style
@@ -165,6 +177,16 @@ public class TextInput: BaseControl {
         mainLabel.numberOfLines = 0
         mainLabel.attributedText = displayable.label
             .uppercased().attributed(fontStyle: .h5, color: colors.textHighEmphasis)
+
+        if let popoverText = displayable.popoverHelpText {
+            popoverTipButton.isHidden = false
+            popoverTipButton.tintColor = theme.colors.textButtonMenuPlaceholder
+            popoverTipButton.imageView?.contentMode = .scaleAspectFit
+            popoverTipButton.setImage(theme.images.help, for: .normal)
+            popoverTipButton.imageEdgeInsets = UIEdgeInsets(vertical: 4)
+        } else {
+            popoverTipButton.isHidden = true
+        }
     }
 
     private func styleTextInputView(theme: Theme, displayable: TextInputDisplayable) {
@@ -212,6 +234,12 @@ public class TextInput: BaseControl {
                                              replacementString string: String) -> String {
         let currentNSString = NSString(string: currentText)
         return currentNSString.replacingCharacters(in: range, with: string)
+    }
+
+    @objc
+    private func popoverTipButtonWasTapped() {
+        guard let text = displayable?.popoverHelpText else { return }
+        delegate?.showTip(withText: text, presentedFrom: popoverTipButton)
     }
 }
 

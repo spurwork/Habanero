@@ -89,4 +89,11 @@ extension TextInputVC: TextInputDelegate {
     func textInputHasInputError(_ textInput: TextInput, error: Error) {
         textInput.shake()
     }
+    
+    func showTip(withText text: String, presentedFrom: UIView?) {
+        let tip = Tip(message: text)
+        AlertManager.shared.show(tip, onView: view,
+                                 presentedFrom: presentedFrom,
+                                 withTheme: theme)
+    }
 }

@@ -23,6 +23,10 @@ public struct ConstantsStandard: Constants {
     public var alertViewInsets: UIEdgeInsets { return UIEdgeInsets(vertical: 10, horizontal: 12) }
     public var alertViewShowDuration: Double { return 2.0 }
 
+    // MARK: Tip View
+    public var tipViewContainingViewWidthFactor: CGFloat { return 0.6 }
+    public var tipViewInsets: UIEdgeInsets { return UIEdgeInsets(vertical: 8, horizontal: 12) }
+
     // MARK: Bar Button Item
 
     public var barButtonItemBadgeCircleSize: CGSize { return CGSize(width: 9, height: 7) }
@@ -94,6 +98,7 @@ public struct ConstantsStandard: Constants {
     public var alphaDisabled: CGFloat { return 0.6 }
     public var anchorBottomExtraVerticalPadding: CGFloat { return 76 }
     public var anchorTopExtraVerticalPadding: CGFloat { return 16 }
+    public var minimumAnchoredViewSideInset: CGFloat { return 16 }
     public var minimumTouchSize: CGSize { return CGSize(width: 44.0, height: 44.0) }
 
     // MARK: Menu
