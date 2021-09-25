@@ -1,6 +1,6 @@
 // MARK: - TipViewDelegate
 
-protocol TipViewDelegate: class {
+protocol TipViewDelegate: AnyObject {
     func tipViewShouldDismiss(_ tipView: TipView)
 }
 

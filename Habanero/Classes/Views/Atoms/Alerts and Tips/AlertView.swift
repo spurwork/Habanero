@@ -1,6 +1,6 @@
 // MARK: - AlertViewDelegate
 
-protocol AlertViewDelegate: class {
+protocol AlertViewDelegate: AnyObject {
     func alertViewShouldDismiss(_ alertView: AlertView)
 }
 
