@@ -28,18 +28,23 @@ public class TipView: BaseView {
 
     private let messageLabel = UILabel(frame: .zero)
 
+    private let button = UIButton(type: .custom)
+
     weak var delegate: TipViewDelegate?
 
     public override var visualConstraintViews: [String: AnyObject] {
         return [
-            "stackView": stackView
+            "stackView": stackView,
+            "button": button
         ]
     }
 
     public override var visualConstraints: [String] {
         return [
             "H:|[stackView]|",
-            "V:|[stackView]|"
+            "V:|[stackView]|",
+            "H:|[button]|",
+            "V:|[button]|"
         ]
     }
 
@@ -49,16 +54,17 @@ public class TipView: BaseView {
         stackView.addArrangedSubview(messageLabel)
 
         addSubview(stackView)
+        addSubview(button)
     }
 
     public override func addTargets() {
-//        closeButton.addTarget(self, action: #selector(closeButtonTapped), for: .touchUpInside)
+        button.addTarget(self, action: #selector(viewTapped), for: .touchUpInside)
     }
 
     // MARK: Actions
 
-    @objc func closeButtonTapped() {
-//        delegate?.alertViewShouldDismiss(self)
+    @objc func viewTapped() {
+        delegate?.tipViewShouldDismiss(self)
     }
 
     // MARK: Style

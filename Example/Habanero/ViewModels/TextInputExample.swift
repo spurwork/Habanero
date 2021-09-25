@@ -28,7 +28,7 @@ struct TextInputExample: TextInputDisplayable {
     let label: String
     let placeholder: String?
     let tip: String?
-    let popoverHelpText: String? = "This is a tip overlay. Tap anywhere to dismiss."
+    let popoverHelpText: String? = "This is a tip overlay. Tap to dismiss."
     let useSecureTextEntry: Bool
     let icon: UIImage?
     let multiline: Bool

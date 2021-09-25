@@ -170,20 +170,18 @@ public class AlertManager {
                        completion: { _ in
                         completionHandler?()
 
-                        if let duration = duration {
-                            let timer = Timer(timeInterval: duration,
-                                              target: self,
-                                              selector: #selector(self.alertTimerDidFinish(_:)),
-                                              userInfo: tipView,
-                                              repeats: false)
+                        let timer = Timer(timeInterval: duration ?? 4,
+                                          target: self,
+                                          selector: #selector(self.alertTimerDidFinish(_:)),
+                                          userInfo: tipView,
+                                          repeats: false)
 
-                            RunLoop.main.add(timer, forMode: .common)
+                        RunLoop.main.add(timer, forMode: .common)
 
-                            objc_setAssociatedObject(tipView,
-                                                     &AlertManager.handlerKey,
-                                                     alertHandler,
-                                                     .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-                        }
+                        objc_setAssociatedObject(tipView,
+                                                 &AlertManager.handlerKey,
+                                                 alertHandler,
+                                                 .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
                        })
     }
 
@@ -228,6 +226,6 @@ extension AlertManager: AlertViewDelegate {
 
 extension AlertManager: TipViewDelegate {
     func tipViewShouldDismiss(_ tipView: TipView) {
-
+        hideView(tipView)
     }
 }
