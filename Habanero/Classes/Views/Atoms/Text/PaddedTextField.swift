@@ -1,6 +1,6 @@
 // MARK: - PaddingTextFieldDelegate
 
-protocol PaddedTextFieldDelegate: class {
+protocol PaddedTextFieldDelegate: AnyObject {
     func paddedTextFieldDidDeleteBackwards(_ paddedTextField: PaddedTextField)
 }
 

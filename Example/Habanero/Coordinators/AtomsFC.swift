@@ -10,7 +10,7 @@ import UIKit
 
 // MARK: - AtomsFCDelegate
 
-protocol AtomsFCDelegate: class {
+protocol AtomsFCDelegate: AnyObject {
     func atomsFCShouldDismiss(_ atomsFC: AtomsFC)
 }
 

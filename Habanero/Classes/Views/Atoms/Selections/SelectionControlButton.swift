@@ -1,7 +1,7 @@
 // MARK: - SelectionControlButtonDelegate
 
 /// An object that can respond to events emitted by a `SelectionControlButton`.
-protocol SelectionControlButtonDelegate: class {
+protocol SelectionControlButtonDelegate: AnyObject {
     func selectionControlButtonWasTapped(_ button: UIButton)
 }
 

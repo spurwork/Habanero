@@ -1,6 +1,6 @@
 // MARK: - TextInputCountViewDelegate
 
-protocol TextInputCountViewDelegate: class {
+protocol TextInputCountViewDelegate: AnyObject {
     func textInputCountViewButtonTapped(_ textInputCountView: TextInputCountView)
 }
 

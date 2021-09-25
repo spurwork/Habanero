@@ -28,7 +28,7 @@ public struct HCalendarViewConfig {
 
 // MARK: - HCalendarViewDelegate
 
-public protocol HCalendarViewDelegate: class {
+public protocol HCalendarViewDelegate: AnyObject {
     func calendarViewTriedOverscroll(_ calendarView: HCalendarView)
     func calendarViewSelectionDidChange(_ calendarView: HCalendarView,
                                         selection: CalendarDaySelection,

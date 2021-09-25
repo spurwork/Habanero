@@ -1,6 +1,6 @@
 // MARK: - BaseUIConfigurable
 
-public protocol BaseUIConfigurable: class {
+public protocol BaseUIConfigurable: AnyObject {
     var visualConstraintViews: [String: AnyObject] { get }
     var visualConstraints: [String] { get }
 

@@ -10,7 +10,7 @@ import UIKit
 
 // MARK: - ActionListVCDelegate
 
-protocol ActionListVCDelegate: class {
+protocol ActionListVCDelegate: AnyObject {
     func actionListVCTappedDismiss(_ actionListVC: ActionListVC)
     func actionListVCTappedRow(_ actionListVC: ActionListVC, row: Int)
 }

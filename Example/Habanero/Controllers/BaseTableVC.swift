@@ -9,7 +9,7 @@ import UIKit
 
 // MARK: - TableVCSizer
 
-protocol TableVCSizer: class {
+protocol TableVCSizer: AnyObject {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat

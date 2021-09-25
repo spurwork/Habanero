@@ -1,6 +1,6 @@
 // MARK: - SelectionLabelDelegate
 
-protocol SelectionLabelDelegate: class {
+protocol SelectionLabelDelegate: AnyObject {
     func selectionLabelWasTouchedUp(_ selectionLabel: SelectionLabel)
     func selectionLabelWasTouchedDown(_ selectionLabel: SelectionLabel)
 }

@@ -43,7 +43,7 @@ public protocol MenuPickerDisplayable {
 
 // MARK: - MenuPickerDelegate
 
-public protocol MenuPickerDelegate: class {
+public protocol MenuPickerDelegate: AnyObject {
     func menuPickerFinished(pickerView: UIPickerView, selectedIndices: [Int])
 }
 

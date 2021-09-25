@@ -724,7 +724,8 @@
 				C788BC7EAF4671BA1A315BCDF98719F9 /* AlertView.swift */,
 				9429E4B226EA5EF9008C6B3B /* TipView.swift */,
 			);
-			path = Alerts;
+			name = Alerts;
+			path = "Alerts and Tips";
 			sourceTree = "<group>";
 		};
 		B661BAA76C2A27DCD9CF13875DEF1AC6 /* Pods-Habanero_Tests */ = {

@@ -31,14 +31,14 @@ public protocol SelectionControlDisplayable {
 // MARK: - SelectionControlDelegate
 
 /// An object that can respond to `SelectionControl` events.
-public protocol SelectionControlDelegate: class {
+public protocol SelectionControlDelegate: AnyObject {
     func selectionControlWasTapped(_ selectionControl: SelectionControl)
 }
 
 // MARK: - SelectionControlTipDelegate
 
 /// An object that can respond to events emitted by the tip label in a `SelectionControl`.
-public protocol SelectionControlTipDelegate: class {
+public protocol SelectionControlTipDelegate: AnyObject {
     func selectionControlTipWasTapped(_ selectionControl: SelectionControl)
 }
 

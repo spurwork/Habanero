@@ -1,6 +1,6 @@
 // MARK: - TextInputDelegate
 
-public protocol TextInputDelegate: class {
+public protocol TextInputDelegate: AnyObject {
     func textInputShouldBeginEditing(_ textInput: TextInput) -> Bool
     func textInputShouldReturn(_ textInput: TextInput) -> Bool
     func textInputTextDidChange(_ textInput: TextInput, text: String)

@@ -20,7 +20,7 @@ public protocol SelectionGroupDisplayable {
 
 // MARK: - SelectionGroupDelegate
 
-public protocol SelectionGroupDelegate: class {
+public protocol SelectionGroupDelegate: AnyObject {
     func selectionGroupSelectionChanged(_ selectionGroup: SelectionGroup, selection: Selection)
     func selectionGroupShouldExpand(_ selectionGroup: SelectionGroup)
     func selectionGroupTipWasTapped(_ selectionGroup: SelectionGroup, selectionControl: SelectionControl)

@@ -13,7 +13,7 @@ public enum TextInputFormat {
 // MARK: - TextInputFormatter
 
 /// An object that can format text input.
-public protocol TextInputFormatter: class {
+public protocol TextInputFormatter: AnyObject {
     /// Mutating function that updates `UITextField.text` by applying a custom format.
     /// - Parameters:
     ///   - textField: The `UITextField` to modify.

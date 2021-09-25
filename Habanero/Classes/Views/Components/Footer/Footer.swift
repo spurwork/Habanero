@@ -11,19 +11,19 @@ public protocol FooterDisplayable {
 
 // MARK: - FooterButtonDelegate
 
-public protocol FooterButtonDelegate: class {
+public protocol FooterButtonDelegate: AnyObject {
     func footerButtonWasTapped(_ footer: Footer, position: FooterButtonPosition)
 }
 
 // MARK: - FooterLabelDelegate
 
-public protocol FooterLabelDelegate: class {
+public protocol FooterLabelDelegate: AnyObject {
     func footerLabelWasTapped(_ footer: Footer)
 }
 
 // MARK: - FooterCheckboxDelegate
 
-public protocol FooterCheckboxDelegate: class {
+public protocol FooterCheckboxDelegate: AnyObject {
     func footerCheckboxWasTapped(_ footer: Footer, isSelected: Bool)
     func footerTipWasTapped(_ footer: Footer, backedValue: Any)
 }

@@ -10,7 +10,7 @@ import UIKit
 
 // MARK: - ComponentsFCDelegate
 
-protocol ComponentsFCDelegate: class {
+protocol ComponentsFCDelegate: AnyObject {
     func componentsFCShouldDismiss(_ componentsFC: ComponentsFC)
 }
 

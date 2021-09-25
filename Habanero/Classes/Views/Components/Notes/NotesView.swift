@@ -20,7 +20,7 @@ public protocol NotesViewDisplayable {
 
 // MARK: - NotesViewDelegate
 
-public protocol NotesViewDelegate: class {
+public protocol NotesViewDelegate: AnyObject {
     func notesViewTappedNote(_ notesView: NotesView, backedValue: Any?)
 }
 

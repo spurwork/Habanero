@@ -2,7 +2,7 @@ import HorizonCalendar
 
 // MARK: - ManagedCalendarViewDelegate
 
-protocol ManagedCalendarViewDelegate: class {
+protocol ManagedCalendarViewDelegate: AnyObject {
     func managedCalendarViewTriedOverscroll(_ managedCalendarView: ManagedCalendarView)
     func managedCalendarViewSelectionDidChange(_ managedCalendarView: ManagedCalendarView,
                                                selection: CalendarDaySelection,

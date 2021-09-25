@@ -10,7 +10,7 @@ import UIKit
 
 // MARK: - FlowCoordinator
 
-protocol FlowCoordinator: class {
+protocol FlowCoordinator: AnyObject {
     var theme: Theme { get set }
     var rootViewController: UIViewController { get }
     var lastModalPresentedByViewController: UIViewController? { get }
